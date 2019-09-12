@@ -1,0 +1,4 @@
+﻿Bu calismada Log file basitce bir txt dosyasini acmakta ve line eklenerek uzayip gitmektedir. Boylece her asamada ne tur islevler yapilmis her bir sey kayit altinda tutulabilecektir. 
+
+Kisaca program calismaya basladiginda yeni bir txt dosyasi olusturmaktadir ve her bir olay program calisirken icerisinde log edilmektedir.
+

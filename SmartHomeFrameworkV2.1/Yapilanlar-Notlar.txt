@@ -35,4 +35,5 @@ NOT: SerialCOMM icerisindeki "StandardSerialComStruct" bizim en onemli struct if
 
 V2.5'dn devam ediyoruz (Aug09).. Oncelikle incelemeler yapalim nerede kalmistik. Bir sey yapmadık (Aug20'den devam edıyoruz)
 Bu surumde ExcelUsage.cs  CLASS'ini hallettik. Bu asamaya kadar Ammonit-DataBaseSQL-ExcelUsage ve KISMI olarak LOGGING kismina bir seyler yazdik. 
-Sabahtan (Aug21) SerialCOMM ve Logging CLASS'larini beraberce halledelim...
+Sabahtan (Aug21) SerialCOMM ve Logging CLASS'larini beraberce halledelim... (Sbah 11.30 gibi) Logging CLASS tamamlandi. Artik bunu rahatlikla istedigimiz yerde kullanabiliriz.
+Oncelikle SerialComm ile deneyip kullanacagiz.
