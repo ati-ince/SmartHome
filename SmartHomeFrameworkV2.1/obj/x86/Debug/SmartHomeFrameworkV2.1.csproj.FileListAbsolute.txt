@@ -25,3 +25,14 @@ D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.2\
 D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.2\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csproj.GenerateResource.Cache
 D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.2\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe
 D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.2\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\SH Soft June25\Work-June25\June25-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Form1.resources
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Properties.Resources.resources
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csproj.GenerateResource.Cache
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\SH Soft June28Night\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.3\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.pdb

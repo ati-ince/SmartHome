@@ -47,7 +47,8 @@ namespace SmartHomeFrameworkV2._1
         SerialCOMM.StandardSerialComStruct StandardSerialComStruct = new SerialCOMM.StandardSerialComStruct();
         //
         SerialCOMM.ComPortStruct XtenderStruct = new SerialCOMM.ComPortStruct(); // we are using and that is very usefull for app
-
+        //
+        Xtender.XtenderInfo xtender_info = new Xtender.XtenderInfo();
 
         /// <summary>
         /// GLOBAL VARIATIONS
@@ -80,7 +81,7 @@ namespace SmartHomeFrameworkV2._1
         void _XtenderSerial_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             int Result_Xtender;
-            StandardSerialComStruct.StructXtender.DataFrameRead = new byte[_XtenderSerial.BytesToRead]; // Define Struct element size for read the serial data
+        // (#sil)   StandardSerialComStruct.StructXtender.DataFrameRead = new byte[_XtenderSerial.BytesToRead]; // Define Struct element size for read the serial data
             
             Result_Xtender = SerialCOMM.SerialRead(ref XtenderStruct, ref _XtenderSerial);
 
@@ -90,7 +91,7 @@ namespace SmartHomeFrameworkV2._1
 
         private void _Xtender_DisplayText(object sender, EventArgs e)
         {
-            byte[] XtenderReceivedFrame = SerialCOMM.SerialDataTidyUp(ref XtenderStruct); // data clean up is necassary
+            List<byte> XtenderReceivedFrame = SerialCOMM.SerialDataTidyUp(ref StandardSerialComStruct); // data clean up is necassary
             // do what necassarly will ........
             // we get the frame (raw) from Xtender and Write to DataBase now ..................
             //public List<float> XtenderDataRendering(byte[] XtenderReceivedFrame)
@@ -123,32 +124,25 @@ namespace SmartHomeFrameworkV2._1
         {
             /********* Close all COM ports and Stop Algorithm ****************/
             // Close Xtender Serial Port
-            SerialCOMM.SerialClose(ref XtenderStruct, ref _XtenderSerial);
+            SerialCOMM.SerialClose(ref _XtenderSerial);
         }
 
         private void Connect_Xtender_Click(object sender, EventArgs e)
         {
-
-
-            
-
-            
-            //TextBoxTest.Text = StandardSerialComStruct.StructXtender.PortName.ToString();
-
-
-            //set xtender serialport necessaries (include port name from ComboBox)
-            Xtender.XtenderComPortSettings(ref XtenderStruct, ref StandardSerialComStruct, ComboBox_Xtender);
-
-            
+            // in here, we get all COM port info from comBox (Xtender PortName)
+            // and write all necassaries into _XtenderSerial
+            Xtender.XtenderComPortSettings(ref _XtenderSerial, ref StandardSerialComStruct, ComboBox_Xtender); 
 
             // Open Xtender SerialPort
-            SerialCOMM.SerialOpen(ref XtenderStruct, ref _XtenderSerial);// send the memory adress to acces real struct/
+            SerialCOMM.SerialOpen(ref _XtenderSerial);// send the memory adress to acces real struct/
 
-            StandardSerialComStruct.xSrial(ref _XtenderSerial);
-            TextBoxTest.Text = StandardSerialComStruct.StructXtender.PortName.ToString();
-
+            //
             Connect_Xtender.Enabled = false;
-            Disconnect_Xtender.Enabled = true;
+            Disconnect_Xtender.Enabled = true;   
+            ///////////////////
+            xtender_info.seraillls = _XtenderSerial; 
+            //
+            TextBoxTest.Text = xtender_info.seraillls.PortName;
 
             
         }
@@ -166,7 +160,7 @@ namespace SmartHomeFrameworkV2._1
         private void Disconnect_Xtender_Click(object sender, EventArgs e)
         {
             // Close Xtender Serial Port
-            SerialCOMM.SerialClose(ref XtenderStruct, ref _XtenderSerial);
+            SerialCOMM.SerialClose(ref _XtenderSerial);
 
             Connect_Xtender.Enabled = true;
             Disconnect_Xtender.Enabled = false;
@@ -212,7 +206,8 @@ namespace SmartHomeFrameworkV2._1
         {
             //(every 60 second will triggered)
             // Call Algorithms every tick
-            Algorithms.AlgorithmStarting(); // do lots of things in the algorithm class   
+            Algorithms.AlgorithmStarting(ref _XtenderSerial, ref StandardSerialComStruct);
+            // do lots of things in the algorithm class   
         }
 
     

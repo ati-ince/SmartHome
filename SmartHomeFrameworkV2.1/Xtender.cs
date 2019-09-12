@@ -27,10 +27,20 @@ namespace SmartHomeFrameworkV2._1
         /// <summary>
         /// GLOBAL CLASS
         /// </summary>
-        SerialCOMM serialcomm = new SerialCOMM();
+        SerialCOMM serialComm4Xtender = new SerialCOMM();
         OleDbConnection connection; // Excel Connection
         DataBaseSQL databasesql = new DataBaseSQL();
 
+
+        /// <summary>
+        /// General Struct
+        /// </summary>
+
+        public struct XtenderInfo
+        {
+            public System.Windows.Forms.DataGridView dataGrid4Excell;
+            public SerialPort seraillls;
+        }
 
         /// <summary>
         /// METHODS .........
@@ -44,17 +54,18 @@ namespace SmartHomeFrameworkV2._1
         }
         /***************************************************************************************/
 
-        public void XtenderComPortSettings(ref SerialCOMM.ComPortStruct xtendercomportstruct,ref  SerialCOMM.StandardSerialComStruct standartserialcomstruct_xtenderportsettings, System.Windows.Forms.ComboBox ComboBox_XtenderSettings)
+        public void XtenderComPortSettings(ref SerialPort _xSerialPort, ref SerialCOMM.StandardSerialComStruct SerialStandardStruct,System.Windows.Forms.ComboBox ComboBox_XtenderSettings)
         {
             //
-            xtendercomportstruct.PortName = serialcomm.GetSelectedPortNamesFromComboBox(standartserialcomstruct_xtenderportsettings._GetPortNames, ComboBox_XtenderSettings);
+            SerialStandardStruct.StructXtender.PortName = serialComm4Xtender.GetSelectedPortNamesFromComboBox(ref SerialStandardStruct, ComboBox_XtenderSettings);
             //Necessary settings ..........................................
-            xtendercomportstruct.BaudRate = 38400;
-            xtendercomportstruct.DataBits = 8;
-            xtendercomportstruct.StopBits = System.IO.Ports.StopBits.One;
-            xtendercomportstruct.Parity = System.IO.Ports.Parity.Even;
-            xtendercomportstruct.ReadTimeout = 3000;
-            xtendercomportstruct.WriteTimeout = 4000;
+            _xSerialPort.PortName = SerialStandardStruct.StructXtender.PortName;
+            _xSerialPort.BaudRate=38400;
+            _xSerialPort.DataBits=8;
+            _xSerialPort.StopBits=System.IO.Ports.StopBits.One;
+            _xSerialPort.Parity=System.IO.Ports.Parity.Even;
+            _xSerialPort.ReadTimeout=3000;
+            _xSerialPort.WriteTimeout = 4000;
         }
         /***************************************************************************************/
         
@@ -390,6 +401,16 @@ namespace SmartHomeFrameworkV2._1
             //
             XtenderDataRenderedOutput = XtenderDataRendering (XtenderReceivedFrame) ;
             // Now divide the list and write to the DataBase ....
+        }
+        //*************************************************************************************
+
+        // xtender Read Preparing and sending over serial port
+        public void XtenderSendReadData(UInt16 xRegAddr, ref SerialCOMM.StandardSerialComStruct sStandartStruct, ref SerialPort _xSerial)
+        {
+            sStandartStruct.StructXtender.DataFrameWrite = XtenderReadFrameCreate(xRegAddr);
+            sStandartStruct.StructGeneralComPort = sStandartStruct.StructXtender; // carry all info to standarstruct buffer
+            serialComm4Xtender.SerialWrite(ref sStandartStruct, ref _xSerial); // we write like this 
+            
         }
         //*************************************************************************************
     }
