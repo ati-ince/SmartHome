@@ -9,43 +9,90 @@ using System.Windows.Forms;
 
 namespace SmartHomeFrameworkV2._1
 {
-    
-    
     public class SerialCOMM
     {
-        // serial port object and data arrays
-        //_SerialPort4SerialCOMM
-        SerialPort _SerialPort4SerialCOMM = new SerialPort();
-        ////////////
-        // Burada gelen parca datalari bir sekilde birlestirecegiz. Parca parca olmamasi icin tamamainin.  
-        public byte[] SerialDataTidyUp(byte[] SerialData)
-        {
-            byte[] SerialRegularData;
-            // 
-            SerialRegularData = SerialData; // Bu kisimda ise yapilcak islemler...
-            //
-            return SerialRegularData;
-        }
 
-        // Buraya Seriali actiktan sonra yazilacak ozellikleri de ekleyelim, Baudrate vb... iste alttaki sirasi ile 
-        public void SerialOpen(string PortNames) // This value comes from Form opening time
+        /// <summary>
+        /// STRUCTS
+        /// </summary>
+        
+        // All information about serial port are inside evn SerialPort Object referance/address....
+        public struct StandardSerialComStruct
         {
-            _SerialPort4SerialCOMM.PortName = PortNames;
-            _SerialPort4SerialCOMM.BaudRate = 38400;//  Xtendar data rate
-            _SerialPort4SerialCOMM.DataBits = 8;//int formatinda yazdiriliyo
-            _SerialPort4SerialCOMM.StopBits = System.IO.Ports.StopBits.One;
-            _SerialPort4SerialCOMM.Parity = System.IO.Ports.Parity.Even;
-            _SerialPort4SerialCOMM.ReadTimeout = 3000;
-            _SerialPort4SerialCOMM.WriteTimeout = 4000;
+            public string[] _GetPortNames; // get port name from Windows
+
+            // Collect All SerialComm devices Struct
+            public  ComPortStruct StructXtender;
+            //4Noks and more....
+
+            /*Write SerialPorts*/
+            public  void xSrial(ref SerialPort _xSer)
+            {
+                StructXtender.PortName = _xSer.PortName;
+            }
+        }
+        /******************************************************************************************************/
+
+        public struct ComPortStruct // Information from All ComPorts will use this struct
+        {
+            public string PortName;
+            public int BaudRate;
+            public int DataBits;
+            public System.IO.Ports.StopBits StopBits;
+            public System.IO.Ports.Parity Parity;
+            public int ReadTimeout;
+            public int WriteTimeout;
+            //
+            public byte[] DataFrameRead; // will use all reading data inside
+            public byte[] DataFrameWrite; // will use all writing data inside
+            //
+            public string[] SendingTimeFrames; // serialPort Sending Local time collector
+            public string[] ReceivingTimeFrames; // serialPort Receiving Local Time Collector
+        }
+        /******************************************************************************************************/
+
+        /// <summary>
+        /// METHODS
+        /// </summary>
+
+        // fill the comboBox with available comPort Names
+        public void ComboBoxComPortNameFilling(string[] GetPortNames, System.Windows.Forms.ComboBox comboBox)
+        {
+            foreach (string port in GetPortNames) // see all existed port names
+            {
+                comboBox.Items.Add(port); // normally we use with "this" like this.comboBox ......
+            }
+        }
+        /******************************************************************************************************/
+
+
+        ///// ComBox GetSelectedComPortNames ////////////////////
+        public string GetSelectedPortNamesFromComboBox(string[] GetPortNames, System.Windows.Forms.ComboBox comboBox)
+        {
+            SByte i_ComPorts = Convert.ToSByte( comboBox.SelectedIndex.ToString());
+            if (i_ComPorts == (-1)) { i_ComPorts++; }
+            string PortName = GetPortNames[i_ComPorts]; // detect which is selected
+          
+          return PortName;
+        }
+        /******************************************************************************************************/
+
+        public void SerialOpen(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose, ref SerialPort __SerialPortUse) // This value comes from Form opening time
+        {
+            __SerialPortUse.PortName = comportstruct_serialOpenClose.PortName; // string
+            __SerialPortUse.BaudRate = comportstruct_serialOpenClose.BaudRate;//  int
+            __SerialPortUse.DataBits = comportstruct_serialOpenClose.DataBits;//int
+            __SerialPortUse.StopBits = comportstruct_serialOpenClose.StopBits; // System.IO.Ports.StopBits
+            __SerialPortUse.Parity = comportstruct_serialOpenClose.Parity;  // System.IO.Ports.Parity
+            __SerialPortUse.ReadTimeout = comportstruct_serialOpenClose.ReadTimeout; // int
+            __SerialPortUse.WriteTimeout = comportstruct_serialOpenClose.WriteTimeout; // int
             try
             {
-                if (_SerialPort4SerialCOMM.IsOpen)
+                if (__SerialPortUse.IsOpen)
                 {
-                    _SerialPort4SerialCOMM.Close();
+                    __SerialPortUse.Close();
                 }
-                _SerialPort4SerialCOMM.Open();
-
-
+                __SerialPortUse.Open();
             }
             catch (Exception exc)
             {
@@ -55,24 +102,26 @@ namespace SmartHomeFrameworkV2._1
                 }
             }
         }
+        /******************************************************************************************************/
 
-        public void SerialClose(string PortNames) // This value comes from Form opening time
+        public void SerialClose(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose, ref SerialPort __SerialPortUse) // This value comes from Form opening time // This value comes from Form opening time
         {
-            _SerialPort4SerialCOMM.PortName = PortNames;
-            _SerialPort4SerialCOMM.BaudRate = 38400;//  Xtendar data rate
-            _SerialPort4SerialCOMM.DataBits = 8;//int formatinda yazdiriliyo
-            _SerialPort4SerialCOMM.StopBits = System.IO.Ports.StopBits.One;
-            _SerialPort4SerialCOMM.Parity = System.IO.Ports.Parity.Even;
-            _SerialPort4SerialCOMM.ReadTimeout = 3000;
-            _SerialPort4SerialCOMM.WriteTimeout = 4000;
+            
 
+            if (__SerialPortUse.IsOpen)
+            {
+                __SerialPortUse.Close(); // first close the port for change the port adrss which port need to change
+                __SerialPortUse.PortName = comportstruct_serialOpenClose.PortName; // which port will close, write the adress
+                __SerialPortUse.Open();// open the propoer com port for close
+            }
+            
             try
             {
-                if (!_SerialPort4SerialCOMM.IsOpen)
+                if (!__SerialPortUse.IsOpen)
                 {
-                    _SerialPort4SerialCOMM.Open();
+                    __SerialPortUse.Open();
                 }
-                _SerialPort4SerialCOMM.Close();
+                __SerialPortUse.Close();
 
 
             }
@@ -80,19 +129,40 @@ namespace SmartHomeFrameworkV2._1
             {
                 using (StreamWriter w = File.AppendText("log.txt"))
                 {
-                    Logging.Log("Couldn't close Xtender serial port, will try again", w);
+                    //Logging.Log("Couldn't close Xtender serial port, will try again", w);
                 }
             }
         }
+        /******************************************************************************************************/
 
-
-        // Bunu da tamami icin kullanacagiz. Ama burada port ismi de eklenecek
-        //SerialCOMM icerisinde SerialWrite icerisine ayrica hangi  SerialObject yani COM portuna hangi array yazdirilacak onu da ekliyoruz. 
-        public void SerialWrite(byte[] SendingData)
+        public void SerialWrite(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose, ref SerialPort __SerialPortUse)
         {
-            _SerialPort4SerialCOMM.Write(SendingData.ToArray(), (int)0, (int)SendingData.Count());
-
+            __SerialPortUse.Open(); // may be look closed, you never know !!!
+            __SerialPortUse.Write(comportstruct_serialOpenClose.DataFrameWrite.ToArray(), (int)0, (int)comportstruct_serialOpenClose.DataFrameWrite.Count());
         }
+        /******************************************************************************************************/
+
+        public int SerialRead(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose, ref SerialPort __SerialPortUse)
+        {
+            int readRespond;
+            __SerialPortUse.Open(); // may be look closed, you never know !!!
+            readRespond = __SerialPortUse.Read(comportstruct_serialOpenClose.DataFrameRead.ToArray(), (int)0, __SerialPortUse.BytesToRead );
+        return readRespond;
+        }
+        /******************************************************************************************************/
+
+        // Coolect all part of serial comm data and tidy up and do compact 
+        public byte[] SerialDataTidyUp(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose)
+        {
+            byte[] SerialRegularData;
+            // 
+            SerialRegularData = comportstruct_serialOpenClose.DataFrameRead; // Do somthings...........................
+            //
+            return SerialRegularData;
+        }
+        // **********************************************************//
+
+       
         
      
     }

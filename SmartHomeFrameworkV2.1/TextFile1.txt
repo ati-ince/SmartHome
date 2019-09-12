@@ -1,0 +1,9 @@
+﻿v1.1 base yapi, v2.2 den itibaren bir seyler yapmaya basladik.
+
+V2.2 de SerialCOMM uzerinde guzel sekilde calisan bir yazilimimiz oldu ama bu SerialPort kisimlarinin tamamini tek bir Struct icerisine tasimak istiyorum.
+Boylece StandartSerialStruct icerisinde Xtender, 4Noks, RemoteCOMM ve diger olasi seriport cihazlarin SerialPort _SerialPort refranslari (var ile ic fonksiyona gecirilmesi sayesinde)
+  bunun yaninda o serialport obj sine ait tum degiskenler, baudrate vb tamami burada yer alacaktir. 
+  sikinti bunlari duzgun zamanda gecirebilmek "ref" ile.
+
+V3.3 de ise yukarida bahsettigim olayi yapmaya calisacagim. Boylece sadece tek bir ANA StandartSerialComStruct referansi gecirilerek her bir 
+  seriport obj si, adresi, alinan ve gonderilcek datasi alinma ve gonderilme zamanlari vb tamami tasinmasi saglanabilecektir.

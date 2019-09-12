@@ -32,6 +32,7 @@ namespace SmartHomeFrameworkV2._1
         //SerialPort _RemoteCommSerial = new SerialPort(); // RemoteComm Virtual 
         //SerialPort _4NoksSerial = new SerialPort(); // 4Noks  Modbus Serial RTU
         Ammonit Ammonit4Algorithm= new Ammonit(); // for algorithm
+        SerialCOMM Serialcomm4Algorithm = new SerialCOMM(); // for algorithm
         //DataBaseSQL _DataBaseSQL = new DataBaseSQL();
         //Algorithms _Algorithms = new Algorithms(); // Algorithms and Variables
 
@@ -40,8 +41,8 @@ namespace SmartHomeFrameworkV2._1
         /// GLOBAL STATICS VARIABLES (WHICH IS ACTIVE OR PASSIVE)
         /// </summary>
         /// 
-        public bool _AmmonitState = false;
-        public bool _XtenderState = false;
+        public bool _AmmonitState = true; // we are using now
+        public bool _XtenderState = true; // we are using now
         public bool _ModBus4NoksState = false;
 
 
@@ -71,6 +72,23 @@ namespace SmartHomeFrameworkV2._1
             {
                 // Call All Ammonit Sensor Data and Write to dataBase
                 Ammonit4Algorithm.Ammonit_AddAllTo_DataBase(Ammonit4Algorithm.GetAmmonitData("169.254.36.137", 40500, 16));
+            }
+
+            if (_XtenderState == true)
+            {
+                /*#### READ all necessaries  #####*/
+               
+               //3000	battery voltage
+              // Serialcomm4Algorithm.SerialWrite(
+               //3001	battery temp
+               //3007	State of charge
+               //3021	Output voltage AC-out
+               //3087	output active power
+               //3088	input active power
+               //9004	output power of the PV
+               //9013	sum of daily energy of PV
+               //7002	State of Charge (GENERAL)
+            
             }
 
         

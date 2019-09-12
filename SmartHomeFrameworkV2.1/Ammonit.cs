@@ -96,7 +96,7 @@ namespace SmartHomeFrameworkV2._1
                 }
                 catch (ArgumentNullException ane)
                 {
-                    //Debug.WriteLine("ArgumentNullException : {0}", ane.ToString());
+                   // Debug.WriteLine("ArgumentNullException : {0}", ane.ToString());
                 }
                 catch (SocketException se)
                 {
