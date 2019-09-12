@@ -47,9 +47,17 @@
             this.Start_Algorithm = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Stop_Algorithm = new System.Windows.Forms.Button();
-            this.TextBoxTest = new System.Windows.Forms.TextBox();
             this.TimerAlgorithm = new System.Windows.Forms.Timer(this.components);
             this.DataGridViewXtenderExcel = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.fournoks_off = new System.Windows.Forms.Button();
+            this.fournoks_on = new System.Windows.Forms.Button();
+            this.fournoks_device_name = new System.Windows.Forms.ComboBox();
+            this.PoolTimer = new System.Windows.Forms.Timer(this.components);
+            this.UartTimer = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewXtenderExcel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,13 +245,6 @@
             this.Stop_Algorithm.UseVisualStyleBackColor = false;
             this.Stop_Algorithm.Click += new System.EventHandler(this.Stop_Algorithm_Click);
             // 
-            // TextBoxTest
-            // 
-            this.TextBoxTest.Location = new System.Drawing.Point(213, 38);
-            this.TextBoxTest.Name = "TextBoxTest";
-            this.TextBoxTest.Size = new System.Drawing.Size(100, 20);
-            this.TextBoxTest.TabIndex = 54;
-            // 
             // TimerAlgorithm
             // 
             this.TimerAlgorithm.Interval = 1000;
@@ -257,13 +258,90 @@
             this.DataGridViewXtenderExcel.Size = new System.Drawing.Size(825, 417);
             this.DataGridViewXtenderExcel.TabIndex = 55;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(358, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 13);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "4NoksPlugState";
+            // 
+            // fournoks_off
+            // 
+            this.fournoks_off.BackColor = System.Drawing.Color.Red;
+            this.fournoks_off.Location = new System.Drawing.Point(277, 78);
+            this.fournoks_off.Name = "fournoks_off";
+            this.fournoks_off.Size = new System.Drawing.Size(75, 23);
+            this.fournoks_off.TabIndex = 63;
+            this.fournoks_off.Text = "OFF";
+            this.fournoks_off.UseVisualStyleBackColor = false;
+            this.fournoks_off.Click += new System.EventHandler(this.off_Click);
+            // 
+            // fournoks_on
+            // 
+            this.fournoks_on.BackColor = System.Drawing.Color.SeaGreen;
+            this.fournoks_on.Location = new System.Drawing.Point(277, 58);
+            this.fournoks_on.Name = "fournoks_on";
+            this.fournoks_on.Size = new System.Drawing.Size(75, 23);
+            this.fournoks_on.TabIndex = 62;
+            this.fournoks_on.Text = "ON";
+            this.fournoks_on.UseVisualStyleBackColor = false;
+            this.fournoks_on.Click += new System.EventHandler(this.on_Click);
+            // 
+            // fournoks_device_name
+            // 
+            this.fournoks_device_name.BackColor = System.Drawing.Color.Ivory;
+            this.fournoks_device_name.FormattingEnabled = true;
+            this.fournoks_device_name.Location = new System.Drawing.Point(187, 68);
+            this.fournoks_device_name.Name = "fournoks_device_name";
+            this.fournoks_device_name.Size = new System.Drawing.Size(84, 21);
+            this.fournoks_device_name.TabIndex = 61;
+            // 
+            // PoolTimer
+            // 
+            this.PoolTimer.Interval = 250;
+            this.PoolTimer.Tick += new System.EventHandler(this.PoolTimer_Tick);
+            // 
+            // UartTimer
+            // 
+            this.UartTimer.Interval = 150;
+            this.UartTimer.Tick += new System.EventHandler(this.UartTimer_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(252, 124);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 65;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(252, 151);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 66;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(252, 180);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 67;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 291);
+            this.ClientSize = new System.Drawing.Size(440, 291);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.fournoks_off);
+            this.Controls.Add(this.fournoks_on);
+            this.Controls.Add(this.fournoks_device_name);
             this.Controls.Add(this.DataGridViewXtenderExcel);
-            this.Controls.Add(this.TextBoxTest);
             this.Controls.Add(this.Start_Algorithm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Stop_Algorithm);
@@ -312,9 +390,17 @@
         private System.Windows.Forms.Button Start_Algorithm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Stop_Algorithm;
-        private System.Windows.Forms.TextBox TextBoxTest;
         private System.Windows.Forms.Timer TimerAlgorithm;
         private System.Windows.Forms.DataGridView DataGridViewXtenderExcel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button fournoks_off;
+        private System.Windows.Forms.Button fournoks_on;
+        private System.Windows.Forms.ComboBox fournoks_device_name;
+        private System.Windows.Forms.Timer PoolTimer;
+        private System.Windows.Forms.Timer UartTimer;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="4Noks.cs" />
     <Compile Include="Algorithms.cs" />
     <Compile Include="Ammonit.cs" />
     <Compile Include="DataBaseSQL.cs" />

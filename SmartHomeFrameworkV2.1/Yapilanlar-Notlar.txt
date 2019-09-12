@@ -65,4 +65,6 @@ Tımer ıle yaptıgımız ısı daha sonrasında multıthread halıne getırebı
 Bu 2.6'da Logging yaparken hata felan alınabiliyor, bunu try catch ile çözdüm gibi ama sadece çökmesini engelledik. Belki de çözümü sadece budur. 2.7den 4Noks eklemesi yaparak devam edelim...
 NOT: V2.6 yı 3 kesintisiz çalıştırdım, baktıgımda göçmediğini gördüm, birkaç düzenleme sonunda da kusursuz hale getirecegiz, try-catch ile muhtemelen.
 
-V2.7'de 4Noks eklemesi yapıyoruz. Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz. Öncelikle, 
+V2.7'de 4Noks eklemesi yapıyoruz. Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz.  Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz. Öncelikle, Start Stop Alg butonları aktif-pasif özelliği ve algoritma seçme seçeneği getirildi.
+@ Excel duzenlemesi yaparak hem xtender hemde 4noks için gerekli kısımların okunmasını saglamam gerekmekte.
+

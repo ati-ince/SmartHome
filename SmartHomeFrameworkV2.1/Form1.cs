@@ -35,6 +35,17 @@ namespace SmartHomeFrameworkV2._1
         SerialCOMM.ComPortStruct _xtenderStruct = new SerialCOMM.ComPortStruct(); // also we have _xtenderStruct._SerialPortObj
         SerialPort _xtenderSerial = new SerialPort();
         Xtender XtenderClass = new Xtender();
+        /*********/
+        //4Noks
+        static Int16 AddressF, AddressL, Indexx; // fırst and last adress 
+        //static Int16 FrameX = 0; // for collected 
+        static List<byte> _4NoksUartFrame = new List<byte>();
+        static bool UartState = false;
+        //
+        SerialCOMM.ComPortStruct _4noksStruct = new SerialCOMM.ComPortStruct();// also we have _xtenderStruct._SerialPortObj
+        SerialPort _4noksserial = new SerialPort();
+        _4Noks _4noksClass = new _4Noks();
+        /********/
         ExcelUsege _exceluse = new ExcelUsege(); // excel kullanimi amaci ile
         ExcelUsege.ExcelStruct _excelStruct = new ExcelUsege.ExcelStruct(); // excel icin structor 
         /**/
@@ -42,7 +53,7 @@ namespace SmartHomeFrameworkV2._1
         /**/
         Logging _log = new Logging();
         /**/
-        Algorithms AlgorithmClass = new Algorithms();
+        Algorithms _algorithms = new Algorithms();
  
 
         public static Form1 Instance
@@ -92,11 +103,12 @@ namespace SmartHomeFrameworkV2._1
         {
 
             // Disable all Disconnection and Stop ButtonsFexcel
-            Connect_Xtender.Enabled = true;
+            Connect_Xtender.Enabled = false;
             Disconnect_Xtender.Enabled = false;
+
             //// OTHERS
             Connect_Ammonit.Enabled = false;
-            Connect_ModBus4Noks.Enabled = false;
+            Connect_ModBus4Noks.Enabled = true;
             Connect_RemoteCOMM.Enabled = false;
             //
             Disconnect_Ammonit.Enabled = false;
@@ -105,8 +117,12 @@ namespace SmartHomeFrameworkV2._1
             // ALGORITHM
             Start_Algorithm.Enabled = false;
             Stop_Algorithm.Enabled = false;
-            
 
+            // 4noks On/Off
+            fournoks_on.Enabled = false;
+            fournoks_off.Enabled = false;
+            fournoks_device_name.Enabled = false;
+                      
             // Start the LOGGING !!!
             _log.LoggingStart();//sadece ilk program baslarken cagirilacak..
 
@@ -151,6 +167,12 @@ namespace SmartHomeFrameworkV2._1
         private void Connect_ModBus4Noks_Click(object sender, EventArgs e)
         {
             // Open 4Noks Serial Port
+            Connect_ModBus4Noks.Enabled = false;
+            Disconnect_ModBus4Noks.Enabled = true;
+            // 4noks On/Off
+            fournoks_on.Enabled = true;
+            fournoks_off.Enabled = true;
+            fournoks_device_name.Enabled = true;
         }
 
         private void Connect_RemoteCOMM_Click(object sender, EventArgs e)
@@ -171,6 +193,12 @@ namespace SmartHomeFrameworkV2._1
         private void Disconnect_ModBus4Noks_Click(object sender, EventArgs e)
         {
            // Close 4Noks Serial port
+            Connect_ModBus4Noks.Enabled = true;
+            Disconnect_ModBus4Noks.Enabled = false;
+            // 4noks On/Off
+            fournoks_on.Enabled = false;
+            fournoks_off.Enabled = false;
+            fournoks_device_name.Enabled = false;
         }
 
         private void Disconnect_RemoteCOMM_Click(object sender, EventArgs e)
@@ -193,13 +221,15 @@ namespace SmartHomeFrameworkV2._1
             // Start Timer (every 60 second will triggered)
             TimerAlgorithm.Enabled = true; // Call the algorithm in the Timer 
             Start_Algorithm.Enabled = false; // close button activity
+            Stop_Algorithm.Enabled = true; // close button activity
         }
 
         private void Stop_Algorithm_Click(object sender, EventArgs e)
         {
             // Stop Algorithm (Timer etc)
-            TimerAlgorithm.Enabled = false; 
+            TimerAlgorithm.Enabled = false;
             Start_Algorithm.Enabled = true; // start again button activity
+            Stop_Algorithm.Enabled = false; // close button activity
         }
 
         private void TimerAlgorithm_Tick(object sender, EventArgs e)
@@ -207,7 +237,7 @@ namespace SmartHomeFrameworkV2._1
             //(every 5 second will triggered) // istenildigi gibi degistirilebilir... Simdilik 5 sec
             // Call Algorithms every tick
 
-            AlgorithmClass.AlgorithmStarting(ref  _xtenderStruct, ref _excelStruct); // Sira ile hangisi eklenirse buraya eklenecek !!!
+            _algorithms.AlgorithmStarting(ref  _xtenderStruct, ref _excelStruct); // Sira ile hangisi eklenirse buraya eklenecek !!!
             // do lots of things in the algorithm class   
         }
 
@@ -217,6 +247,26 @@ namespace SmartHomeFrameworkV2._1
         }
 
         private void ComboBox_Xtender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void on_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void off_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PoolTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UartTimer_Tick(object sender, EventArgs e)
         {
 
         }
