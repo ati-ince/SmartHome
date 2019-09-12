@@ -263,7 +263,7 @@
             // 
             // TimerAlgorithm
             // 
-            this.TimerAlgorithm.Interval = 60000;
+            this.TimerAlgorithm.Interval = 5000;
             this.TimerAlgorithm.Tick += new System.EventHandler(this.TimerAlgorithm_Tick);
             // 
             // DataGridViewXtenderExcel

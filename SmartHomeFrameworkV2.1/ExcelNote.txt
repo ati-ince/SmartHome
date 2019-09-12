@@ -13,3 +13,14 @@
 gerekli alt fonksyonlari barindirmasi lazimdir.
 ................................................................................................
 
+NOTE1: Excel okuma ve excel dosyalarının herhangı bırn algoritmada CLASS yapisinda kullamnilmasi amaci ile bu CLASS halini: ExcelUsage.cs dosyasini hazirlamaktayim
+Bunu oncelikli olarakm Xtender icin kullanarak algoritmalarin otomatik calismasini sag;ayacagim.
+
+Bu ilk class yapisi Extender icin ozellesse de kullanilabilir bir cok ozellik barindirmaktadir
+Ornegin READ ve WRITE icin ayri methodlar bulunmaktadir ve bu methodlar cikti olarak bize kullanabilecegimiz READ ve WRITE listesi sunmakltadir
+
+Ayrica buna ek olarak bu liste ciktilarini sorgulamak icin bir foksiyon yazalim ve bu method geri donusu de Coordinat,TRUE/FALSE ifadesi bulunmaktadir.
+Boylece algoritmada kullanilmak istenen ifadenin listelerde bulunup-bulunmamasi ve konumu rahatca ogrenilebilecektir. 
+
+
+

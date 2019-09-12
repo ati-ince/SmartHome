@@ -51,6 +51,36 @@ D:\Sh\SH Soft July1\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.4\S
 D:\Sh\SH Soft July1\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csproj.GenerateResource.Cache
 D:\Sh\SH Soft July1\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe
 D:\Sh\SH Soft July1\Work-June28\June28-Devam\CalismaDvm\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.pdb
-D:\AkilliEv Klasoru (!)\SH_Soft_Versiyonlari (!!!)\!!! Sh_Fr Kullanilanlar\V2 yazılımları\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
-D:\AkilliEv Klasoru (!)\SH_Soft_Versiyonlari (!!!)\!!! Sh_Fr Kullanilanlar\V2 yazılımları\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
-D:\AkilliEv Klasoru (!)\SH_Soft_Versiyonlari (!!!)\!!! Sh_Fr Kullanilanlar\V2 yazılımları\SmartHomeFrameworkV2.4\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\SH Aug09\Work-Aug09\Aug09\CalismaDvm\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\Sh\SH Aug09\Work-Aug09\Aug09\CalismaDvm\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\SH Aug09\Work-Aug09\Aug09\CalismaDvm\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR\SH\SH-Aug10\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\THR\SH\SH-Aug10\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\THR\SH\SH-Aug10\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csprojResolveAssemblyReference.cache
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Form1.resources
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Properties.Resources.resources
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csproj.GenerateResource.Cache
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\Ongoing !\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR_ONEMLI_PRJ\SH-OnGoing-Lab\Ongoing ! Aug11_Home\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\THR_ONEMLI_PRJ\SH-OnGoing-Lab\Ongoing ! Aug11_Home\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\THR_ONEMLI_PRJ\SH-OnGoing-Lab\Ongoing ! Aug11_Home\Aug10-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR_ONEMLI_PRJ\Ongoing_Aug16_Lab\Aug16-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\THR_ONEMLI_PRJ\Ongoing_Aug16_Lab\Aug16-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\THR_ONEMLI_PRJ\Ongoing_Aug16_Lab\Aug16-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\Sh\Ongoing_Aug17_Home\Aug17-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\Sh\Ongoing_Aug17_Home\Aug17-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\Sh\Ongoing_Aug17_Home\Aug17-Dvm\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe.config
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\bin\Debug\SmartHomeFrameworkV2.1.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csprojResolveAssemblyReference.cache
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Form1.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2._1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\SmartHomeFrameworkV2.5\SmartHomeFrameworkV2.1\obj\x86\Debug\SmartHomeFrameworkV2.1.csproj.GenerateResource.Cache

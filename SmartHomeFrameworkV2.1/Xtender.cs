@@ -57,7 +57,7 @@ namespace SmartHomeFrameworkV2._1
         public void XtenderComPortSettings(ref SerialPort _xSerialPort, ref SerialCOMM.StandardSerialComStruct SerialStandardStruct,System.Windows.Forms.ComboBox ComboBox_XtenderSettings)
         {
             //
-            SerialStandardStruct.StructXtender.PortName = serialComm4Xtender.GetSelectedPortNamesFromComboBox(ref SerialStandardStruct, ComboBox_XtenderSettings);
+            SerialStandardStruct.StructXtender.PortName = serialComm4Xtender.GetSelectedPortNamesFromComboBox(SerialStandardStruct._GetPortNames, ComboBox_XtenderSettings);
             //Necessary settings ..........................................
             _xSerialPort.PortName = SerialStandardStruct.StructXtender.PortName;
             _xSerialPort.BaudRate=38400;

@@ -202,7 +202,7 @@ namespace SmartHomeFrameworkV2._1
 
         private void TimerAlgorithm_Tick(object sender, EventArgs e)
         {
-            //(every 60 second will triggered)
+            //(every 5 second will triggered) // istenildigi gibi degistirilebilir... Simdilik 5 sec
             // Call Algorithms every tick
             Algorithms.AlgorithmStarting(ref _XtenderSerial, ref StandardSerialComStruct);
             // do lots of things in the algorithm class   

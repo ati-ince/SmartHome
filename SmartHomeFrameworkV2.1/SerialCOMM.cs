@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Data.SqlClient; // SQL icin gereken girilmis
+using System.Data;
 using System.Text;
+using System.IO;
 using System.IO.Ports;
 using System.Threading;
 using System.Windows.Forms;
@@ -12,9 +14,12 @@ namespace SmartHomeFrameworkV2._1
     public class SerialCOMM
     {
 
-        /// <summary>
-        /// STRUCTS
-        /// </summary>
+        /// Classes
+        Logging _logging = new Logging();
+
+        /// Globals
+        
+        ///////////////////////////////////////////
         
         // All information about serial port are inside evn SerialPort Object referance/address....
         public struct StandardSerialComStruct
@@ -79,11 +84,11 @@ namespace SmartHomeFrameworkV2._1
         /******************************************************************************************************/
 
         ///// ComBox GetSelectedComPortNames ////////////////////
-        public string GetSelectedPortNamesFromComboBox(ref StandardSerialComStruct StandartStruct_get, System.Windows.Forms.ComboBox comboBox)
+        public string GetSelectedPortNamesFromComboBox(string[] getportnames, System.Windows.Forms.ComboBox comboBox)
         {
             SByte i_ComPorts = Convert.ToSByte( comboBox.SelectedIndex.ToString());
             if (i_ComPorts == (-1)) { i_ComPorts++; }
-            string PortName = StandartStruct_get._GetPortNames[i_ComPorts]; // detect which is selected
+            string PortName = getportnames[i_ComPorts]; // detect which is selected
           
           return PortName;
         }
@@ -100,13 +105,14 @@ namespace SmartHomeFrameworkV2._1
                     __SerialPort_open.Close();
                 }
                 __SerialPort_open.Open();
+                // log
+                _logging.Logging2Txt(__SerialPort_open.PortName, "is opened !"); // This port now open !
             }
             catch (Exception exc)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
-                {
-                    // Logging.Log("Couldn't open Xtender serial port, will try again", w);
-                }
+                // log
+                _logging.Logging2Txt(__SerialPort_open.PortName, "couldn't opened ! !"); // This port now open !
+            
             }
         }
         /******************************************************************************************************/
@@ -120,15 +126,15 @@ namespace SmartHomeFrameworkV2._1
                     __SerialPort_close.Open();
                 }
                 __SerialPort_close.Close();
-
+                // log
+                _logging.Logging2Txt(__SerialPort_close.PortName, "is closed !"); // This port now open ! 
 
             }
             catch (Exception exc)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
-                {
-                    //Logging.Log("Couldn't close Xtender serial port, will try again", w);
-                }
+                // log
+                _logging.Logging2Txt(__SerialPort_close.PortName, "couldn't closed !"); // This port now open ! 
+
             }
         }
         /******************************************************************************************************/

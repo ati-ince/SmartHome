@@ -106,7 +106,7 @@ namespace SmartHomeFrameworkV2._1
 
                     String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
                     String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + "   " + zmn + "    Database_4noks     " + hata.Message);
+                    w.WriteLine(trh + " " + zmn +" "+ "Database_4noks" +" "+ hata.Message);
                 }
 
             }

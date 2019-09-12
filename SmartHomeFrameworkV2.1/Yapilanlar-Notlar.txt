@@ -1,0 +1,38 @@
+﻿v2.1 base yapi, v2.2 den itibaren bir seyler yapmaya basladik.
+
+V2.2 de SerialCOMM uzerinde guzel sekilde calisan bir yazilimimiz oldu ama bu SerialPort kisimlarinin tamamini tek bir Struct icerisine tasimak istiyorum.
+Boylece StandartSerialStruct icerisinde Xtender, 4Noks, RemoteCOMM ve diger olasi seriport cihazlarin SerialPort _SerialPort refranslari (var ile ic fonksiyona gecirilmesi sayesinde)
+	bunun yaninda o serialport obj sine ait tum degiskenler, baudrate vb tamami burada yer alacaktir. 
+    sikinti bunlari duzgun zamanda gecirebilmek "ref" ile.
+
+V2.3 de ise yukarida bahsettigim olayi yapmaya calisacagim. Boylece sadece tek bir ANA StandartSerialComStruct referansi gecirilerek her bir 
+	seriport obj si, adresi, alinan ve gonderilcek datasi alinma ve gonderilme zamanlari vb tamami tasinmasi saglanabilecektir.
+
+V2.3 devaminda kismi olarak istedigimi yapabildim. Tum verileri StandartSerialStruct ta toplayabiliyorum ama bunun tamami yine de el ile SerialPort obj ye gecirilebilmkte.
+	Metodumuz su sekilde olacak: Herhangi bir sekilde haberlesme yapildiginda tum veriler ve bilgiler (Port bilgileri, gdecek-gelen byte datalar ve giden gelen veri zamanlari(time) vb) StandarSerialStruct icerisindeki
+	ilgili alt struct da tutulacak (her biri icin alt struct taimlandi: Xtender, ModBus4Noks, Remote ve olasi diger protokoller ...) 
+	ancak her halukarda haberlesme yapilacak SerialPort obj "ref" ile ilgili class'a (ornegin Algorithm) ile birlikte kullanilabilecektir.
+	Ornegin: Xtender ve ModBus4Noks Algoritma icinde kullanilacaksa veri su sekilde gonderilebilecektir:
+	AlgorithStart(ref StandartSerialStruct, ref _Xtender, ref _ModBus4Noks) .... Ancak bu sekilde kismi olarak paramtre azaltilmasi yapilabildi.
+	Tum veriler StandartStruct icerisinde maalesef gonderilememekte...... 
+	
+Good news :))))))  Struct icerisinde serialPort tanimlamasi yapabiliyoruz ve Form icerisindeki _Xtender verilerini struct icerisine cekebildim ....
+
+V2.3 de sonunda basardim :))))) xtender_info ile Form icerisinde test ettigimde istedigim gibi calisti.
+	Bundan sonra SerialCOMM icerisindeki StandarSerialStruct icerisine public SerialPort tanimlamasi yaparak tum classlar arasinda sadece tek "ref" struct gezdirecegiz ve boylece kalabalik ortadan kalkacak.
+	
+V2.4 den devam ediyoruz (July31).... Hangi port ve cihaz kullandigimizi galiba StandarStruct daki "bool" degerleri ile anlayabilecez...  
+
+NOT: SerialCOMM icerisindeki "StandardSerialComStruct" bizim en onemli struct ifademiz olmakta. Burada seri porta ait verileri ornegin Xtender icin "StructXtender" sub-struct icerisinde tutmaktayiz. Ayni zamanda tasima amacli yine Xtender icin bu struct icerisinde "_XtenderSerialPort" serialport obj tutmaktayiz.
+	Burada onemli olan serialWrit gibi methodlara tasima yaparken bool olarak hangi porta yazdirilacagi rahatlikla tasinabilmekte fakat receive yapilirken bunun nasil belirlencegine su an pek emin degilim .....
+	Ancak, dataReceive icin her birinin kendi fonksiyonu/methodu bulunmasi sebebi ile muhtemelen boyle bir sikintimiz olmayacak, greksiz olduguna kanaat getirilirse Struct icerisinden kaldirilacaktir...
+
+    Yazilimda SerialWrite ve SerialRead kismlarinda StandartStruct icerisinde bulunan StandartSerialObj kullanilmaktadr su anda.
+	Boylece Port ismi yazilmadan tumu icin buffer olarak bu yapi ile bilgiler ve gelen-gidecek veriler tasinabilmektedir. 
+
+	Xtender da read yapilacak registerlari el ile girip upuzun bir yazilim yerine bunlari excell den cekip otomatik okutup sorgulatmayi deneyecegim..
+	Bu amac dogrultusunda excell kullanimi amaci ile bir Class hazirlamaktayiz... 
+
+V2.5'dn devam ediyoruz (Aug09).. Oncelikle incelemeler yapalim nerede kalmistik. Bir sey yapmadık (Aug20'den devam edıyoruz)
+Bu surumde ExcelUsage.cs  CLASS'ini hallettik. Bu asamaya kadar Ammonit-DataBaseSQL-ExcelUsage ve KISMI olarak LOGGING kismina bir seyler yazdik. 
+Sabahtan (Aug21) SerialCOMM ve Logging CLASS'larini beraberce halledelim...
