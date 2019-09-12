@@ -393,7 +393,7 @@ namespace SmartHomeFrameworkV2._1
         //*************************************************************************************
 
         // Now, write the Xtender read value to DataBase
-        // public void Xtender(string date, int command, float data)
+        // With this purpose, we use cming data (Datareceive Handle fn)
         public void Xtender_AddTo_DataBase(byte[] XtenderReceivedFrame)
         {
             List<float> XtenderDataRenderedOutput= new List<float>();
@@ -407,9 +407,10 @@ namespace SmartHomeFrameworkV2._1
         // xtender Read Preparing and sending over serial port
         public void XtenderSendReadData(UInt16 xRegAddr, ref SerialCOMM.StandardSerialComStruct sStandartStruct, ref SerialPort _xSerial)
         {
-            sStandartStruct.StructXtender.DataFrameWrite = XtenderReadFrameCreate(xRegAddr);
+            sStandartStruct.StructXtender.DataFrameWrite = XtenderReadFrameCreate(xRegAddr).ToArray(); // convert List to Array (byte[] array)
             sStandartStruct.StructGeneralComPort = sStandartStruct.StructXtender; // carry all info to standarstruct buffer
-            serialComm4Xtender.SerialWrite(ref sStandartStruct, ref _xSerial); // we write like this 
+            sStandartStruct._SerialPortGeneralObj = _xSerial; // move info to StndartSerialObj
+            serialComm4Xtender.SerialWrite(ref sStandartStruct); // we write like this 
             
         }
         //*************************************************************************************

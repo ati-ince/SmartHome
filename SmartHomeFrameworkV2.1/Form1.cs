@@ -45,10 +45,7 @@ namespace SmartHomeFrameworkV2._1
         /// GLOBAL Struct
         /// </summary>
         SerialCOMM.StandardSerialComStruct StandardSerialComStruct = new SerialCOMM.StandardSerialComStruct();
-        //
-        SerialCOMM.ComPortStruct XtenderStruct = new SerialCOMM.ComPortStruct(); // we are using and that is very usefull for app
-        //
-        Xtender.XtenderInfo xtender_info = new Xtender.XtenderInfo();
+        // we define main struct to use in any situations......
 
         /// <summary>
         /// GLOBAL VARIATIONS
@@ -83,7 +80,7 @@ namespace SmartHomeFrameworkV2._1
             int Result_Xtender;
         // (#sil)   StandardSerialComStruct.StructXtender.DataFrameRead = new byte[_XtenderSerial.BytesToRead]; // Define Struct element size for read the serial data
             
-            Result_Xtender = SerialCOMM.SerialRead(ref XtenderStruct, ref _XtenderSerial);
+            Result_Xtender = SerialCOMM.SerialRead(ref StandardSerialComStruct);
 
             // throw new NotImplementedException(); // this is new version
             this.Invoke(new EventHandler(_Xtender_DisplayText)); // old version and worked before
@@ -91,7 +88,7 @@ namespace SmartHomeFrameworkV2._1
 
         private void _Xtender_DisplayText(object sender, EventArgs e)
         {
-            List<byte> XtenderReceivedFrame = SerialCOMM.SerialDataTidyUp(ref StandardSerialComStruct); // data clean up is necassary
+            byte[] XtenderReceivedFrame = SerialCOMM.SerialDataTidyUp(ref StandardSerialComStruct); // data clean up is necassary
             // do what necassarly will ........
             // we get the frame (raw) from Xtender and Write to DataBase now ..................
             //public List<float> XtenderDataRendering(byte[] XtenderReceivedFrame)
@@ -118,6 +115,10 @@ namespace SmartHomeFrameworkV2._1
             // fill the XtenderExcell
             Xtender.FillTheExcel(DataGridViewXtenderExcel); // fill the excell in the Xtender Class;
 
+            // all serial obj is passive now.... We use into Serial for Read and Write these.....
+            StandardSerialComStruct.IsModBus4NoksWrite = false;
+            StandardSerialComStruct.IsRemoteCOMMWrite = false;
+            StandardSerialComStruct.IsXtenderWrite = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)//Bu program kapanirken eğer açık kalmışsa portu kapatıyor, baya guzel bir ozellik
@@ -140,9 +141,6 @@ namespace SmartHomeFrameworkV2._1
             Connect_Xtender.Enabled = false;
             Disconnect_Xtender.Enabled = true;   
             ///////////////////
-            xtender_info.seraillls = _XtenderSerial; 
-            //
-            TextBoxTest.Text = xtender_info.seraillls.PortName;
 
             
         }

@@ -20,20 +20,28 @@ namespace SmartHomeFrameworkV2._1
         public struct StandardSerialComStruct
         {
             public string[] _GetPortNames; // get port name from Windows
+            /////////////
+            public SerialPort _SerialPortGeneralObj; // may be we use
             //
-            public SerialPort SerialPortGeneralObj;
+            public SerialPort _XtenderSerialPort;
+            public SerialPort _ModBus4NoksSerialPort;
+            public SerialPort _RemoteCOMMSerialPort;
 
-            // Collect All SerialComm devices Struct
-            public ComPortStruct StructGeneralComPort;
+            ///////////// Collect All SerialComm devices Struct
+            public ComPortStruct StructGeneralComPort; // may be we use
             //
             public ComPortStruct StructXtender;
             public ComPortStruct StructModBus4Noks;
             public ComPortStruct StructRemoteCOMM;
-            
-            // which port active now? (we can fill which is active right time !!!)
-            public bool IsXtenderUsing ;
-            public bool IsModBus4NoksUsing ;
-            public bool IsRemoteCOMMIsUsing ;
+
+            ///////////// in which port active now? (we can fill which is active right time !!!)
+            public bool IsXtenderWrite ; // if we wanna write using this port .....
+            public bool IsModBus4NoksWrite ;
+            public bool IsRemoteCOMMWrite ;
+            //
+            public bool IsXtenderReceive; // if we wanna receive data from this port ....
+            public bool IsModBus4NoksReceive;
+            public bool IsRemoteCOMMReceive;
         }
         /******************************************************************************************************/
 
@@ -47,8 +55,8 @@ namespace SmartHomeFrameworkV2._1
             public int ReadTimeout;
             public int WriteTimeout;
             //
-            public List<byte> DataFrameRead; // will use all reading data inside
-            public List<byte> DataFrameWrite; // will use all writing data inside
+            public byte[] DataFrameRead; // will use all reading data inside
+            public byte[] DataFrameWrite; // will use all writing data inside
             //
             public string[] SendingTimeFrames; // serialPort Sending Local time collector
             public string[] ReceivingTimeFrames; // serialPort Receiving Local Time Collector
@@ -70,36 +78,28 @@ namespace SmartHomeFrameworkV2._1
         }
         /******************************************************************************************************/
 
-
         ///// ComBox GetSelectedComPortNames ////////////////////
-        public string GetSelectedPortNamesFromComboBox(ref StandardSerialComStruct StandartStruct, System.Windows.Forms.ComboBox comboBox)
+        public string GetSelectedPortNamesFromComboBox(ref StandardSerialComStruct StandartStruct_get, System.Windows.Forms.ComboBox comboBox)
         {
             SByte i_ComPorts = Convert.ToSByte( comboBox.SelectedIndex.ToString());
             if (i_ComPorts == (-1)) { i_ComPorts++; }
-            string PortName = StandartStruct._GetPortNames[i_ComPorts]; // detect which is selected
+            string PortName = StandartStruct_get._GetPortNames[i_ComPorts]; // detect which is selected
           
           return PortName;
         }
         /******************************************************************************************************/
 
         // public void SerialOpen(ref StandardSerialComStruct StandartStruct, ref SerialPort __SerialPortUse)
-        public void SerialOpen(ref SerialPort __SerialPortUse)
+        public void SerialOpen(ref SerialPort __SerialPort_open)
          {
 
-            //__SerialPortUse.PortName = StandartStruct.StructGeneralComPort.PortName; ; // string
-            //__SerialPortUse.BaudRate = StandartStruct.StructGeneralComPort.BaudRate;//  int
-            //__SerialPortUse.DataBits = StandartStruct.StructGeneralComPort.DataBits;//int
-            //__SerialPortUse.StopBits = StandartStruct.StructGeneralComPort.StopBits; // System.IO.Ports.StopBits
-            //__SerialPortUse.Parity = StandartStruct.StructGeneralComPort.Parity;  // System.IO.Ports.Parity
-            //__SerialPortUse.ReadTimeout = StandartStruct.StructGeneralComPort.ReadTimeout; // int
-            //__SerialPortUse.WriteTimeout = StandartStruct.StructGeneralComPort.WriteTimeout; // int
             try
             {
-                if (__SerialPortUse.IsOpen)
+                if (__SerialPort_open.IsOpen)
                 {
-                    __SerialPortUse.Close();
+                    __SerialPort_open.Close();
                 }
-                __SerialPortUse.Open();
+                __SerialPort_open.Open();
             }
             catch (Exception exc)
             {
@@ -111,15 +111,15 @@ namespace SmartHomeFrameworkV2._1
         }
         /******************************************************************************************************/
 
-        public void SerialClose(ref SerialPort __SerialPortUse) // This value comes from Form opening time // This value comes from Form opening time
+        public void SerialClose(ref SerialPort __SerialPort_close) 
         {                  
             try
             {
-                if (!__SerialPortUse.IsOpen)
+                if (!__SerialPort_close.IsOpen)
                 {
-                    __SerialPortUse.Open();
+                    __SerialPort_close.Open();
                 }
-                __SerialPortUse.Close();
+                __SerialPort_close.Close();
 
 
             }
@@ -133,26 +133,39 @@ namespace SmartHomeFrameworkV2._1
         }
         /******************************************************************************************************/
 
-        public void SerialWrite(ref SerialCOMM.StandardSerialComStruct standartSerialPortStruct, ref SerialPort __SerialPortUse)
+        public void SerialWrite(ref SerialCOMM.StandardSerialComStruct sStandardStr_SerWr)
         {
-            __SerialPortUse.Open(); // may be look closed, you never know !!!
-            __SerialPortUse.Write(standartSerialPortStruct.StructGeneralComPort.DataFrameWrite.ToArray(), (int)0, (int)standartSerialPortStruct.StructGeneralComPort.DataFrameWrite.Count());
+            sStandardStr_SerWr._SerialPortGeneralObj.Open();// may be look closed, you never know !!!
+            sStandardStr_SerWr._SerialPortGeneralObj.Write(sStandardStr_SerWr.StructGeneralComPort.DataFrameWrite.ToArray(), (int)0, (int)sStandardStr_SerWr.StructGeneralComPort.DataFrameWrite.Count());  
+            ////////////////
+            //if (sStandardStr_SerWr.IsXtenderWrite == true)
+            //{
+            //    sStandardStr_SerWr._XtenderSerialPort.Open();
+            //}
+            //if (sStandardStr_SerWr.IsModBus4NoksWrite == true)
+            //{
+            //    sStandardStr_SerWr._ModBus4NoksSerialPort.Open();
+            //}
+            //if (sStandardStr_SerWr.IsRemoteCOMMWrite == true)
+            //{
+            //    sStandardStr_SerWr._RemoteCOMMSerialPort.Open();
+            //}
         }
         /******************************************************************************************************/
 
-        public int SerialRead(ref SerialCOMM.ComPortStruct comportstruct_serialOpenClose, ref SerialPort __SerialPortUse)
+        public int SerialRead(ref SerialCOMM.StandardSerialComStruct sStandardStr_SerRead)
         {
             int readRespond;
-            __SerialPortUse.Open(); // may be look closed, you never know !!!
-            readRespond = __SerialPortUse.Read(comportstruct_serialOpenClose.DataFrameRead.ToArray(), (int)0, __SerialPortUse.BytesToRead );
+            sStandardStr_SerRead._SerialPortGeneralObj.Open();// may be look closed, you never know !!!
+            readRespond = sStandardStr_SerRead._SerialPortGeneralObj.Read(sStandardStr_SerRead.StructGeneralComPort.DataFrameRead.ToArray(), (int)0, sStandardStr_SerRead._SerialPortGeneralObj.BytesToRead);
         return readRespond;
         }
         /******************************************************************************************************/
 
         // Coolect all part of serial comm data and tidy up and do compact 
-        public List<byte> SerialDataTidyUp(ref SerialCOMM.StandardSerialComStruct sStandarStr)
+        public byte[] SerialDataTidyUp(ref SerialCOMM.StandardSerialComStruct sStandarStr)
         {
-            List<byte> SerialRegularData;
+            byte[] SerialRegularData;
             // 
             SerialRegularData = sStandarStr.StructGeneralComPort.DataFrameRead; // Do somthings...........................
             //

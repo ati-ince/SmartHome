@@ -1,0 +1,15 @@
+﻿Excel kullanilarak yapilacak isler:
+
+- Yazilimin calistigi klasorun uzantisi alinarak Excel dosyasinin adresini otomatik ckilmesi 
+
+- Onceden olusturulan excel dosyasina datalarin yazilmasi.
+
+- Herhangi bir zamanda excel dosyasi create ederek data yazilmasi.
+
+- Excel den data cekilmesi ve herhangi bir amac ile istenilen noktaya cekilmesi.
+
+- Excel den data cekildikten sonrasinda herhangi bir data iceriisnde  aranmasi vb gibi durumlarda kullanilmak uzere
+
+gerekli alt fonksyonlari barindirmasi lazimdir.
+................................................................................................
+

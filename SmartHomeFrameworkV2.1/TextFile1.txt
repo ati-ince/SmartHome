@@ -22,3 +22,13 @@ V2.3 de sonunda basardim :))))) xtender_info ile Form icerisinde test ettigimde 
 	Bundan sonra SerialCOMM icerisindeki StandarSerialStruct icerisine public SerialPort tanimlamasi yaparak tum classlar arasinda sadece tek "ref" struct gezdirecegiz ve boylece kalabalik ortadan kalkacak.
 	
 V2.4 den devam ediyoruz.... Hangi port ve cihaz kullandigimizi galiba StandarStruct daki "bool" degerleri ile anlayabilecez...  
+
+NOT: SerialCOMM icerisindeki "StandardSerialComStruct" bizim en onemli struct ifademiz olmakta. Burada seri porta ait verileri ornegin Xtender icin "StructXtender" sub-struct icerisinde tutmaktayiz. Ayni zamanda tasima amacli yine Xtender icin bu struct icerisinde "_XtenderSerialPort" serialport obj tutmaktayiz.
+	Burada onemli olan serialWrit gibi methodlara tasima yaparken bool olarak hangi porta yazdirilacagi rahatlikla tasinabilmekte fakat receive yapilirken bunun nasil belirlencegine su an pek emin degilim .....
+	Ancak, dataReceive icin her birinin kendi fonksiyonu/methodu bulunmasi sebebi ile muhtemelen boyle bir sikintimiz olmayacak, greksiz olduguna kanaat getirilirse Struct icerisinden kaldirilacaktir...
+
+    Yazilimda SerialWrite ve SerialRead kismlarinda StandartStruct icerisinde bulunan StandartSerialObj kullanilmaktadr su anda.
+	Boylece Port ismi yazilmadan tumu icin buffer olarak bu yapi ile bilgiler ve gelen-gidecek veriler tasinabilmektedir. 
+
+	Xtender da read yapilacak registerlari el ile girip upuzun bir yazilim yerine bunlari excell den cekip otomatik okutup sorgulatmayi deneyecegim..
+	Bu amac dogrultusunda excell kullanimi amaci ile bir Class hazirlamaktayiz... 

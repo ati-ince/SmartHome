@@ -3,7 +3,7 @@
   <Class Name="SmartHomeFrameworkV2._1.Algorithms" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAgAAQAIAAAAAAAACAACgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAAAgAgAAQAIAAAAAAAACAAGgAAAAA=</HashCode>
       <FileName>Algorithms.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,8 +21,8 @@
       <FileName>DataBaseSQL.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SmartHomeFrameworkV2._1.Form1">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+  <Class Name="SmartHomeFrameworkV2._1.Form1" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIDBECAgIGACCBQyAADQAAIKACDQRAgASAYIAQgECGg=</HashCode>
       <FileName>Form1.cs</FileName>
@@ -45,7 +45,7 @@
   <Class Name="SmartHomeFrameworkV2._1.Xtender" Collapsed="true">
     <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAABAIIAAAIAAAAAJAAEAAAEAAAAAAEAAAAACkAA=</HashCode>
+      <HashCode>AAIAAABAIIIIAIAAAAAJAAEAAAEAAAAAAEAAAAACEAA=</HashCode>
       <FileName>Xtender.cs</FileName>
     </TypeIdentifier>
   </Class>
