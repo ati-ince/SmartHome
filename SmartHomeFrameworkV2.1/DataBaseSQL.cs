@@ -17,11 +17,11 @@ namespace SmartHomeFrameworkV2._1
         public string ConnectionInformation()
         {
             // Disaridan nasil yazilacagi bilgisi ogrenilebilsin
-            //string connection = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
+            string connection = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
             return "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
         }
         //
-        static string Connect = "";// simdilik burasi bos deger ama disaridan bilgi alindiktan sonra ici doldurulacak
+        static string Connect = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";// simdilik burasi bos deger ama disaridan bilgi alindiktan sonra ici doldurulacak
         /// </summary>
         public void ConnectionInitialize(string DataSource)
         {

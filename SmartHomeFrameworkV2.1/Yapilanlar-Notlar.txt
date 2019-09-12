@@ -50,3 +50,8 @@ Xtender:Serial (+ DataBaseSQL CLASS eklendi )
 Buradan sonra SerialCOMM duzenlenmis ve Xtender halledilmektedir. DataBaseSQL kisminda Logging formati olmasi gereken ytapiya cekilmis ve duzenlenmistir. 
 Ammonit icerisinde DataBase inherince yapilmistir ve duzenlenmistir. 
 Yanliz yazilim calistirildiginda Ammonit Database'ye yazdiracagi zaman bir hata aldim sebebini ogrenip xtender icinde bir duzenleme yapacagiz...
+
+(October09 Devam) Burada yaptığım kontrollerde SQL bağlantısında (Server Explorer) bir sorun gözükmemekte. Sorun DataBaseSQL.CS dosyasında olabilir. 
+V2.5.4 çalışan bir sürümdür, DB için test edilen Oguz-Prj3 - v3 sürümünden farklı olmayıp bağlantı kurduktan sonra DB üzerine kayıt yapabilmekte. Log kayıtları da düzgün ve ayrıntılı şekilde tutulmaktadır.
+Buna şimdi Ana algoritma için Xtender eklemesi yapıp DB'ye kayıt yapmayı deneyeceğiz.
+

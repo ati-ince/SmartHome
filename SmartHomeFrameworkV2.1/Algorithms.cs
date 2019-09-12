@@ -67,7 +67,7 @@ namespace SmartHomeFrameworkV2._1
 
             /******///(1)Ammonit 
             // Call All Ammonit Sensor Data and Write to dataBase
-            Ammonit4Algorithm.Ammonit_AddAllTo_DataBase(Ammonit4Algorithm.GetAmmonitData("169.254.36.137", 40500, 16));
+            Ammonit4Algorithm.Ammonit_AddAllTo_DataBase(Ammonit4Algorithm.GetAmmonitData("169.254.164.31", 40500, 16));
 
             /******///(2)Xtender 
             // Oncelikle READ yapilacak Xtender Listesini cekelim
