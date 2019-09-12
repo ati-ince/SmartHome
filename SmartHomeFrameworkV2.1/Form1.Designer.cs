@@ -56,10 +56,9 @@
             // Connect_RemoteCOMM
             // 
             this.Connect_RemoteCOMM.BackColor = System.Drawing.Color.SeaGreen;
-            this.Connect_RemoteCOMM.Location = new System.Drawing.Point(14, 228);
-            this.Connect_RemoteCOMM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Connect_RemoteCOMM.Location = new System.Drawing.Point(9, 148);
             this.Connect_RemoteCOMM.Name = "Connect_RemoteCOMM";
-            this.Connect_RemoteCOMM.Size = new System.Drawing.Size(112, 35);
+            this.Connect_RemoteCOMM.Size = new System.Drawing.Size(75, 23);
             this.Connect_RemoteCOMM.TabIndex = 45;
             this.Connect_RemoteCOMM.Text = "Connect";
             this.Connect_RemoteCOMM.UseVisualStyleBackColor = false;
@@ -68,20 +67,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(148, 191);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(99, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 47;
             this.label3.Text = "RemoteCOMM";
             // 
             // Disconnect_RemoteCOMM
             // 
             this.Disconnect_RemoteCOMM.BackColor = System.Drawing.Color.Red;
-            this.Disconnect_RemoteCOMM.Location = new System.Drawing.Point(153, 228);
-            this.Disconnect_RemoteCOMM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Disconnect_RemoteCOMM.Location = new System.Drawing.Point(102, 148);
             this.Disconnect_RemoteCOMM.Name = "Disconnect_RemoteCOMM";
-            this.Disconnect_RemoteCOMM.Size = new System.Drawing.Size(112, 35);
+            this.Disconnect_RemoteCOMM.Size = new System.Drawing.Size(75, 23);
             this.Disconnect_RemoteCOMM.TabIndex = 46;
             this.Disconnect_RemoteCOMM.Text = "Disconnect";
             this.Disconnect_RemoteCOMM.UseVisualStyleBackColor = false;
@@ -91,19 +88,17 @@
             // 
             this.ComboBox__RemoteCOMM.BackColor = System.Drawing.Color.Ivory;
             this.ComboBox__RemoteCOMM.FormattingEnabled = true;
-            this.ComboBox__RemoteCOMM.Location = new System.Drawing.Point(14, 188);
-            this.ComboBox__RemoteCOMM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ComboBox__RemoteCOMM.Location = new System.Drawing.Point(9, 122);
             this.ComboBox__RemoteCOMM.Name = "ComboBox__RemoteCOMM";
-            this.ComboBox__RemoteCOMM.Size = new System.Drawing.Size(124, 28);
+            this.ComboBox__RemoteCOMM.Size = new System.Drawing.Size(84, 21);
             this.ComboBox__RemoteCOMM.TabIndex = 44;
             // 
             // Connect_ModBus4Noks
             // 
             this.Connect_ModBus4Noks.BackColor = System.Drawing.Color.SeaGreen;
-            this.Connect_ModBus4Noks.Location = new System.Drawing.Point(14, 142);
-            this.Connect_ModBus4Noks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Connect_ModBus4Noks.Location = new System.Drawing.Point(9, 92);
             this.Connect_ModBus4Noks.Name = "Connect_ModBus4Noks";
-            this.Connect_ModBus4Noks.Size = new System.Drawing.Size(112, 35);
+            this.Connect_ModBus4Noks.Size = new System.Drawing.Size(75, 23);
             this.Connect_ModBus4Noks.TabIndex = 41;
             this.Connect_ModBus4Noks.Text = "Connect";
             this.Connect_ModBus4Noks.UseVisualStyleBackColor = false;
@@ -112,20 +107,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(148, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(99, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 43;
             this.label2.Text = "4Noks";
             // 
             // Disconnect_ModBus4Noks
             // 
             this.Disconnect_ModBus4Noks.BackColor = System.Drawing.Color.Red;
-            this.Disconnect_ModBus4Noks.Location = new System.Drawing.Point(153, 142);
-            this.Disconnect_ModBus4Noks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Disconnect_ModBus4Noks.Location = new System.Drawing.Point(102, 92);
             this.Disconnect_ModBus4Noks.Name = "Disconnect_ModBus4Noks";
-            this.Disconnect_ModBus4Noks.Size = new System.Drawing.Size(112, 35);
+            this.Disconnect_ModBus4Noks.Size = new System.Drawing.Size(75, 23);
             this.Disconnect_ModBus4Noks.TabIndex = 42;
             this.Disconnect_ModBus4Noks.Text = "Disconnect";
             this.Disconnect_ModBus4Noks.UseVisualStyleBackColor = false;
@@ -135,19 +128,17 @@
             // 
             this.ComboBox_Modbus4Noks.BackColor = System.Drawing.Color.Ivory;
             this.ComboBox_Modbus4Noks.FormattingEnabled = true;
-            this.ComboBox_Modbus4Noks.Location = new System.Drawing.Point(14, 102);
-            this.ComboBox_Modbus4Noks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ComboBox_Modbus4Noks.Location = new System.Drawing.Point(9, 66);
             this.ComboBox_Modbus4Noks.Name = "ComboBox_Modbus4Noks";
-            this.ComboBox_Modbus4Noks.Size = new System.Drawing.Size(124, 28);
+            this.ComboBox_Modbus4Noks.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Modbus4Noks.TabIndex = 40;
             // 
             // Connect_Xtender
             // 
             this.Connect_Xtender.BackColor = System.Drawing.Color.SeaGreen;
-            this.Connect_Xtender.Location = new System.Drawing.Point(14, 55);
-            this.Connect_Xtender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Connect_Xtender.Location = new System.Drawing.Point(9, 36);
             this.Connect_Xtender.Name = "Connect_Xtender";
-            this.Connect_Xtender.Size = new System.Drawing.Size(112, 35);
+            this.Connect_Xtender.Size = new System.Drawing.Size(75, 23);
             this.Connect_Xtender.TabIndex = 37;
             this.Connect_Xtender.Text = "Connect";
             this.Connect_Xtender.UseVisualStyleBackColor = false;
@@ -156,20 +147,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(99, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 39;
             this.label1.Text = "Xtender";
             // 
             // Disconnect_Xtender
             // 
             this.Disconnect_Xtender.BackColor = System.Drawing.Color.Red;
-            this.Disconnect_Xtender.Location = new System.Drawing.Point(153, 55);
-            this.Disconnect_Xtender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Disconnect_Xtender.Location = new System.Drawing.Point(102, 36);
             this.Disconnect_Xtender.Name = "Disconnect_Xtender";
-            this.Disconnect_Xtender.Size = new System.Drawing.Size(112, 35);
+            this.Disconnect_Xtender.Size = new System.Drawing.Size(75, 23);
             this.Disconnect_Xtender.TabIndex = 38;
             this.Disconnect_Xtender.Text = "Disconnect";
             this.Disconnect_Xtender.UseVisualStyleBackColor = false;
@@ -179,19 +168,17 @@
             // 
             this.ComboBox_Xtender.BackColor = System.Drawing.Color.Ivory;
             this.ComboBox_Xtender.FormattingEnabled = true;
-            this.ComboBox_Xtender.Location = new System.Drawing.Point(14, 14);
-            this.ComboBox_Xtender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ComboBox_Xtender.Location = new System.Drawing.Point(9, 9);
             this.ComboBox_Xtender.Name = "ComboBox_Xtender";
-            this.ComboBox_Xtender.Size = new System.Drawing.Size(124, 28);
+            this.ComboBox_Xtender.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Xtender.TabIndex = 36;
             // 
             // Connect_Ammonit
             // 
             this.Connect_Ammonit.BackColor = System.Drawing.Color.SeaGreen;
-            this.Connect_Ammonit.Location = new System.Drawing.Point(14, 311);
-            this.Connect_Ammonit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Connect_Ammonit.Location = new System.Drawing.Point(9, 202);
             this.Connect_Ammonit.Name = "Connect_Ammonit";
-            this.Connect_Ammonit.Size = new System.Drawing.Size(112, 35);
+            this.Connect_Ammonit.Size = new System.Drawing.Size(75, 23);
             this.Connect_Ammonit.TabIndex = 48;
             this.Connect_Ammonit.Text = "Connect";
             this.Connect_Ammonit.UseVisualStyleBackColor = false;
@@ -200,20 +187,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 277);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(66, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 50;
             this.label4.Text = "Ammonit";
             // 
             // Disconnect_Ammonit
             // 
             this.Disconnect_Ammonit.BackColor = System.Drawing.Color.Red;
-            this.Disconnect_Ammonit.Location = new System.Drawing.Point(153, 311);
-            this.Disconnect_Ammonit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Disconnect_Ammonit.Location = new System.Drawing.Point(102, 202);
             this.Disconnect_Ammonit.Name = "Disconnect_Ammonit";
-            this.Disconnect_Ammonit.Size = new System.Drawing.Size(112, 35);
+            this.Disconnect_Ammonit.Size = new System.Drawing.Size(75, 23);
             this.Disconnect_Ammonit.TabIndex = 49;
             this.Disconnect_Ammonit.Text = "Disconnect";
             this.Disconnect_Ammonit.UseVisualStyleBackColor = false;
@@ -222,10 +207,9 @@
             // Start_Algorithm
             // 
             this.Start_Algorithm.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.Start_Algorithm.Location = new System.Drawing.Point(14, 392);
-            this.Start_Algorithm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Start_Algorithm.Location = new System.Drawing.Point(9, 255);
             this.Start_Algorithm.Name = "Start_Algorithm";
-            this.Start_Algorithm.Size = new System.Drawing.Size(112, 35);
+            this.Start_Algorithm.Size = new System.Drawing.Size(75, 23);
             this.Start_Algorithm.TabIndex = 51;
             this.Start_Algorithm.Text = "Start";
             this.Start_Algorithm.UseVisualStyleBackColor = false;
@@ -234,20 +218,18 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(99, 358);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(66, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 53;
             this.label5.Text = "Algorithm";
             // 
             // Stop_Algorithm
             // 
             this.Stop_Algorithm.BackColor = System.Drawing.Color.LightPink;
-            this.Stop_Algorithm.Location = new System.Drawing.Point(153, 392);
-            this.Stop_Algorithm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Stop_Algorithm.Location = new System.Drawing.Point(102, 255);
             this.Stop_Algorithm.Name = "Stop_Algorithm";
-            this.Stop_Algorithm.Size = new System.Drawing.Size(112, 35);
+            this.Stop_Algorithm.Size = new System.Drawing.Size(75, 23);
             this.Stop_Algorithm.TabIndex = 52;
             this.Stop_Algorithm.Text = "Stop";
             this.Stop_Algorithm.UseVisualStyleBackColor = false;
@@ -255,31 +237,29 @@
             // 
             // TextBoxTest
             // 
-            this.TextBoxTest.Location = new System.Drawing.Point(305, 59);
-            this.TextBoxTest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TextBoxTest.Location = new System.Drawing.Point(213, 38);
             this.TextBoxTest.Name = "TextBoxTest";
-            this.TextBoxTest.Size = new System.Drawing.Size(148, 26);
+            this.TextBoxTest.Size = new System.Drawing.Size(100, 20);
             this.TextBoxTest.TabIndex = 54;
             // 
             // TimerAlgorithm
             // 
-            this.TimerAlgorithm.Interval = 5000;
+            this.TimerAlgorithm.Interval = 1000;
             this.TimerAlgorithm.Tick += new System.EventHandler(this.TimerAlgorithm_Tick);
             // 
             // DataGridViewXtenderExcel
             // 
             this.DataGridViewXtenderExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewXtenderExcel.Location = new System.Drawing.Point(14, 457);
-            this.DataGridViewXtenderExcel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataGridViewXtenderExcel.Location = new System.Drawing.Point(9, 297);
             this.DataGridViewXtenderExcel.Name = "DataGridViewXtenderExcel";
-            this.DataGridViewXtenderExcel.Size = new System.Drawing.Size(1238, 642);
+            this.DataGridViewXtenderExcel.Size = new System.Drawing.Size(825, 417);
             this.DataGridViewXtenderExcel.TabIndex = 55;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 447);
+            this.ClientSize = new System.Drawing.Size(379, 291);
             this.Controls.Add(this.DataGridViewXtenderExcel);
             this.Controls.Add(this.TextBoxTest);
             this.Controls.Add(this.Start_Algorithm);
@@ -300,6 +280,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Disconnect_Xtender);
             this.Controls.Add(this.ComboBox_Xtender);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "ShFramework";
             this.Load += new System.EventHandler(this.Form1_Load);

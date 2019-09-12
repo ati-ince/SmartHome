@@ -9,7 +9,7 @@ using System.Net.Sockets;
 
 namespace SmartHomeFrameworkV2._1
 {
-    class Ammonit
+    class Ammonit : DataBaseSQL // Burada da bunu kullanalim... Nu hali ile database kisminda zaten sorunu yoktu
     {
 
         // Burada DataBase ye eklemek icin gerekli baglantilari kurmus olduk.
@@ -18,103 +18,6 @@ namespace SmartHomeFrameworkV2._1
 
         public static string OutWorld;
         ///////////////////////////////
-
-        public string GetAmmonitData_Listbox(System.Windows.Forms.ListBox Listbox, ushort registerAddress, ushort numOfRegs)
-        {
-            byte[] bytes = new byte[1024];
-            List<byte> lByteCommand = new List<byte>();
-
-
-            //////////////////
-            // Connect to a remote device.
-            try
-            {
-
-                IPAddress ipAddress = IPAddress.Parse("169.254.36.137");
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 502);
-
-                // Create a TCP/IP  socket.
-                Socket sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-                // Connect the socket to the remote endpoint. Catch any errors.
-                try
-                {
-                    sender.Connect(remoteEP);
-
-                    //Debug.WriteLine("Socket connected to {0}",
-                    //sender.RemoteEndPoint.ToString());
-                    lByteCommand = PrepareAmmonitCommandMessage(registerAddress, numOfRegs);
-                    // Encode the data string into a byte array.
-                    byte[] msg = lByteCommand.ToArray();
-
-                    // Send the data through the socket.
-                    int bytesSent = sender.Send(msg);
-                    //Standard analog register read command is 12 bytes
-                    if (12 != bytesSent)
-                    {
-                        //Debug.WriteLine("Couldn't send modbus analog register read command successfully!");
-                    }
-                    else
-                    {
-                        // Receive the response from the remote device.
-                        int bytesRec = sender.Receive(bytes);
-                        //// geleni kopyalayalim ////
-                        //CommCome = bytes;
-                        ///////
-                        ///Response byte length is 
-                        ///9 + (4 bytes register length x register num) bytes
-                        if ((9 + numOfRegs * 4) != bytesRec)
-                        {
-                            // Debug.WriteLine("Couldn't receive modbus analog register read response successfully!");
-                        }
-                        else
-                        {
-                            string dataLine = DateTime.Now.ToLongTimeString() + "\t";
-
-                            for (int regIndex = 0; regIndex < numOfRegs; regIndex++)
-                            {
-                                if (bytes.Length >= (9 + regIndex * 4 + 4))
-                                {
-                                    float val = AmmonitBytesToFloat(bytes, 9 + regIndex * 4);
-
-                                    dataLine += val.ToString() + "\t";
-                                }
-                                else
-                                {
-                                    //Debug.WriteLine("There is a big problem dude!");
-                                }
-                            }
-                            OutWorld = dataLine;
-                            Listbox.Items.Add(dataLine);
-                            Listbox.SelectedIndex = Listbox.Items.Count - 1;
-                        }
-                    }
-                    // Release the socket.
-                    sender.Shutdown(SocketShutdown.Both);
-                    sender.Close();
-
-                }
-                catch (ArgumentNullException ane)
-                {
-                   // Debug.WriteLine("ArgumentNullException : {0}", ane.ToString());
-                }
-                catch (SocketException se)
-                {
-                    //WriteLine("SocketException : {0}", se.ToString());
-                }
-                catch (Exception e)
-                {
-                    //Debug.WriteLine("Unexpected exception : {0}", e.ToString());
-                }
-
-            }
-            catch (Exception e)
-            {
-                //Debug.WriteLine(e.ToString());
-            }
-            return OutWorld;// Burada data disariya string olarak cikartilmaktadir !!!!
-            // Mecburen static bir yere yazabilmekteyiz//
-        }
         /////
         public float AmmonitBytesToFloat(byte[] bytes, int startIndex)
         {
@@ -176,7 +79,7 @@ namespace SmartHomeFrameworkV2._1
 
             // Burada da DataBese'e ekleme yapmaktayiz.
             // GetAmmonitData ciktisi gelen uzun string kullaniliyor....
-            database.Ammonit(
+            Ammonit(
             Convert.ToDouble(Ammonit_Split_GetData(AmmonitComingString, "WindSpeed")),
             Convert.ToDouble(Ammonit_Split_GetData(AmmonitComingString, "WindDirection")),
             Convert.ToDouble(Ammonit_Split_GetData(AmmonitComingString, "Humidity")),
@@ -313,25 +216,27 @@ namespace SmartHomeFrameworkV2._1
                     // Release the socket.
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
+                    //
+                    Logging2Txt("AmmonitGettingDataFromIPAdress:", " " + IPadress);
 
                 }
                 catch (ArgumentNullException ane)
                 {
-                    //Debug.WriteLine("ArgumentNullException : {0}", ane.ToString());
+                    Logging2Txt("Ammonit:ArgumentNullException", " " + ane.ToString());
                 }
                 catch (SocketException se)
                 {
-                    //WriteLine("SocketException : {0}", se.ToString());
+                    Logging2Txt("Ammonit:SocketException", " " + se.ToString());
                 }
                 catch (Exception e)
                 {
-                    //Debug.WriteLine("Unexpected exception : {0}", e.ToString());
+                    Logging2Txt("Ammonit:UnexpectedException", " " + e.ToString());
                 }
 
             }
             catch (Exception e)
             {
-                //Debug.WriteLine(e.ToString());
+                Logging2Txt("Ammonit:SomethingExceptionalError", " " + e.ToString());
             }
             return OutWorld;// Burada data disariya string olarak cikartilmaktadir !!!!
             // Mecburen static bir yere yazabilmekteyiz//

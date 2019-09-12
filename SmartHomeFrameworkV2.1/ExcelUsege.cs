@@ -25,9 +25,9 @@ using System.Net.Sockets;
 // yeni excel dosya create edilip veri yazimi (loglama amacli ornegin, yada data toplama)
 // islerini yapacagiz !!!
 // **********************************************************//
-namespace ExcelManagement
+namespace SmartHomeFrameworkV2._1
 {
-    public class ExcelUsege
+    public class ExcelUsege : Logging
     {
         /// <summary>
         /// GLOBAL CLASS
@@ -61,7 +61,9 @@ namespace ExcelManagement
             ExcelXtederReadRegisterList(ref excelstr);
             // Fill the WRITE LIST
             ExcelXtenderWriteRegisterList(ref excelstr);
-
+            //
+            Logging2Txt("XtenderExcelCall", " ExcelKullanimaAlindi");
+            //
         }
 
         public List<int> ExcelXtederReadRegisterList(ref ExcelStruct excelstr) // if need use the return list
@@ -82,6 +84,9 @@ namespace ExcelManagement
             }
 
             excelstr.ExcelReadList = ListBuffer;// we've got the LIST
+            //
+            Logging2Txt("XtenderExcelReadRegister", ListBuffer.Count().ToString() + " ElemanDosyadanOkunmustur");
+            //
             return excelstr.ExcelReadList;
         }
         //*************************************************************************************
@@ -104,6 +109,9 @@ namespace ExcelManagement
             }
             //
             excelstr.ExcelWriteList = ListBuffer;// we've got the LIST
+            //
+            Logging2Txt("XtenderExcelWriteRegister", ListBuffer.Count().ToString() + " ElemanDosyadanOkunmustur");
+            //
             return excelstr.ExcelWriteList;
         }
 
@@ -149,7 +157,9 @@ namespace ExcelManagement
                }
 
            }
- 
+           //
+           Logging2Txt("XtenderExcelQuestioning", " " + ret[0].ToString() +"RegisterNo"+ ret[1].ToString());
+           //
             return ret;
         }
         //*************************************************************************************

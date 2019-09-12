@@ -36,4 +36,17 @@ NOT: SerialCOMM icerisindeki "StandardSerialComStruct" bizim en onemli struct if
 V2.5'dn devam ediyoruz (Aug09).. Oncelikle incelemeler yapalim nerede kalmistik. Bir sey yapmadık (Aug20'den devam edıyoruz)
 Bu surumde ExcelUsage.cs  CLASS'ini hallettik. Bu asamaya kadar Ammonit-DataBaseSQL-ExcelUsage ve KISMI olarak LOGGING kismina bir seyler yazdik. 
 Sabahtan (Aug21) SerialCOMM ve Logging CLASS'larini beraberce halledelim... (Sbah 11.30 gibi) Logging CLASS tamamlandi. Artik bunu rahatlikla istedigimiz yerde kullanabiliriz.
-Oncelikle SerialComm ile deneyip kullanacagiz.
+Oncelikle SerialComm ile deneyip kullanacagiz. Burada Logging tekrar degistirildi.
+Yazilim CLASS:Inherance yapisina donusturuldu
+
+Bu calismada sadece Xtender kismi Ammonit DB kimina eklenmesi halledilmeye calisilmistir.
+
+EExcelUsage:Logging
+Serial:Logging
+DataBaseSQL:Logging
+Xtender:Serial (+ DataBaseSQL CLASS eklendi )   
+.....
+
+Buradan sonra SerialCOMM duzenlenmis ve Xtender halledilmektedir. DataBaseSQL kisminda Logging formati olmasi gereken ytapiya cekilmis ve duzenlenmistir. 
+Ammonit icerisinde DataBase inherince yapilmistir ve duzenlenmistir. 
+Yanliz yazilim calistirildiginda Ammonit Database'ye yazdiracagi zaman bir hata aldim sebebini ogrenip xtender icinde bir duzenleme yapacagiz...

@@ -8,26 +8,26 @@ using System.IO;
 
 namespace SmartHomeFrameworkV2._1
 {
-    public class DataBaseSQL
+    public class DataBaseSQL : Logging
     {
         /// <summary>
-        /// Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True
+        /// 
         /// </summary>
         /// <returns></returns>
         public string ConnectionInformation()
         {
             // Disaridan nasil yazilacagi bilgisi ogrenilebilsin
-            string connection = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
+            //string connection = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
             return "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";
         }
         //
-        static string Connect = "Data Source=SMARTHOME;Initial Catalog=SmartHome;Integrated Security=True";// simdilik burasi bos deger ama disaridan bilgi alindiktan sonra ici doldurulacak
+        static string Connect = "";// simdilik burasi bos deger ama disaridan bilgi alindiktan sonra ici doldurulacak
         /// </summary>
         public void ConnectionInitialize(string DataSource)
         {
             Connect = DataSource; // Boylece disaridan DataBase baglantisi kurulacak bilgi alinmis oldu. Devaminda DataBase baslatilabilir. 
         }
-
+ 
         /// <summary>
         /// Burada yazilima adresin dirasiran girilmesine imkan taniyalim, normalde yukaridaki gibi idi,
         /// </summary>
@@ -57,16 +57,15 @@ namespace SmartHomeFrameworkV2._1
                 komut.Parameters.AddWithValue("@Data", data);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
+                //
+                Logging2Txt("Database_Xtender", " Register:"+command.ToString()+" WriteToDataBase");
 
             }
             catch (Exception hata)
             {
                 using (StreamWriter w = File.AppendText("log.txt"))
                 {
-
-                    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + "   " + zmn + "    Database_Xtender     " + hata.Message);
+                    Logging2Txt("Database_Xtender", " " + hata.Message);
                 }
 
             }
@@ -97,16 +96,14 @@ namespace SmartHomeFrameworkV2._1
                 komut.Parameters.AddWithValue("@Data", data);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
-
+                //
+                Logging2Txt("Database_4noks", " Adress:" + adress.ToString() +" Command:" + command.ToString() +" WriteToDataBase");
             }
             catch (Exception hata)
             {
                 using (StreamWriter w = File.AppendText("log.txt"))
                 {
-
-                    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + " " + zmn +" "+ "Database_4noks" +" "+ hata.Message);
+                    Logging2Txt("Database_4noks", " " + hata.Message);
                 }
 
             }
@@ -114,7 +111,7 @@ namespace SmartHomeFrameworkV2._1
 
 
         }
-        public void Ammonit(double wind_speed, double Wind_Direction, double Humidity, double Temperature, double Air_Pressure, double Irradiance)
+        public void Ammonit( double wind_speed, double Wind_Direction, double Humidity, double Temperature, double Air_Pressure, double Irradiance)
         {
 
             try
@@ -139,16 +136,15 @@ namespace SmartHomeFrameworkV2._1
                 komut.Parameters.AddWithValue("@Irradiance", Irradiance);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
+                //
+                Logging2Txt("Database_Ammonit", " AllAmmonitParameters"+" WriteToDataBase");
 
             }
             catch (Exception hata)
             {
                 using (StreamWriter w = File.AppendText("log.txt"))
                 {
-
-                    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + "   " + zmn + "    Database_Ammonit     " + hata.Message);
+                    Logging2Txt("Database_Ammonit", " " + hata.Message);
                 }
 
             }
@@ -156,45 +152,7 @@ namespace SmartHomeFrameworkV2._1
 
 
         }
-        public void Xtennder(string date, int command, float data)
-        {
-
-            try
-            {
-                if (baglanti.State == ConnectionState.Closed)
-                    baglanti.Open();
-
-
-                String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-
-
-                string kayit = "insert into Xtender(Date_Sql,Date_Read,Command,Data) values (@Date_Sql,@Date_Read,@Command,@Data)";
-                SqlCommand komut = new SqlCommand(kayit, baglanti);
-
-                komut.Parameters.AddWithValue("@Date_Sql", trh + " " + zmn);
-                komut.Parameters.AddWithValue("@Date_Read", date);
-                komut.Parameters.AddWithValue("@Command", command);
-                komut.Parameters.AddWithValue("@Data", data);
-                komut.ExecuteNonQuery();
-                baglanti.Close();
-
-            }
-            catch (Exception hata)
-            {
-                using (StreamWriter w = File.AppendText("log.txt"))
-                {
-
-                    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + "   " + zmn + "    Database_Xtender     " + hata.Message);
-                }
-
-            }
-
-
-
-        }
+        
         public void Solar(string date, int command, float data)
         {
 
@@ -217,22 +175,20 @@ namespace SmartHomeFrameworkV2._1
                 komut.Parameters.AddWithValue("@Data", data);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
-
+                //
+                Logging2Txt("Database_Solar", " SolarCommand:" + command.ToString() + " WriteToDataBase");
             }
             catch (Exception hata)
             {
                 using (StreamWriter w = File.AppendText("log.txt"))
                 {
-
-                    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-                    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                    w.WriteLine(trh + "   " + zmn + "    Database_Solar     " + hata.Message);
+                    Logging2Txt("Database_Solar", " " + hata.Message);
                 }
 
             }
 
-
-
         }
     }
+
 }
+

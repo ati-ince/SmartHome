@@ -1,0 +1,18 @@
+﻿=== CLASS's ===
+SerialCOMM.ComPortStruct _xtenderStruct = new SerialCOMM.ComPortStruct(); 
+SerialPort _xtenderSerial = new SerialPort();
+Xtender XtenderClass= new Xtender();
+SerialCOMM _serialcomm = new SerialCOMM();
+Logging _log = new Logging();
+
+
+=== LOAD ===
+_log.LoggingStart();
+_xtenderStruct._GetPortNames = SerialPort.GetPortNames();
+_serialcomm.ComboBoxComPortNameFilling(_xtenderStruct._GetPortNames, comboBox1);
+
+
+== button1_Click ==
+ XtenderClass.XtenderComPortSettings(ref _xtenderStruct, ref _xtenderSerial, comboBox1);
+ _serialcomm.ComPortSettings(ref _xtenderStruct);
+ _serialcomm.SerialOpen(ref _xtenderStruct);

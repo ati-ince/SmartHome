@@ -30,28 +30,20 @@ namespace SmartHomeFrameworkV2._1
         private static Form1 instance;
 
         /// <summary>
-        /// GLOBAL CLASSES
-        /// </summary>
-        SerialPort _XtenderSerial = new SerialPort(); // define the Xtender Serial Port Object
-        //
-        Ammonit Ammonit = new Ammonit(); // define Ammonit class to use
-        DataBaseSQL DataBaseSQL = new DataBaseSQL(); // define database class to use
-        Algorithms Algorithms = new Algorithms(); // Algorithms and Variables all are inside
-        SerialCOMM SerialCOMM = new SerialCOMM(); // define SerialCOMM class to use
-        Xtender Xtender = new Xtender();
-
-
-        /// <summary>
-        /// GLOBAL Struct
-        /// </summary>
-        SerialCOMM.StandardSerialComStruct StandardSerialComStruct = new SerialCOMM.StandardSerialComStruct();
-        // we define main struct to use in any situations......
-
-        /// <summary>
-        /// GLOBAL VARIATIONS
-        /// </summary>
+        //Class's and Struct's
+        /**/
+        SerialCOMM.ComPortStruct _xtenderStruct = new SerialCOMM.ComPortStruct(); // also we have _xtenderStruct._SerialPortObj
+        SerialPort _xtenderSerial = new SerialPort();
+        Xtender XtenderClass = new Xtender();
+        ExcelUsege _exceluse = new ExcelUsege(); // excel kullanimi amaci ile
+        ExcelUsege.ExcelStruct _excelStruct = new ExcelUsege.ExcelStruct(); // excel icin structor 
+        /**/
+        SerialCOMM _serialcomm = new SerialCOMM();
+        /**/
+        Logging _log = new Logging();
+        /**/
+        Algorithms AlgorithmClass = new Algorithms();
  
-        
 
         public static Form1 Instance
         {
@@ -70,7 +62,7 @@ namespace SmartHomeFrameworkV2._1
         public Form1()
         {
             InitializeComponent();
-            _XtenderSerial.DataReceived += new SerialDataReceivedEventHandler(_XtenderSerial_DataReceived); 
+            _xtenderSerial.DataReceived += new SerialDataReceivedEventHandler(_XtenderSerial_DataReceived); 
 
         }
 
@@ -79,8 +71,8 @@ namespace SmartHomeFrameworkV2._1
         {
             int Result_Xtender;
         // (#sil)   StandardSerialComStruct.StructXtender.DataFrameRead = new byte[_XtenderSerial.BytesToRead]; // Define Struct element size for read the serial data
-            
-            Result_Xtender = SerialCOMM.SerialRead(ref StandardSerialComStruct);
+
+            Result_Xtender = _serialcomm.SerialRead(ref _xtenderStruct);
 
             // throw new NotImplementedException(); // this is new version
             this.Invoke(new EventHandler(_Xtender_DisplayText)); // old version and worked before
@@ -88,7 +80,7 @@ namespace SmartHomeFrameworkV2._1
 
         private void _Xtender_DisplayText(object sender, EventArgs e)
         {
-            byte[] XtenderReceivedFrame = SerialCOMM.SerialDataTidyUp(ref StandardSerialComStruct); // data clean up is necassary
+            byte[] XtenderReceivedFrame = _serialcomm.SerialDataTidyUp(ref _xtenderStruct); // data clean up is necassary
             // do what necassarly will ........
             // we get the frame (raw) from Xtender and Write to DataBase now ..................
             //public List<float> XtenderDataRendering(byte[] XtenderReceivedFrame)
@@ -99,49 +91,60 @@ namespace SmartHomeFrameworkV2._1
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            // Disable all Disconnection and Stop Buttons
-            Stop_Algorithm.Enabled = false;
+            // Disable all Disconnection and Stop ButtonsFexcel
+            Connect_Xtender.Enabled = true;
             Disconnect_Xtender.Enabled = false;
+            //// OTHERS
+            Connect_Ammonit.Enabled = false;
+            Connect_ModBus4Noks.Enabled = false;
+            Connect_RemoteCOMM.Enabled = false;
+            //
+            Disconnect_Ammonit.Enabled = false;
             Disconnect_ModBus4Noks.Enabled = false;
             Disconnect_RemoteCOMM.Enabled = false;
-            Disconnect_Ammonit.Enabled = false;
+            // ALGORITHM
+            Start_Algorithm.Enabled = false;
+            Stop_Algorithm.Enabled = false;
+            
 
-            // Call all Active ComPort Names
-            StandardSerialComStruct._GetPortNames = SerialPort.GetPortNames(); // will use in almost everywhere
+            // Start the LOGGING !!!
+            _log.LoggingStart();//sadece ilk program baslarken cagirilacak..
+
+            // Call all Active ComPort Names for Xtender
+            _xtenderStruct._GetPortNames = SerialPort.GetPortNames(); // will use in almost everywhere
 
             // fill all ComboBox using available ComPorNames
-            SerialCOMM.ComboBoxComPortNameFilling(StandardSerialComStruct._GetPortNames, ComboBox_Xtender);
+            _serialcomm.ComboBoxComPortNameFilling(_xtenderStruct._GetPortNames, ComboBox_Xtender);
             
-            // fill the XtenderExcell
-            Xtender.FillTheExcel(DataGridViewXtenderExcel); // fill the excell in the Xtender Class;
+            // Excell Call and USE
+            _exceluse.ExcelCall("xtender_write_komutlari.xlsx", ref _excelStruct);
 
-            // all serial obj is passive now.... We use into Serial for Read and Write these.....
-            StandardSerialComStruct.IsModBus4NoksWrite = false;
-            StandardSerialComStruct.IsRemoteCOMMWrite = false;
-            StandardSerialComStruct.IsXtenderWrite = false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)//Bu program kapanirken eğer açık kalmışsa portu kapatıyor, baya guzel bir ozellik
         {
             /********* Close all COM ports and Stop Algorithm ****************/
             // Close Xtender Serial Port
-            SerialCOMM.SerialClose(ref _XtenderSerial);
+            // Portu kapatalim
+            _serialcomm.SerialClose(ref _xtenderStruct); // gerekli SerialPort ve icerikleri _struct ile aktarilmis oldu !!!
+            /*****/
         }
 
         private void Connect_Xtender_Click(object sender, EventArgs e)
         {
-            // in here, we get all COM port info from comBox (Xtender PortName)
-            // and write all necassaries into _XtenderSerial
-            Xtender.XtenderComPortSettings(ref _XtenderSerial, ref StandardSerialComStruct, ComboBox_Xtender); 
-
-            // Open Xtender SerialPort
-            SerialCOMM.SerialOpen(ref _XtenderSerial);// send the memory adress to acces real struct/
-
-            //
+            // Port name felan Combodan cekilmekte ve asagida SerialComm icerisinde kullanilmaktadir !!!
+            XtenderClass.XtenderComPortSettings(ref _xtenderStruct, ref _xtenderSerial, ComboBox_Xtender); // oncelikle struct icerisine gereken degerler SerialComm oncesionde cekiliyor. 
+            //SerialComm icerisinde port ayarlari ise simdi yapilabilir. 
+            _serialcomm.ComPortSettings(ref _xtenderStruct); // boylece _XtenderSerialPort ayarlari tamamlanmis oldu. (SerialComm ile genel sekilde halledilebildi)
+            // Portu acip kullanmaya baslayalim...
+            _serialcomm.SerialOpen(ref _xtenderStruct); // gerekli SerialPort ve icerikleri _struct ile aktarilmis oldu !!!
+            /*****/
             Connect_Xtender.Enabled = false;
-            Disconnect_Xtender.Enabled = true;   
+            Disconnect_Xtender.Enabled = true;
             ///////////////////
-
+            // ALGORITHM
+            Start_Algorithm.Enabled = true;
+            Stop_Algorithm.Enabled = false;
             
         }
 
@@ -158,8 +161,9 @@ namespace SmartHomeFrameworkV2._1
         private void Disconnect_Xtender_Click(object sender, EventArgs e)
         {
             // Close Xtender Serial Port
-            SerialCOMM.SerialClose(ref _XtenderSerial);
-
+            // Portu acip kullanmaya baslayalim...
+            _serialcomm.SerialClose(ref _xtenderStruct); // gerekli SerialPort ve icerikleri _struct ile aktarilmis oldu !!!
+            /*****/
             Connect_Xtender.Enabled = true;
             Disconnect_Xtender.Enabled = false;
         }
@@ -176,14 +180,12 @@ namespace SmartHomeFrameworkV2._1
 
         private void Connect_Ammonit_Click(object sender, EventArgs e)
         {
-            // Activate the Ammonit
-            Algorithms._AmmonitState = true;
+
         }
 
         private void Disconnect_Ammonit_Click(object sender, EventArgs e)
         {
-            // DeActivate the Ammonit
-            Algorithms._AmmonitState = false; // with this Ammonit dont work in the Algorithm and never Call Ammonit Sensor Data
+
         }
 
         private void Start_Algorithm_Click(object sender, EventArgs e)
@@ -204,7 +206,8 @@ namespace SmartHomeFrameworkV2._1
         {
             //(every 5 second will triggered) // istenildigi gibi degistirilebilir... Simdilik 5 sec
             // Call Algorithms every tick
-            Algorithms.AlgorithmStarting(ref _XtenderSerial, ref StandardSerialComStruct);
+
+            AlgorithmClass.AlgorithmStarting(ref  _xtenderStruct, ref _excelStruct); // Sira ile hangisi eklenirse buraya eklenecek !!!
             // do lots of things in the algorithm class   
         }
 

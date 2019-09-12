@@ -22,53 +22,44 @@ using System.Net.Sockets;
 
 namespace SmartHomeFrameworkV2._1
 {
-    public class Xtender  
+    // Burada extra olarak ExcelClass yapisina ihtiyac duymaktayiz....
+    class Xtender: SerialCOMM // get what we need We can Add One Class and Multiple Interface !!!
     {
         /// <summary>
         /// GLOBAL CLASS
         /// </summary>
-        SerialCOMM serialComm4Xtender = new SerialCOMM();
-        OleDbConnection connection; // Excel Connection
-        DataBaseSQL databasesql = new DataBaseSQL();
+        ExcelUsege _exceluse = new ExcelUsege(); // Burada sorgulama vs diger isleri yaptiracagiz... 
+        DataBaseSQL databasesql= new DataBaseSQL(); // database kayitlari da buraya...
+        /**/
 
 
-        /// <summary>
-        /// General Struct
-        /// </summary>
 
-        public struct XtenderInfo
+         //_exceluse.ExcelCall("xtender_write_komutlari.xlsx", ref _excelStruct);
+         //   //_exceluse.ExcelXtenderWriteRegisterList(ref _excelStruct);// list<int>
+         //   string[] came = _exceluse.XtenderExcelQuestioning(3023, _excelStruct.ExcelReadList);//true false
+         //   textBox1.Text = came[0];//coord
+         //   textBox2.Text = came[1];//state
+
+
+
+        // In here, we get the port name from Combobox !!! May be later, we add in here direclty !!!
+        // Sadece STRUCT icerisinde gerekli |FIELD'leri dolduruyoruz, ASIL is yine de SERIALCOMM iceriisnde yapilacak... 
+        public void XtenderComPortSettings(ref SerialCOMM.ComPortStruct _comportStruct, ref SerialPort _xtenderSerial, System.Windows.Forms.ComboBox ComboBox_XtenderSettings)
         {
-            public System.Windows.Forms.DataGridView dataGrid4Excell;
-            public SerialPort seraillls;
-        }
+            _comportStruct._SerialPortObj = _xtenderSerial;// In here we define Port Obj to class !!!
 
-        /// <summary>
-        /// METHODS .........
-        /// </summary>
-
-
-        // Excel connction
-        public void ExcellConnection()
-        {
-            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\xtender_write_komutlari.xlsx; Extended Properties='Excel 12.0 xml;HDR=YES;'");
-        }
-        /***************************************************************************************/
-
-        public void XtenderComPortSettings(ref SerialPort _xSerialPort, ref SerialCOMM.StandardSerialComStruct SerialStandardStruct,System.Windows.Forms.ComboBox ComboBox_XtenderSettings)
-        {
+            // _comportStruct.PortName = "COM1"; // some day may be we need this usage...
+            _comportStruct.PortName = GetSelectedPortNamesFromComboBox(_comportStruct._GetPortNames, ComboBox_XtenderSettings);
+            _comportStruct.BaudRate = 38400;
+            _comportStruct.DataBits = 8;
+            _comportStruct.StopBits = System.IO.Ports.StopBits.One;
+            _comportStruct.Parity = System.IO.Ports.Parity.Even;
+            _comportStruct.ReadTimeout = 3000;
+            _comportStruct.WriteTimeout = 4000;
             //
-            SerialStandardStruct.StructXtender.PortName = serialComm4Xtender.GetSelectedPortNamesFromComboBox(SerialStandardStruct._GetPortNames, ComboBox_XtenderSettings);
-            //Necessary settings ..........................................
-            _xSerialPort.PortName = SerialStandardStruct.StructXtender.PortName;
-            _xSerialPort.BaudRate=38400;
-            _xSerialPort.DataBits=8;
-            _xSerialPort.StopBits=System.IO.Ports.StopBits.One;
-            _xSerialPort.Parity=System.IO.Ports.Parity.Even;
-            _xSerialPort.ReadTimeout=3000;
-            _xSerialPort.WriteTimeout = 4000;
+            _comportStruct.PortINFO = "Xtender"; // Log icin kullanilabilir.
         }
         /***************************************************************************************/
-        
 
         // in this method, xtender inverter read data frame will create using register adress like 3000 and more...
         private List<byte> XtenderReadFrameCreate(UInt16 XtenderReadRegAddr)
@@ -312,85 +303,7 @@ namespace SmartHomeFrameworkV2._1
         }
         //*************************************************************************************
 
-        // Excell read and fill the Grid after give the number to Grid for Excel .............
-        public void FillTheExcel(System.Windows.Forms.DataGridView DataGridViewXtenderExcel)
-        {
-            ExcellConnection(); // first, connect to excel
-            connection.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM [Sayfa1$]", connection);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            
-            DataGridViewXtenderExcel.DataSource = dt.DefaultView;
-            connection.Close();
-            ///
-            GridNumeratorForExcell(DataGridViewXtenderExcel);
-        }
-        //*************************************************************************************
-
-        //We use this giving numbers to Grig for excell
-        private static void GridNumeratorForExcell(System.Windows.Forms.DataGridView DataGridViewXtenderExcel)
-        {
-            if (DataGridViewXtenderExcel != null)
-            {
-                for (int count = 0; (count <= (DataGridViewXtenderExcel.Rows.Count - 1)); count++)
-                {
-                    string sayi = (count + 1).ToString();
-                    DataGridViewXtenderExcel.Rows[count].HeaderCell.Value = sayi;
-                }
-            }
-        }
-        //*************************************************************************************
-
-
-        // In here, will questioning read excell by form 
-        // When doing questioning, we seach in the datagridview list the register adres inside the list? 
-
-        public uint[] Xtender_Excell_Questioning(System.Windows.Forms.DataGridView DataGridViewXtenderExcel, uint State, UInt32 Command)
-        {
-            // State = 1 is READ, State=2 is WRITE
-            // In list, F6 use for 1 (Read), F1 use for 2 (Write)  (But seems F6 use for READ in the List)
-            // [0]. colon for write [5]. colon for read . F1 and F6 
-            uint[] ReturnValue = new uint[] { 0, 0, 0 };
-            ////////
-            ReturnValue[0] = State;
-
-            if (State == 1) // the means read
-            {
-
-                //
-
-                for (int i = 2; i < 17; i++)
-                {
-
-                    if (DataGridViewXtenderExcel.Rows[i].Cells[5].Value.ToString() == Command.ToString())
-                    {
-
-                        ReturnValue[1] = 1; // bulduk ve bu deger deger dogru ise
-                        ReturnValue[2] = 1; // simdilik daima float
-                    }
-
-                }
-
-            }
-            else if (State == 2) // means write
-            {
-                // F1 olacak 1, 2. elemandan baslayacak
-                for (int i = 2; i < 19; i++)
-                {
-                    if (DataGridViewXtenderExcel.Rows[i].Cells[0].Value.ToString() == Command.ToString())
-                    {
-                        ReturnValue[1] = 1; // bulduk ve bu deger dogru
-                        // simdi turunu bulalim
-                        ReturnValue[2] = ((uint)Convert.ToUInt16(DataGridViewXtenderExcel.Rows[i].Cells[0 + 3].Value.ToString()));
-
-                    }
-                }
-            }
-
-            return ReturnValue;
-        }
-        //*************************************************************************************
+       
 
         // Now, write the Xtender read value to DataBase
         // With this purpose, we use cming data (Datareceive Handle fn)
@@ -405,13 +318,10 @@ namespace SmartHomeFrameworkV2._1
         //*************************************************************************************
 
         // xtender Read Preparing and sending over serial port
-        public void XtenderSendReadData(UInt16 xRegAddr, ref SerialCOMM.StandardSerialComStruct sStandartStruct, ref SerialPort _xSerial)
+        public void XtenderSendReadData(UInt16 xRegAddr, ref ComPortStruct _comStruct)
         {
-            sStandartStruct.StructXtender.DataFrameWrite = XtenderReadFrameCreate(xRegAddr).ToArray(); // convert List to Array (byte[] array)
-            sStandartStruct.StructGeneralComPort = sStandartStruct.StructXtender; // carry all info to standarstruct buffer
-            sStandartStruct._SerialPortGeneralObj = _xSerial; // move info to StndartSerialObj
-            serialComm4Xtender.SerialWrite(ref sStandartStruct); // we write like this 
-            
+            _comStruct.DataFrameWrite = XtenderReadFrameCreate(xRegAddr).ToArray(); // convert List to Array (byte[] array)
+            SerialWrite(ref _comStruct); // Hazirlanan Liste SerialPort'a yazdirildi        
         }
         //*************************************************************************************
     }

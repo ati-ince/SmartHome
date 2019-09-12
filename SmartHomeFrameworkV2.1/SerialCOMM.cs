@@ -11,47 +11,21 @@ using System.Windows.Forms;
 
 namespace SmartHomeFrameworkV2._1
 {
-    public class SerialCOMM
+    class SerialCOMM : Logging // Always we need the Log what is going on , DataBase SQL
     {
-
-        /// Classes
-        Logging _logging = new Logging();
 
         /// Globals
         
         ///////////////////////////////////////////
-        
-        // All information about serial port are inside evn SerialPort Object referance/address....
-        public struct StandardSerialComStruct
-        {
-            public string[] _GetPortNames; // get port name from Windows
-            /////////////
-            public SerialPort _SerialPortGeneralObj; // may be we use
-            //
-            public SerialPort _XtenderSerialPort;
-            public SerialPort _ModBus4NoksSerialPort;
-            public SerialPort _RemoteCOMMSerialPort;
-
-            ///////////// Collect All SerialComm devices Struct
-            public ComPortStruct StructGeneralComPort; // may be we use
-            //
-            public ComPortStruct StructXtender;
-            public ComPortStruct StructModBus4Noks;
-            public ComPortStruct StructRemoteCOMM;
-
-            ///////////// in which port active now? (we can fill which is active right time !!!)
-            public bool IsXtenderWrite ; // if we wanna write using this port .....
-            public bool IsModBus4NoksWrite ;
-            public bool IsRemoteCOMMWrite ;
-            //
-            public bool IsXtenderReceive; // if we wanna receive data from this port ....
-            public bool IsModBus4NoksReceive;
-            public bool IsRemoteCOMMReceive;
-        }
-        /******************************************************************************************************/
 
         public struct ComPortStruct // Information from All ComPorts will use this struct
         {
+            public string[] _GetPortNames; // get port name from Windows
+            public string PortINFO; // name etc (Xtender, 4Noks, Xbee et al)
+            public bool Condition; // if write Condition=1, read Condition=0 we will know what is going on
+            /////////////
+            public SerialPort _SerialPortObj; // may be we use
+            //
             public string PortName;
             public int BaudRate;
             public int DataBits;
@@ -95,9 +69,9 @@ namespace SmartHomeFrameworkV2._1
         /******************************************************************************************************/
 
         // public void SerialOpen(ref StandardSerialComStruct StandartStruct, ref SerialPort __SerialPortUse)
-        public void SerialOpen(ref SerialPort __SerialPort_open)
+        public void SerialOpen(ref ComPortStruct _comportstr)
          {
-
+            SerialPort __SerialPort_open = _comportstr._SerialPortObj; // struct icerisinden cektik.
             try
             {
                 if (__SerialPort_open.IsOpen)
@@ -106,19 +80,21 @@ namespace SmartHomeFrameworkV2._1
                 }
                 __SerialPort_open.Open();
                 // log
-                _logging.Logging2Txt(__SerialPort_open.PortName, "is opened !"); // This port now open !
+                
+                Logging2Txt(__SerialPort_open.PortName, _comportstr.PortINFO +" IsOpened!"); // This port now open !
             }
             catch (Exception exc)
             {
                 // log
-                _logging.Logging2Txt(__SerialPort_open.PortName, "couldn't opened ! !"); // This port now open !
+                Logging2Txt(__SerialPort_open.PortName, _comportstr.PortINFO + " Couldn'tOpened!"); // This port now open !
             
             }
         }
         /******************************************************************************************************/
 
-        public void SerialClose(ref SerialPort __SerialPort_close) 
-        {                  
+        public void SerialClose(ref ComPortStruct _comportstr)
+        {
+            SerialPort __SerialPort_close = _comportstr._SerialPortObj; // struct icerisinden cektik.      
             try
             {
                 if (!__SerialPort_close.IsOpen)
@@ -126,61 +102,60 @@ namespace SmartHomeFrameworkV2._1
                     __SerialPort_close.Open();
                 }
                 __SerialPort_close.Close();
-                // log
-                _logging.Logging2Txt(__SerialPort_close.PortName, "is closed !"); // This port now open ! 
+                //
+                Logging2Txt(__SerialPort_close.PortName, _comportstr.PortINFO + " IsClosed!"); // This port now open ! 
 
             }
             catch (Exception exc)
             {
-                // log
-                _logging.Logging2Txt(__SerialPort_close.PortName, "couldn't closed !"); // This port now open ! 
+                Logging2Txt(__SerialPort_close.PortName, _comportstr.PortINFO + " Couldn'tClosed!"); // This port now open ! 
 
             }
         }
         /******************************************************************************************************/
 
-        public void SerialWrite(ref SerialCOMM.StandardSerialComStruct sStandardStr_SerWr)
+        // Only we need Struct for anything . _xtender, xbee etc....
+        public void SerialWrite(ref ComPortStruct _comPortStr)
         {
-            sStandardStr_SerWr._SerialPortGeneralObj.Open();// may be look closed, you never know !!!
-            sStandardStr_SerWr._SerialPortGeneralObj.Write(sStandardStr_SerWr.StructGeneralComPort.DataFrameWrite.ToArray(), (int)0, (int)sStandardStr_SerWr.StructGeneralComPort.DataFrameWrite.Count());  
-            ////////////////
-            //if (sStandardStr_SerWr.IsXtenderWrite == true)
-            //{
-            //    sStandardStr_SerWr._XtenderSerialPort.Open();
-            //}
-            //if (sStandardStr_SerWr.IsModBus4NoksWrite == true)
-            //{
-            //    sStandardStr_SerWr._ModBus4NoksSerialPort.Open();
-            //}
-            //if (sStandardStr_SerWr.IsRemoteCOMMWrite == true)
-            //{
-            //    sStandardStr_SerWr._RemoteCOMMSerialPort.Open();
-            //}
+            _comPortStr._SerialPortObj.Open();// may be look closed, you never know !!!
+            _comPortStr._SerialPortObj.Write(_comPortStr.DataFrameWrite.ToArray(), 0,_comPortStr.DataFrameWrite.Count() ); 
         }
         /******************************************************************************************************/
 
-        public int SerialRead(ref SerialCOMM.StandardSerialComStruct sStandardStr_SerRead)
+        // Only we need Struct for anything . _xtender, xbee etc....
+        public int SerialRead(ref ComPortStruct _comPortStr)
         {
             int readRespond;
-            sStandardStr_SerRead._SerialPortGeneralObj.Open();// may be look closed, you never know !!!
-            readRespond = sStandardStr_SerRead._SerialPortGeneralObj.Read(sStandardStr_SerRead.StructGeneralComPort.DataFrameRead.ToArray(), (int)0, sStandardStr_SerRead._SerialPortGeneralObj.BytesToRead);
-        return readRespond;
+            _comPortStr._SerialPortObj.Open();// may be look closed, you never know !!!
+            readRespond = _comPortStr._SerialPortObj.Read(_comPortStr.DataFrameRead.ToArray(), (int)0, _comPortStr._SerialPortObj.BytesToRead);
+            // geleni de struct icerisine yazmistik.
+            return readRespond;
         }
         /******************************************************************************************************/
 
         // Coolect all part of serial comm data and tidy up and do compact 
-        public byte[] SerialDataTidyUp(ref SerialCOMM.StandardSerialComStruct sStandarStr)
+        // Simdilik bir sey yapmiyoruz, datanin duzgun geldigini farz ediyoruz. 
+        public byte[] SerialDataTidyUp(ref ComPortStruct _comPortStr)
         {
             byte[] SerialRegularData;
             // 
-            SerialRegularData = sStandarStr.StructGeneralComPort.DataFrameRead; // Do somthings...........................
+            SerialRegularData = _comPortStr.DataFrameRead; // Do somthings...........................
             //
             return SerialRegularData;
         }
         // **********************************************************//
 
-       
-        
+        // In this method, we set the SerialPort obj specs usimg particular SerialPort and its struch which is use for collection all info about that port. 
+        public void ComPortSettings(ref ComPortStruct _comPortStr)
+        {
+            _comPortStr._SerialPortObj.PortName = _comPortStr.PortName;
+            _comPortStr._SerialPortObj.BaudRate = _comPortStr.BaudRate;
+            _comPortStr._SerialPortObj.DataBits = _comPortStr.DataBits;
+            _comPortStr._SerialPortObj.StopBits = _comPortStr.StopBits;
+            _comPortStr._SerialPortObj.Parity = _comPortStr.Parity;
+            _comPortStr._SerialPortObj.ReadTimeout = _comPortStr.ReadTimeout;
+            _comPortStr._SerialPortObj.WriteTimeout = _comPortStr.WriteTimeout;
+        }
      
-    }
+    } 
 }
