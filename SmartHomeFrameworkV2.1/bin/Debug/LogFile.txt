@@ -1,3 +1,0 @@
-28.03.2019 01.12.37 XtenderExcelReadRegister 15 ElemanDosyadanOkunmustur
-28.03.2019 01.12.37 XtenderExcelWriteRegister 17 ElemanDosyadanOkunmustur
-28.03.2019 01.12.37 XtenderExcelCall  ExcelKullanimaAlindi

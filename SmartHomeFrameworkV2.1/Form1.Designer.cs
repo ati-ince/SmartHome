@@ -47,19 +47,8 @@
             this.Start_Algorithm = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Stop_Algorithm = new System.Windows.Forms.Button();
+            this.TextBox_AmmonitTest = new System.Windows.Forms.TextBox();
             this.TimerAlgorithm = new System.Windows.Forms.Timer(this.components);
-            this.DataGridViewXtenderExcel = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.fournoks_off = new System.Windows.Forms.Button();
-            this.fournoks_on = new System.Windows.Forms.Button();
-            this.fournoks_device_name = new System.Windows.Forms.ComboBox();
-            this.PoolTimer = new System.Windows.Forms.Timer(this.components);
-            this.UartTimer = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewXtenderExcel)).BeginInit();
             this.SuspendLayout();
             // 
             // Connect_RemoteCOMM
@@ -141,7 +130,6 @@
             this.ComboBox_Modbus4Noks.Name = "ComboBox_Modbus4Noks";
             this.ComboBox_Modbus4Noks.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Modbus4Noks.TabIndex = 40;
-            this.ComboBox_Modbus4Noks.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Modbus4Noks_SelectedIndexChanged);
             // 
             // Connect_Xtender
             // 
@@ -182,7 +170,6 @@
             this.ComboBox_Xtender.Name = "ComboBox_Xtender";
             this.ComboBox_Xtender.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Xtender.TabIndex = 36;
-            this.ComboBox_Xtender.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Xtender_SelectedIndexChanged);
             // 
             // Connect_Ammonit
             // 
@@ -198,7 +185,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 180);
+            this.label4.Location = new System.Drawing.Point(66, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 50;
@@ -246,111 +233,24 @@
             this.Stop_Algorithm.UseVisualStyleBackColor = false;
             this.Stop_Algorithm.Click += new System.EventHandler(this.Stop_Algorithm_Click);
             // 
+            // TextBox_AmmonitTest
+            // 
+            this.TextBox_AmmonitTest.Location = new System.Drawing.Point(251, 205);
+            this.TextBox_AmmonitTest.Name = "TextBox_AmmonitTest";
+            this.TextBox_AmmonitTest.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_AmmonitTest.TabIndex = 54;
+            // 
             // TimerAlgorithm
             // 
             this.TimerAlgorithm.Interval = 1000;
             this.TimerAlgorithm.Tick += new System.EventHandler(this.TimerAlgorithm_Tick);
             // 
-            // DataGridViewXtenderExcel
-            // 
-            this.DataGridViewXtenderExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewXtenderExcel.Location = new System.Drawing.Point(9, 297);
-            this.DataGridViewXtenderExcel.Name = "DataGridViewXtenderExcel";
-            this.DataGridViewXtenderExcel.Size = new System.Drawing.Size(825, 417);
-            this.DataGridViewXtenderExcel.TabIndex = 55;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "4NoksPlugState";
-            // 
-            // fournoks_off
-            // 
-            this.fournoks_off.BackColor = System.Drawing.Color.Red;
-            this.fournoks_off.Location = new System.Drawing.Point(277, 78);
-            this.fournoks_off.Name = "fournoks_off";
-            this.fournoks_off.Size = new System.Drawing.Size(75, 23);
-            this.fournoks_off.TabIndex = 63;
-            this.fournoks_off.Text = "OFF";
-            this.fournoks_off.UseVisualStyleBackColor = false;
-            this.fournoks_off.Click += new System.EventHandler(this.off_Click);
-            // 
-            // fournoks_on
-            // 
-            this.fournoks_on.BackColor = System.Drawing.Color.SeaGreen;
-            this.fournoks_on.Location = new System.Drawing.Point(277, 58);
-            this.fournoks_on.Name = "fournoks_on";
-            this.fournoks_on.Size = new System.Drawing.Size(75, 23);
-            this.fournoks_on.TabIndex = 62;
-            this.fournoks_on.Text = "ON";
-            this.fournoks_on.UseVisualStyleBackColor = false;
-            this.fournoks_on.Click += new System.EventHandler(this.on_Click);
-            // 
-            // fournoks_device_name
-            // 
-            this.fournoks_device_name.BackColor = System.Drawing.Color.Ivory;
-            this.fournoks_device_name.FormattingEnabled = true;
-            this.fournoks_device_name.Location = new System.Drawing.Point(187, 68);
-            this.fournoks_device_name.Name = "fournoks_device_name";
-            this.fournoks_device_name.Size = new System.Drawing.Size(84, 21);
-            this.fournoks_device_name.TabIndex = 61;
-            // 
-            // PoolTimer
-            // 
-            this.PoolTimer.Interval = 250;
-            this.PoolTimer.Tick += new System.EventHandler(this.PoolTimer_Tick);
-            // 
-            // UartTimer
-            // 
-            this.UartTimer.Interval = 150;
-            this.UartTimer.Tick += new System.EventHandler(this.UartTimer_Tick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(265, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 65;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(265, 204);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 66;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(9, 177);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 67;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(265, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 68;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 291);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.fournoks_off);
-            this.Controls.Add(this.fournoks_on);
-            this.Controls.Add(this.fournoks_device_name);
-            this.Controls.Add(this.DataGridViewXtenderExcel);
+            this.ClientSize = new System.Drawing.Size(203, 294);
+            this.Controls.Add(this.TextBox_AmmonitTest);
             this.Controls.Add(this.Start_Algorithm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Stop_Algorithm);
@@ -369,11 +269,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Disconnect_Xtender);
             this.Controls.Add(this.ComboBox_Xtender);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "ShFramework";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewXtenderExcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,18 +298,8 @@
         private System.Windows.Forms.Button Start_Algorithm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Stop_Algorithm;
+        private System.Windows.Forms.TextBox TextBox_AmmonitTest;
         private System.Windows.Forms.Timer TimerAlgorithm;
-        private System.Windows.Forms.DataGridView DataGridViewXtenderExcel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button fournoks_off;
-        private System.Windows.Forms.Button fournoks_on;
-        private System.Windows.Forms.ComboBox fournoks_device_name;
-        private System.Windows.Forms.Timer PoolTimer;
-        private System.Windows.Forms.Timer UartTimer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
