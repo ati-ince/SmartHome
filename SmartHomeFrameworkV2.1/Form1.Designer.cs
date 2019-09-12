@@ -132,6 +132,7 @@
             this.ComboBox_Modbus4Noks.Name = "ComboBox_Modbus4Noks";
             this.ComboBox_Modbus4Noks.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Modbus4Noks.TabIndex = 40;
+            this.ComboBox_Modbus4Noks.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Modbus4Noks_SelectedIndexChanged);
             // 
             // Connect_Xtender
             // 
@@ -172,6 +173,7 @@
             this.ComboBox_Xtender.Name = "ComboBox_Xtender";
             this.ComboBox_Xtender.Size = new System.Drawing.Size(84, 21);
             this.ComboBox_Xtender.TabIndex = 36;
+            this.ComboBox_Xtender.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Xtender_SelectedIndexChanged);
             // 
             // Connect_Ammonit
             // 
@@ -280,7 +282,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Disconnect_Xtender);
             this.Controls.Add(this.ComboBox_Xtender);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "ShFramework";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -17,19 +17,24 @@ namespace SmartHomeFrameworkV2._1
 
 
         // Log start file burada olusturulacak.. Boylece her yazilimda bir tane dosya olacak.
-        public void LoggingStart()
-        { 
-            String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
-            String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
-                string[] words = zmn.Split(' ');
-                string Time="";
-                for (int i = 0; i < words.Length; i++)
-                {
-                   Time +=words[i];
-                }
+        //public void LoggingStart()
+        //{ 
+        //    String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
+        //    String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
+        //        string[] words = zmn.Split(' ');
+        //        string Time="";
+        //        for (int i = 0; i < words.Length; i++)
+        //        {
+        //           Time +=words[i];
+        //        }
                 
-            //
-                FileName = "LogFile" + "_" + trh + "_" + Time + ".txt";
+        //    //
+        //        FileName = "LogFile" + "_" + trh + "_" + Time + ".txt";
+        //}
+
+        public void LoggingStart()
+        {
+            FileName = "LogFile" + ".txt";
         }
 
 

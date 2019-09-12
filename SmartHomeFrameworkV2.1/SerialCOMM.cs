@@ -117,7 +117,8 @@ namespace SmartHomeFrameworkV2._1
         // Only we need Struct for anything . _xtender, xbee etc....
         public void SerialWrite(ref ComPortStruct _comPortStr)
         {
-            _comPortStr._SerialPortObj.Open();// may be look closed, you never know !!!
+            if (_comPortStr._SerialPortObj.IsOpen == false)
+                _comPortStr._SerialPortObj.Open();// may be look closed, you never know !!!
             _comPortStr._SerialPortObj.Write(_comPortStr.DataFrameWrite.ToArray(), 0,_comPortStr.DataFrameWrite.Count() ); 
         }
         /******************************************************************************************************/
@@ -125,14 +126,20 @@ namespace SmartHomeFrameworkV2._1
         // Only we need Struct for anything . _xtender, xbee etc....
         public int SerialRead(ref ComPortStruct _comPortStr)
         {
-            int readRespond;
-            _comPortStr._SerialPortObj.Open();// may be look closed, you never know !!!
-            readRespond = _comPortStr._SerialPortObj.Read(_comPortStr.DataFrameRead.ToArray(), (int)0, _comPortStr._SerialPortObj.BytesToRead);
+            int readRespond=0 ;
+            byte[] buffXt = new byte[_comPortStr._SerialPortObj.BytesToRead];
+
+            Logging2Txt("SERIAL_INFO" + "PortName: ", _comPortStr._SerialPortObj.PortName);
+                
+            readRespond = _comPortStr._SerialPortObj.Read(buffXt, (int)0, _comPortStr._SerialPortObj.BytesToRead);
+            //
+            _comPortStr.DataFrameRead = buffXt;
+
             // geleni de struct icerisine yazmistik.
             return readRespond;
         }
         /******************************************************************************************************/
-
+       
         // Coolect all part of serial comm data and tidy up and do compact 
         // Simdilik bir sey yapmiyoruz, datanin duzgun geldigini farz ediyoruz. 
         public byte[] SerialDataTidyUp(ref ComPortStruct _comPortStr)
@@ -155,6 +162,19 @@ namespace SmartHomeFrameworkV2._1
             _comPortStr._SerialPortObj.Parity = _comPortStr.Parity;
             _comPortStr._SerialPortObj.ReadTimeout = _comPortStr.ReadTimeout;
             _comPortStr._SerialPortObj.WriteTimeout = _comPortStr.WriteTimeout;
+        }
+
+        /// BURALAR SONRA SILINEBILIR
+        public string Arr2Str(byte[] arr)
+        {
+            string outp="";
+
+            for (uint i = 0; i < arr.Length; i++)
+            {
+                outp = outp + arr[i].ToString() + " ";
+            } 
+            
+            return outp;
         }
      
     } 

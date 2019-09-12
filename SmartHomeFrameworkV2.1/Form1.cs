@@ -83,7 +83,7 @@ namespace SmartHomeFrameworkV2._1
             byte[] XtenderReceivedFrame = _serialcomm.SerialDataTidyUp(ref _xtenderStruct); // data clean up is necassary
             // do what necassarly will ........
             // we get the frame (raw) from Xtender and Write to DataBase now ..................
-            //public List<float> XtenderDataRendering(byte[] XtenderReceivedFrame)
+            XtenderClass.Xtender_AddTo_DataBase(XtenderReceivedFrame);
             // first, luckly all Read From Xtender is FLOAT ....... In future may do and write Xtender write value in the DataBase, but nit NOW !!!
         }
 
@@ -209,6 +209,16 @@ namespace SmartHomeFrameworkV2._1
 
             AlgorithmClass.AlgorithmStarting(ref  _xtenderStruct, ref _excelStruct); // Sira ile hangisi eklenirse buraya eklenecek !!!
             // do lots of things in the algorithm class   
+        }
+
+        private void ComboBox_Modbus4Noks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox_Xtender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     

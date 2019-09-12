@@ -55,3 +55,14 @@ Yanliz yazilim calistirildiginda Ammonit Database'ye yazdiracagi zaman bir hata 
 V2.5.4 çalışan bir sürümdür, DB için test edilen Oguz-Prj3 - v3 sürümünden farklı olmayıp bağlantı kurduktan sonra DB üzerine kayıt yapabilmekte. Log kayıtları da düzgün ve ayrıntılı şekilde tutulmaktadır.
 Buna şimdi Ana algoritma için Xtender eklemesi yapıp DB'ye kayıt yapmayı deneyeceğiz.
 
+V2.6'da Xtender datalarını okumaya başladık. Buradan devam edeceğim, nedense hepsini randımanlı şekilde okumamakta, acaba Xtender geç mi cevap veriyor tam anlamadım. 
+Bu kismi Sleep() komutunu devre dışı bırakarak her bir (Algorithm1 için elbette) cycle de 1 tane Ammonit (yani tüm frame) ve 1 tane de Xtender register'i okuyup database'ye yazmaktayız. Böylece:
+	Ammonit
+	Xtender  READ registerleri güzelce okunuyor, Log ediliyor, render edildikten sonra da değeri database'ye EKLENMEMEKTE ve HATA VERMEKTEDIR !!! -> OĞUZ SORACAZ...
+
+Bu 2.6 dan devam etmek daha dogru gelıyor. Her ne kadar Xtender bır sure db e READ regıster kaydı yapıp sonradan hata alsak ta en azından ammonıt ve xtender algorıtma ıcerısınde calısmakta.
+Tımer ıle yaptıgımız ısı daha sonrasında multıthread halıne getırebılırız...
+Bu 2.6'da Logging yaparken hata felan alınabiliyor, bunu try catch ile çözdüm gibi ama sadece çökmesini engelledik. Belki de çözümü sadece budur. 2.7den 4Noks eklemesi yaparak devam edelim...
+NOT: V2.6 yı 3 kesintisiz çalıştırdım, baktıgımda göçmediğini gördüm, birkaç düzenleme sonunda da kusursuz hale getirecegiz, try-catch ile muhtemelen.
+
+V2.7'de 4Noks eklemesi yapıyoruz. Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz. Öncelikle, 

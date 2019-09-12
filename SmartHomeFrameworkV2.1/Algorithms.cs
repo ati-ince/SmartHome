@@ -43,6 +43,7 @@ namespace SmartHomeFrameworkV2._1
         public bool _XtenderState = true; // we are using now
         public bool _ModBus4NoksState = false;
 
+        public static uint XtenderReadRegListIndex = 0;
 
         /*************************************************/
         public bool AlgorithmStarting(ref ComPortStruct _xtenderComPortStr, ref ExcelUsege.ExcelStruct _excelStruct) // public calling algorithm 
@@ -67,11 +68,27 @@ namespace SmartHomeFrameworkV2._1
 
             /******///(1)Ammonit 
             // Call All Ammonit Sensor Data and Write to dataBase
-            Ammonit4Algorithm.Ammonit_AddAllTo_DataBase(Ammonit4Algorithm.GetAmmonitData("169.254.164.31", 40500, 16));
+            Ammonit4Algorithm.Ammonit_AddAllTo_DataBase(Ammonit4Algorithm.GetAmmonitData("169.254.31.136", 40500, 16));
 
             /******///(2)Xtender 
             // Oncelikle READ yapilacak Xtender Listesini cekelim
             List<int> XtenderREADList = _excelStruct.ExcelReadList;
+            //
+            // XtenderSendReadData(UInt16 xRegAddr, ref ComPortStruct _comStruct)
+            if (XtenderREADList.Count() >= 0)
+            {
+                Xtender4Algorithm.XtenderSendReadData((ushort)XtenderREADList.ToArray()[XtenderReadRegListIndex], ref _xtenderComPortStr);
+                Logging2Txt("Xtender" + " " + "READ_REGISTER" + " " + "SENDING_FRAME: ", XtenderREADList.ToArray()[XtenderReadRegListIndex].ToString());
+                XtenderReadRegListIndex++;
+
+                if (XtenderReadRegListIndex == XtenderREADList.Count())
+                {
+                    XtenderReadRegListIndex = 0;
+                }
+            }
+
+            
+            //
             // Simdi bunun tamamini sorgulayip data baseye yazdiralim
             // Get all reg addr from xtender excelll .... 
 
