@@ -33,7 +33,8 @@ namespace SmartHomeFrameworkV2._1
         SerialCOMM SerialCOMM4Algorithm = new SerialCOMM(); // we use for sending data via SerialCOMM class
         DataBaseSQL DataBaseSQL4Algorithm = new DataBaseSQL();
         Xtender Xtender4Algorithm = new Xtender(); // we use for algorithm ...
-
+        // Test
+        Algorithms _algTest = new Algorithms();
 
         /// <summary>
         /// GLOBAL STATICS VARIABLES (WHICH IS ACTIVE OR PASSIVE)
@@ -48,7 +49,9 @@ namespace SmartHomeFrameworkV2._1
         /*************************************************/
         public bool AlgorithmStarting(ref ComPortStruct _xtenderComPortStr, ref ExcelUsege.ExcelStruct _excelStruct) // public calling algorithm 
         {
-
+            List<String> AlgorithmList = new List<String>(); AlgorithmList.Clear();
+            AlgorithmList.Add("Algorithm1");
+            /********/
             bool stateAlgorithm = true;
             // Call main algorithms
             //

@@ -23,22 +23,22 @@ using System.Net.Sockets;
 namespace SmartHomeFrameworkV2._1
 {
     // Burada extra olarak ExcelClass yapisina ihtiyac duymaktayiz....
-    class Xtender : SerialCOMM // get what we need We can Add One Class and Multiple Interface !!!
+    class Xtender: SerialCOMM // get what we need We can Add One Class and Multiple Interface !!!
     {
         /// <summary>
         /// GLOBAL CLASS
         /// </summary>
         ExcelUsege _exceluse = new ExcelUsege(); // Burada sorgulama vs diger isleri yaptiracagiz... 
-        DataBaseSQL databasesql = new DataBaseSQL(); // database kayitlari da buraya...
+        DataBaseSQL databasesql= new DataBaseSQL(); // database kayitlari da buraya...
         /**/
 
 
 
-        //_exceluse.ExcelCall("xtender_write_komutlari.xlsx", ref _excelStruct);
-        //   //_exceluse.ExcelXtenderWriteRegisterList(ref _excelStruct);// list<int>
-        //   string[] came = _exceluse.XtenderExcelQuestioning(3023, _excelStruct.ExcelReadList);//true false
-        //   textBox1.Text = came[0];//coord
-        //   textBox2.Text = came[1];//state
+         //_exceluse.ExcelCall("xtender_write_komutlari.xlsx", ref _excelStruct);
+         //   //_exceluse.ExcelXtenderWriteRegisterList(ref _excelStruct);// list<int>
+         //   string[] came = _exceluse.XtenderExcelQuestioning(3023, _excelStruct.ExcelReadList);//true false
+         //   textBox1.Text = came[0];//coord
+         //   textBox2.Text = came[1];//state
 
 
 
@@ -64,61 +64,61 @@ namespace SmartHomeFrameworkV2._1
         // in this method, xtender inverter read data frame will create using register adress like 3000 and more...
         private List<byte> XtenderReadFrameCreate(UInt16 XtenderReadRegAddr)
         {
+        
+        Dictionary<uint, List<byte>> XtenderCreateReadFrame = new Dictionary<uint, List<byte>>();
+        List<byte> command_XtenderReadFrame = new List<byte>();
 
-            Dictionary<uint, List<byte>> XtenderCreateReadFrame = new Dictionary<uint, List<byte>>();
-            List<byte> command_XtenderReadFrame = new List<byte>();
+        command_XtenderReadFrame.Clear();// empty and clean frame for fill up
+        XtenderCreateReadFrame.Clear();// same as well  
 
-            command_XtenderReadFrame.Clear();// empty and clean frame for fill up
-            XtenderCreateReadFrame.Clear();// same as well  
+        ///Start byte (always 0xAA according to manual)
+        command_XtenderReadFrame.Add(0xAA);
 
-            ///Start byte (always 0xAA according to manual)
-            command_XtenderReadFrame.Add(0xAA);
+        ///Frame flag (always 0x00 according to manual)
+        command_XtenderReadFrame.Add(0x00);
 
-            ///Frame flag (always 0x00 according to manual)
-            command_XtenderReadFrame.Add(0x00);
+        ///Source address (always 0x01 according to manual), 4 bytes
+        command_XtenderReadFrame.Add(0x01);
+        command_XtenderReadFrame.Add(0x00);
+        command_XtenderReadFrame.Add(0x00);
+        command_XtenderReadFrame.Add(0x00);
 
-            ///Source address (always 0x01 according to manual), 4 bytes
-            command_XtenderReadFrame.Add(0x01);
-            command_XtenderReadFrame.Add(0x00);
-            command_XtenderReadFrame.Add(0x00);
-            command_XtenderReadFrame.Add(0x00);
+        ///Destionation address (0x65 = 101 for XTH devices (RCC 3)), 4 bytes
+        command_XtenderReadFrame.Add(0x65);
+        command_XtenderReadFrame.Add(0x00);
+        command_XtenderReadFrame.Add(0x00);
+        command_XtenderReadFrame.Add(0x00);
 
-            ///Destionation address (0x65 = 101 for XTH devices (RCC 3)), 4 bytes
-            command_XtenderReadFrame.Add(0x65);
-            command_XtenderReadFrame.Add(0x00);
-            command_XtenderReadFrame.Add(0x00);
-            command_XtenderReadFrame.Add(0x00);
+        ///Data length (10 always), 2 bytes
+        command_XtenderReadFrame.Add(0x0A);
+        command_XtenderReadFrame.Add(0x00);
 
-            ///Data length (10 always), 2 bytes
-            command_XtenderReadFrame.Add(0x0A);
-            command_XtenderReadFrame.Add(0x00);
+        ///Calculate and add checksum
+        calculateChecksum(ref command_XtenderReadFrame, 1, 11);
 
-            ///Calculate and add checksum
-            calculateChecksum(ref command_XtenderReadFrame, 1, 11);
+        // flags
+        command_XtenderReadFrame.Add(0x00);
 
-            // flags
-            command_XtenderReadFrame.Add(0x00);
+        // service id
+        command_XtenderReadFrame.Add(0x01);
 
-            // service id
-            command_XtenderReadFrame.Add(0x01);
+        // object type
+        command_XtenderReadFrame.Add(0x01);
+        command_XtenderReadFrame.Add(0x00);
 
-            // object type
-            command_XtenderReadFrame.Add(0x01);
-            command_XtenderReadFrame.Add(0x00);
+        // register degerini ekle
+        command_XtenderReadFrame.Add((byte)(XtenderReadRegAddr & 0xFF));
+        command_XtenderReadFrame.Add((byte)(XtenderReadRegAddr >> 8 & 0xFF));
+        command_XtenderReadFrame.Add(0x00);
+        command_XtenderReadFrame.Add(0x00);
 
-            // register degerini ekle
-            command_XtenderReadFrame.Add((byte)(XtenderReadRegAddr & 0xFF));
-            command_XtenderReadFrame.Add((byte)(XtenderReadRegAddr >> 8 & 0xFF));
-            command_XtenderReadFrame.Add(0x00);
-            command_XtenderReadFrame.Add(0x00);
+        ///Property ID (The last), 2 bytes
+        command_XtenderReadFrame.Add(0x01);
+        command_XtenderReadFrame.Add(0x00);
 
-            ///Property ID (The last), 2 bytes
-            command_XtenderReadFrame.Add(0x01);
-            command_XtenderReadFrame.Add(0x00);
+        calculateChecksum(ref command_XtenderReadFrame, 14, 10);
 
-            calculateChecksum(ref command_XtenderReadFrame, 14, 10);
-
-            return command_XtenderReadFrame;
+        return command_XtenderReadFrame;
 
         }
         //*************************************************************************************
@@ -197,7 +197,7 @@ namespace SmartHomeFrameworkV2._1
                 for (uint i = 0; i < (BitConverter.GetBytes(VALUE).Length); i++)
                 {
                     // float value convert to 8byte value (4byte)
-                    command_XtenderWriteFrame.Add(BitConverter.GetBytes(VALUE)[i]);
+                    command_XtenderWriteFrame.Add(BitConverter.GetBytes(VALUE)[i]); 
                 }
             }
             else // BOOL
@@ -249,21 +249,21 @@ namespace SmartHomeFrameworkV2._1
                     return false;
                 }
             }
-            return true;
+        return true;
         }
         //*************************************************************************************
 
-
+        
         // All important job do inside.........................................................
         // But now, we just get the a bit of information. We will use list for getting the nformation from this rendering method. 
         private List<float> XtenderDataRendering(byte[] XtenderReceivedFrame)
         {
-            List<float> XtenderDataRendering_output = new List<float>();
+            List<float> XtenderDataRendering_output= new List<float>();
             XtenderDataRendering_output.Clear(); // clean and empty for carring important informations
             /******############*****/
             // Just now, we render just Read float value, in the List we fill [0]=0, and [1]=1 for this purpose....
-            float FrameType = 0; // read = 0, write is = 1; 
-            float DataType = 1; // Float = 1, Bool = 0, and INT32 = 2
+            float FrameType =  0; // read = 0, write is = 1; 
+            float DataType = 1 ; // Float = 1, Bool = 0, and INT32 = 2
             //
             float ReadValue_xtender;
             UInt16 ReadRegister_xtender;
@@ -277,13 +277,13 @@ namespace SmartHomeFrameworkV2._1
             {
                 if (XtenderReceivedFrame.Count() == 28) // BOOL frame, 28 byte
                 {
-                    // do something
+                   // do something
                 }
                 else if (XtenderReceivedFrame.Count() == 30) // 30 byte FLOAT coming from Xtender Read Responde ...........
                 {
                     // 4 byte coming value convert to Float value
                     ReadValue_xtender = BitConverter.ToSingle(RxByte_Xtender, 24); // [24],[25],[26],[27] use that byte to convert Float valu
-
+                    
                     // 4 byte coming value convert to Uint16 Register Adress/Code
                     ReadRegister_xtender = BitConverter.ToUInt16(RxByte_Xtender, 18);
 
@@ -301,20 +301,20 @@ namespace SmartHomeFrameworkV2._1
             // and write to the Remote Comm ....
             /*##################*/
 
-            return XtenderDataRendering_output;
+        return XtenderDataRendering_output;
         }
         //*************************************************************************************
 
-
+       
 
         // Now, write the Xtender read value to DataBase
         // With this purpose, we use cming data (Datareceive Handle fn)
         public void Xtender_AddTo_DataBase(byte[] XtenderReceivedFrame)
         {
-            List<float> XtenderDataRenderedOutput = new List<float>();
+            List<float> XtenderDataRenderedOutput= new List<float>();
             XtenderDataRenderedOutput.Clear(); // clean and empty
             //
-            XtenderDataRenderedOutput = XtenderDataRendering(XtenderReceivedFrame);
+            XtenderDataRenderedOutput = XtenderDataRendering (XtenderReceivedFrame) ;
             //
             // Now divide the list and write to the DataBase ....
             Logging2Txt("Xtender_READ-REGISTER_RenderedOutput" + " " + "Length= ", XtenderDataRenderedOutput.Count().ToString());
@@ -323,12 +323,12 @@ namespace SmartHomeFrameworkV2._1
                 Logging2Txt("Xtender_READ-REGISTER_RenderedOutput" + " " + "Register= ", XtenderDataRenderedOutput.ToArray()[2].ToString());
                 Logging2Txt("Xtender_READ-REGISTER_RenderedOutput" + " " + "Data= ", XtenderDataRenderedOutput.ToArray()[3].ToString());
             }
-
+            
             // This LIST ready to ADD to DATABASESQL !!!
             String trh = DateTime.Now.ToShortDateString().Replace('/', '.');
             String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
             // Combine.....
-            string DT = trh + " " + zmn;
+            string DT= trh + " " + zmn;
 
             try
             {
@@ -346,8 +346,8 @@ namespace SmartHomeFrameworkV2._1
 
         private void Logging2Txt(string p)
         {
-            //throw new NotImplementedException();
-
+                //throw new NotImplementedException();
+            
         }
         //*************************************************************************************
 

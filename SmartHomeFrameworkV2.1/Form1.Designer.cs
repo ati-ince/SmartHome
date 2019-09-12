@@ -41,23 +41,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Disconnect_Xtender = new System.Windows.Forms.Button();
             this.ComboBox_Xtender = new System.Windows.Forms.ComboBox();
-            this.Connect_Ammonit = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Disconnect_Ammonit = new System.Windows.Forms.Button();
             this.Start_Algorithm = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Stop_Algorithm = new System.Windows.Forms.Button();
             this.TimerAlgorithm = new System.Windows.Forms.Timer(this.components);
             this.DataGridViewXtenderExcel = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.fournoks_off = new System.Windows.Forms.Button();
-            this.fournoks_on = new System.Windows.Forms.Button();
-            this.fournoks_device_name = new System.Windows.Forms.ComboBox();
             this.PoolTimer = new System.Windows.Forms.Timer(this.components);
             this.UartTimer = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fournoks_device_name = new System.Windows.Forms.ComboBox();
+            this.on = new System.Windows.Forms.Button();
+            this.off = new System.Windows.Forms.Button();
+            this.algname = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewXtenderExcel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,41 +178,10 @@
             this.ComboBox_Xtender.TabIndex = 36;
             this.ComboBox_Xtender.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Xtender_SelectedIndexChanged);
             // 
-            // Connect_Ammonit
-            // 
-            this.Connect_Ammonit.BackColor = System.Drawing.Color.SeaGreen;
-            this.Connect_Ammonit.Location = new System.Drawing.Point(9, 202);
-            this.Connect_Ammonit.Name = "Connect_Ammonit";
-            this.Connect_Ammonit.Size = new System.Drawing.Size(75, 23);
-            this.Connect_Ammonit.TabIndex = 48;
-            this.Connect_Ammonit.Text = "Connect";
-            this.Connect_Ammonit.UseVisualStyleBackColor = false;
-            this.Connect_Ammonit.Click += new System.EventHandler(this.Connect_Ammonit_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Ammonit";
-            // 
-            // Disconnect_Ammonit
-            // 
-            this.Disconnect_Ammonit.BackColor = System.Drawing.Color.Red;
-            this.Disconnect_Ammonit.Location = new System.Drawing.Point(102, 202);
-            this.Disconnect_Ammonit.Name = "Disconnect_Ammonit";
-            this.Disconnect_Ammonit.Size = new System.Drawing.Size(75, 23);
-            this.Disconnect_Ammonit.TabIndex = 49;
-            this.Disconnect_Ammonit.Text = "Disconnect";
-            this.Disconnect_Ammonit.UseVisualStyleBackColor = false;
-            this.Disconnect_Ammonit.Click += new System.EventHandler(this.Disconnect_Ammonit_Click);
-            // 
             // Start_Algorithm
             // 
             this.Start_Algorithm.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.Start_Algorithm.Location = new System.Drawing.Point(9, 255);
+            this.Start_Algorithm.Location = new System.Drawing.Point(9, 204);
             this.Start_Algorithm.Name = "Start_Algorithm";
             this.Start_Algorithm.Size = new System.Drawing.Size(75, 23);
             this.Start_Algorithm.TabIndex = 51;
@@ -228,16 +192,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(66, 233);
+            this.label5.Location = new System.Drawing.Point(102, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 53;
-            this.label5.Text = "Algorithm";
+            this.label5.Text = "AlgorithmName";
             // 
             // Stop_Algorithm
             // 
             this.Stop_Algorithm.BackColor = System.Drawing.Color.LightPink;
-            this.Stop_Algorithm.Location = new System.Drawing.Point(102, 255);
+            this.Stop_Algorithm.Location = new System.Drawing.Point(102, 204);
             this.Stop_Algorithm.Name = "Stop_Algorithm";
             this.Stop_Algorithm.Size = new System.Drawing.Size(75, 23);
             this.Stop_Algorithm.TabIndex = 52;
@@ -258,46 +222,6 @@
             this.DataGridViewXtenderExcel.Size = new System.Drawing.Size(825, 417);
             this.DataGridViewXtenderExcel.TabIndex = 55;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(358, 69);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 13);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "4NoksPlugState";
-            // 
-            // fournoks_off
-            // 
-            this.fournoks_off.BackColor = System.Drawing.Color.Red;
-            this.fournoks_off.Location = new System.Drawing.Point(277, 78);
-            this.fournoks_off.Name = "fournoks_off";
-            this.fournoks_off.Size = new System.Drawing.Size(75, 23);
-            this.fournoks_off.TabIndex = 63;
-            this.fournoks_off.Text = "OFF";
-            this.fournoks_off.UseVisualStyleBackColor = false;
-            this.fournoks_off.Click += new System.EventHandler(this.off_Click);
-            // 
-            // fournoks_on
-            // 
-            this.fournoks_on.BackColor = System.Drawing.Color.SeaGreen;
-            this.fournoks_on.Location = new System.Drawing.Point(277, 58);
-            this.fournoks_on.Name = "fournoks_on";
-            this.fournoks_on.Size = new System.Drawing.Size(75, 23);
-            this.fournoks_on.TabIndex = 62;
-            this.fournoks_on.Text = "ON";
-            this.fournoks_on.UseVisualStyleBackColor = false;
-            this.fournoks_on.Click += new System.EventHandler(this.on_Click);
-            // 
-            // fournoks_device_name
-            // 
-            this.fournoks_device_name.BackColor = System.Drawing.Color.Ivory;
-            this.fournoks_device_name.FormattingEnabled = true;
-            this.fournoks_device_name.Location = new System.Drawing.Point(187, 68);
-            this.fournoks_device_name.Name = "fournoks_device_name";
-            this.fournoks_device_name.Size = new System.Drawing.Size(84, 21);
-            this.fournoks_device_name.TabIndex = 61;
-            // 
             // PoolTimer
             // 
             this.PoolTimer.Interval = 250;
@@ -308,46 +232,69 @@
             this.UartTimer.Interval = 150;
             this.UartTimer.Tick += new System.EventHandler(this.UartTimer_Tick);
             // 
-            // textBox1
+            // fournoks_device_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(252, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 65;
+            this.fournoks_device_name.BackColor = System.Drawing.Color.Ivory;
+            this.fournoks_device_name.FormattingEnabled = true;
+            this.fournoks_device_name.Location = new System.Drawing.Point(200, 68);
+            this.fournoks_device_name.Name = "fournoks_device_name";
+            this.fournoks_device_name.Size = new System.Drawing.Size(84, 21);
+            this.fournoks_device_name.TabIndex = 56;
             // 
-            // textBox2
+            // on
             // 
-            this.textBox2.Location = new System.Drawing.Point(252, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 66;
+            this.on.BackColor = System.Drawing.Color.SeaGreen;
+            this.on.Location = new System.Drawing.Point(290, 58);
+            this.on.Name = "on";
+            this.on.Size = new System.Drawing.Size(75, 23);
+            this.on.TabIndex = 57;
+            this.on.Text = "ON";
+            this.on.UseVisualStyleBackColor = false;
+            this.on.Click += new System.EventHandler(this.on_Click);
             // 
-            // textBox3
+            // off
             // 
-            this.textBox3.Location = new System.Drawing.Point(252, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 67;
+            this.off.BackColor = System.Drawing.Color.Red;
+            this.off.Location = new System.Drawing.Point(290, 78);
+            this.off.Name = "off";
+            this.off.Size = new System.Drawing.Size(75, 23);
+            this.off.TabIndex = 58;
+            this.off.Text = "OFF";
+            this.off.UseVisualStyleBackColor = false;
+            this.off.Click += new System.EventHandler(this.off_Click);
+            // 
+            // algname
+            // 
+            this.algname.BackColor = System.Drawing.Color.Ivory;
+            this.algname.FormattingEnabled = true;
+            this.algname.Location = new System.Drawing.Point(9, 177);
+            this.algname.Name = "algname";
+            this.algname.Size = new System.Drawing.Size(84, 21);
+            this.algname.TabIndex = 59;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(371, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "4NoksPlugState";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 291);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.fournoks_off);
-            this.Controls.Add(this.fournoks_on);
+            this.ClientSize = new System.Drawing.Size(471, 237);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.algname);
+            this.Controls.Add(this.off);
+            this.Controls.Add(this.on);
             this.Controls.Add(this.fournoks_device_name);
             this.Controls.Add(this.DataGridViewXtenderExcel);
             this.Controls.Add(this.Start_Algorithm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Stop_Algorithm);
-            this.Controls.Add(this.Connect_Ammonit);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Disconnect_Ammonit);
             this.Controls.Add(this.Connect_RemoteCOMM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Disconnect_RemoteCOMM);
@@ -384,23 +331,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Disconnect_Xtender;
         private System.Windows.Forms.ComboBox ComboBox_Xtender;
-        private System.Windows.Forms.Button Connect_Ammonit;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Disconnect_Ammonit;
         private System.Windows.Forms.Button Start_Algorithm;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Stop_Algorithm;
         private System.Windows.Forms.Timer TimerAlgorithm;
         private System.Windows.Forms.DataGridView DataGridViewXtenderExcel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button fournoks_off;
-        private System.Windows.Forms.Button fournoks_on;
-        private System.Windows.Forms.ComboBox fournoks_device_name;
         private System.Windows.Forms.Timer PoolTimer;
         private System.Windows.Forms.Timer UartTimer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox fournoks_device_name;
+        private System.Windows.Forms.Button on;
+        private System.Windows.Forms.Button off;
+        private System.Windows.Forms.ComboBox algname;
+        private System.Windows.Forms.Label label4;
     }
 }
 

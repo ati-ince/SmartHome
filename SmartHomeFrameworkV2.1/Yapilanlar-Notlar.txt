@@ -63,8 +63,8 @@ Bu kismi Sleep() komutunu devre dışı bırakarak her bir (Algorithm1 için elb
 Bu 2.6 dan devam etmek daha dogru gelıyor. Her ne kadar Xtender bır sure db e READ regıster kaydı yapıp sonradan hata alsak ta en azından ammonıt ve xtender algorıtma ıcerısınde calısmakta.
 Tımer ıle yaptıgımız ısı daha sonrasında multıthread halıne getırebılırız...
 Bu 2.6'da Logging yaparken hata felan alınabiliyor, bunu try catch ile çözdüm gibi ama sadece çökmesini engelledik. Belki de çözümü sadece budur. 2.7den 4Noks eklemesi yaparak devam edelim...
-NOT: V2.6 yı 3 kesintisiz çalıştırdım, baktıgımda göçmediğini gördüm, birkaç düzenleme sonunda da kusursuz hale getirecegiz, try-catch ile muhtemelen.
 
-V2.7'de 4Noks eklemesi yapıyoruz. Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz.  Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz. Öncelikle, Start Stop Alg butonları aktif-pasif özelliği ve algoritma seçme seçeneği getirildi.
-@ Excel duzenlemesi yaparak hem xtender hemde 4noks için gerekli kısımların okunmasını saglamam gerekmekte.
-
+V2.7'de 4Noks eklemesi yapıyoruz. Daha önceden çalıştırdığımız kodu buraya entegre edeceğiz. Öncelikle, Start Stop Alg butonları aktif-pasif özelliği ve algoritma seçme seçeneği getirildi.
+%%%%% Alg içine struct eklenip List içerisinde kullanılabilecek Algoritmalar tutulacak. Her yeni algoritma yeni CS fikle olacak ve bunlarda Alg CS ana yapıda tanıtılacak, timer vb burada çalıştırılacak.
+%%%%% 4Noks için okunan excel ile xtender için okunanı birleştirip beraber okuma yolu bulacaz. Bu sebeple iki test yazılımını da yanıma alacam excel için. Tek excel ile iş yapacaz.
+%%%%% Bu aşamadan sonra excell dosyası okunup hangi pluglardan okuma yapılacağı ortaya çıkartılacaktır. Tamamını sorgulamaya yada okumaya gerek yok. Excel bize yeterince veri sağlayacaktır.

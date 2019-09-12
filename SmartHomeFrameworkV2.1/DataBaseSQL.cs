@@ -63,7 +63,7 @@ namespace SmartHomeFrameworkV2._1
             }
             catch (Exception hata)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
+                using (StreamWriter w = File.AppendText("LogFile.txt"))
                 {
                     Logging2Txt("Database_Xtender", " " + hata.Message);
                 }
@@ -73,7 +73,7 @@ namespace SmartHomeFrameworkV2._1
 
 
         }
-        public void fournoks(string date, int adress, char command, float data)
+        public void fournoks(string date, int adress,string name, char command, float data)
         {
 
             try
@@ -86,22 +86,23 @@ namespace SmartHomeFrameworkV2._1
                 String zmn = DateTime.Now.ToLongTimeString().Replace(':', '.');
 
 
-                string kayit = "insert into fournoks(Date_Sql,Date_Read,Adress,Command,Data) values (@Date_Sql,@Date_Read,@Adress,@Command,@Data)";
+                string kayit = "insert into fournoks(Date_Sql,Date_Read,Adress,Name,Command,Data) values (@Date_Sql,@Date_Read,@Adress,@Name,@Command,@Data)";
                 SqlCommand komut = new SqlCommand(kayit, baglanti);
 
                 komut.Parameters.AddWithValue("@Date_Sql", trh + " " + zmn);
                 komut.Parameters.AddWithValue("@Date_Read", date);
                 komut.Parameters.AddWithValue("@Adress", adress);
+                komut.Parameters.AddWithValue("@Name", name);
                 komut.Parameters.AddWithValue("@Command", command);
                 komut.Parameters.AddWithValue("@Data", data);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
                 //
-                Logging2Txt("Database_4noks", " Adress:" + adress.ToString() +" Command:" + command.ToString() +" WriteToDataBase");
+                Logging2Txt("Database_4noks", " Adress:" + adress.ToString() + " Name:" + name.ToString() + " Command:" + command.ToString() + " WriteToDataBase");
             }
             catch (Exception hata)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
+                using (StreamWriter w = File.AppendText("LogFile.txt"))
                 {
                     Logging2Txt("Database_4noks", " " + hata.Message);
                 }
@@ -142,7 +143,7 @@ namespace SmartHomeFrameworkV2._1
             }
             catch (Exception hata)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
+                using (StreamWriter w = File.AppendText("LogFile.txt"))
                 {
                     Logging2Txt("Database_Ammonit", " " + hata.Message);
                 }
@@ -180,7 +181,7 @@ namespace SmartHomeFrameworkV2._1
             }
             catch (Exception hata)
             {
-                using (StreamWriter w = File.AppendText("log.txt"))
+                using (StreamWriter w = File.AppendText("LogFile.txt"))
                 {
                     Logging2Txt("Database_Solar", " " + hata.Message);
                 }

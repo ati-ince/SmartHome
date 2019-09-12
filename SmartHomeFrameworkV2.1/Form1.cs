@@ -103,26 +103,19 @@ namespace SmartHomeFrameworkV2._1
         {
 
             // Disable all Disconnection and Stop ButtonsFexcel
-            Connect_Xtender.Enabled = false;
+            Connect_Xtender.Enabled = true;
             Disconnect_Xtender.Enabled = false;
-
             //// OTHERS
-            Connect_Ammonit.Enabled = false;
-            Connect_ModBus4Noks.Enabled = true;
+            Connect_ModBus4Noks.Enabled = false;
             Connect_RemoteCOMM.Enabled = false;
             //
-            Disconnect_Ammonit.Enabled = false;
             Disconnect_ModBus4Noks.Enabled = false;
             Disconnect_RemoteCOMM.Enabled = false;
             // ALGORITHM
             Start_Algorithm.Enabled = false;
             Stop_Algorithm.Enabled = false;
+            
 
-            // 4noks On/Off
-            fournoks_on.Enabled = false;
-            fournoks_off.Enabled = false;
-            fournoks_device_name.Enabled = false;
-                      
             // Start the LOGGING !!!
             _log.LoggingStart();//sadece ilk program baslarken cagirilacak..
 
@@ -134,6 +127,8 @@ namespace SmartHomeFrameworkV2._1
             
             // Excell Call and USE
             _exceluse.ExcelCall("xtender_write_komutlari.xlsx", ref _excelStruct);
+
+            // AlgoritmaName ComboVBox
 
         }
 
@@ -167,12 +162,6 @@ namespace SmartHomeFrameworkV2._1
         private void Connect_ModBus4Noks_Click(object sender, EventArgs e)
         {
             // Open 4Noks Serial Port
-            Connect_ModBus4Noks.Enabled = false;
-            Disconnect_ModBus4Noks.Enabled = true;
-            // 4noks On/Off
-            fournoks_on.Enabled = true;
-            fournoks_off.Enabled = true;
-            fournoks_device_name.Enabled = true;
         }
 
         private void Connect_RemoteCOMM_Click(object sender, EventArgs e)
@@ -193,12 +182,6 @@ namespace SmartHomeFrameworkV2._1
         private void Disconnect_ModBus4Noks_Click(object sender, EventArgs e)
         {
            // Close 4Noks Serial port
-            Connect_ModBus4Noks.Enabled = true;
-            Disconnect_ModBus4Noks.Enabled = false;
-            // 4noks On/Off
-            fournoks_on.Enabled = false;
-            fournoks_off.Enabled = false;
-            fournoks_device_name.Enabled = false;
         }
 
         private void Disconnect_RemoteCOMM_Click(object sender, EventArgs e)
@@ -227,7 +210,7 @@ namespace SmartHomeFrameworkV2._1
         private void Stop_Algorithm_Click(object sender, EventArgs e)
         {
             // Stop Algorithm (Timer etc)
-            TimerAlgorithm.Enabled = false;
+            TimerAlgorithm.Enabled = false; 
             Start_Algorithm.Enabled = true; // start again button activity
             Stop_Algorithm.Enabled = false; // close button activity
         }
@@ -251,22 +234,22 @@ namespace SmartHomeFrameworkV2._1
 
         }
 
-        private void on_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void off_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PoolTimer_Tick(object sender, EventArgs e)
         {
 
         }
 
         private void UartTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void on_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void off_Click(object sender, EventArgs e)
         {
 
         }
