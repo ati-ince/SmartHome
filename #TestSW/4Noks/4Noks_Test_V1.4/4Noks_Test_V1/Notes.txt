@@ -1,0 +1,7 @@
+﻿V1 -> Sadece tarama yaparak gelen datalari ekrana basiyor
+
+V1.2 -> Gelen boluk porcuk frame yapoilarini tek duze getiriyor, icinden adresleri cekiyor.
+
+V1.3 -> Gelen Aktif gucleri adreslerin karsiligina yazabilmektedir.
+
+V1.4 -> Checksum kontrolu yapacagım.

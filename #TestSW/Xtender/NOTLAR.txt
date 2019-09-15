@@ -1,0 +1,1 @@
+TahirYeniApp_v13 eski tarzda yazýlan yazýlým idi. Bununla rahatlýkla Xtender READ komutlarý test edilebilir. 

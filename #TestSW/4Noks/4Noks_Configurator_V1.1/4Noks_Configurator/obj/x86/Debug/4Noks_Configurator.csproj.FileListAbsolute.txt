@@ -1,0 +1,31 @@
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.pdb
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Form1.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Properties.Resources.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.pdb
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.exe
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.pdb
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.exe
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.pdb
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Form1.resources
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Properties.Resources.resources
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Huyhu\Desktop\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.exe
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.pdb
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.exe
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\bin\Debug\4Noks_Configurator.pdb
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Form1.resources
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\_4Noks_Configurator.Properties.Resources.resources
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Projects\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\GenerateResource.write.1.tlog
+J:\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.exe
+J:\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.pdb
+D:\Proje Dosyaları\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.exe
+D:\Proje Dosyaları\AkilliEv\4Noks_Configurator\4Noks_Configurator\obj\x86\Debug\4Noks_Configurator.pdb

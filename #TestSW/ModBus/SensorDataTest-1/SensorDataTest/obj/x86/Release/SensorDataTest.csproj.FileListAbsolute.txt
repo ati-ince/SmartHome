@@ -1,0 +1,16 @@
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Release\SensorDataTest.exe.config
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Release\SensorDataTest.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Release\SensorDataTest.pdb
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\ResolveAssemblyReference.cache
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.Form1.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.Properties.Resources.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\GenerateResource.read.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\GenerateResource.write.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.pdb
+D:\Proje Dosyaları\AkilliEv\SensorDataTest\SensorDataTest\bin\Release\SensorDataTest.exe.config
+D:\Proje Dosyaları\AkilliEv\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.exe
+D:\Proje Dosyaları\AkilliEv\SensorDataTest\SensorDataTest\obj\x86\Release\SensorDataTest.pdb
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\SensorDataTest-1\SensorDataTest\bin\Release\SensorDataTest.exe.config
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\SensorDataTest-1\SensorDataTest\obj\x86\Release\SensorDataTest.exe
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\SensorDataTest-1\SensorDataTest\obj\x86\Release\SensorDataTest.pdb

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SerialApp.SerialCOMM">
+    <Position X="7" Y="3.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="SerialApp.SerialCOMM.StandardSerialComStruct">
+        <TypeIdentifier>
+          <NewMemberFileName>SerialCOMM.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="SerialApp.SerialCOMM.ComPortStruct">
+        <TypeIdentifier>
+          <NewMemberFileName>SerialCOMM.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgAAAAAACEAIAAAAAAAAAAAAAACAAACBAAA=</HashCode>
+      <FileName>SerialCOMM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerialApp.Xtender">
+    <Position X="7.5" Y="14.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Xtender.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerialApp.Logging">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAABAAAA=</HashCode>
+      <FileName>Logging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerialApp.ExcelUsege" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="SerialApp.ExcelUsege.ExcelStruct">
+        <TypeIdentifier>
+          <NewMemberFileName>ExcelUsege.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAABAAAAAAAAAAAAAAEAABAAAAAAEAAAAEAA=</HashCode>
+      <FileName>ExcelUsege.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerialApp.DataBaseSQL">
+    <Position X="4.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAQAAIAAACAAIgAAIAACAAAEAAA=</HashCode>
+      <FileName>DataBaseSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,53 @@
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\bin\Release\modbus.exe.config
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\bin\Release\modbus.exe
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\bin\Release\modbus.pdb
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\modbus.Form1.resources
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\modbus.Properties.Resources.resources
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\modbus.exe
+C:\Users\yigit\Documents\Visual Studio 2010\Projects\modbus\obj\x86\Release\modbus.pdb
+D:\Projects\Backup\modbus\bin\Release\modbus.exe.config
+D:\Projects\Backup\modbus\obj\x86\Release\modbus.exe
+D:\Projects\Backup\modbus\obj\x86\Release\modbus.pdb
+D:\Projects\Backup\modbus\bin\Release\modbus.exe
+D:\Projects\Backup\modbus\bin\Release\modbus.pdb
+D:\Projects\Backup\modbus\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projects\Backup\modbus\obj\x86\Release\modbus.Form1.resources
+D:\Projects\Backup\modbus\obj\x86\Release\modbus.Properties.Resources.resources
+D:\Projects\Backup\modbus\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+D:\Projects\Backup\modbus\obj\x86\Release\ResGen.read.1.tlog
+D:\Projects\Backup\modbus\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+D:\Projects\Backup\modbus\obj\x86\Release\ResGen.write.1.tlog
+C:\Users\umut\Desktop\modbus C#\bin\Release\modbus.exe.config
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\modbus.exe
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\modbus.pdb
+C:\Users\umut\Desktop\modbus C#\bin\Release\modbus.exe
+C:\Users\umut\Desktop\modbus C#\bin\Release\modbus.pdb
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\modbus.Form1.resources
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\modbus.Properties.Resources.resources
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\ResGen.read.1.tlog
+C:\Users\umut\Desktop\modbus C#\obj\x86\Release\ResGen.write.1.tlog
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\bin\Release\modbus.exe.config
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\modbus.exe
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\modbus.pdb
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\bin\Release\modbus.exe
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\bin\Release\modbus.pdb
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\modbus.Form1.resources
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\modbus.Properties.Resources.resources
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\Smart_Home\Desktop\ZEBRA\modbus C#\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+D:\ZEBRA\modbus C#\bin\Release\modbus.exe.config
+D:\ZEBRA\modbus C#\obj\x86\Release\modbus.exe
+D:\ZEBRA\modbus C#\obj\x86\Release\modbus.pdb
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\bin\Release\modbus.exe.config
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\obj\x86\Release\modbus.exe
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\obj\x86\Release\modbus.pdb
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\bin\Release\modbus.exe
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\bin\Release\modbus.pdb
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\obj\x86\Release\modbus.Form1.resources
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\obj\x86\Release\modbus.Properties.Resources.resources
+D:\AkilliEv Klasoru (!)\###CesitliGerekliler\modbus C#\obj\x86\Release\modbus.csproj.GenerateResource.Cache

@@ -1,0 +1,4 @@
+4.15.2017 4.38.49PM COM4 4Noks IsOpened!
+4.15.2017 4.38.53PM SerialWrite 4Noks System.String[]
+4.15.2017 4.38.53PM SerialWrite 4Noks Frame = System.Byte[]
+4.15.2017 4.38.57PM COM4 4Noks IsClosed!

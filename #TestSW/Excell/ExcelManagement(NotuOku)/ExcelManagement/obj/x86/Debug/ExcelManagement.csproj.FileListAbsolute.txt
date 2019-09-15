@@ -1,0 +1,11 @@
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\bin\Debug\ExcelManagement.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\bin\Debug\ExcelManagement.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\obj\x86\Debug\ExcelManagement.Form1.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\obj\x86\Debug\ExcelManagement.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\obj\x86\Debug\ExcelManagement.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\obj\x86\Debug\ExcelManagement.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement\ExcelManagement\obj\x86\Debug\ExcelManagement.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement(NotuOku)\ExcelManagement\obj\x86\Debug\ExcelManagement.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#excel-work\ExcelManagement(NotuOku)\ExcelManagement\obj\x86\Debug\ExcelManagement.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Excell\ExcelManagement(NotuOku)\ExcelManagement\obj\x86\Debug\ExcelManagement.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Excell\ExcelManagement(NotuOku)\ExcelManagement\obj\x86\Debug\ExcelManagement.pdb

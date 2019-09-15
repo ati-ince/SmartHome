@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.5, 23.875" name="akilliEv">
+  <DataContextMoniker Name="/akilliEvDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0161acaf-dbff-497c-aac3-5427ee361b2e" absoluteBounds="6.75, 16, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d89facf-5eba-447d-8489-26408a9321bc" absoluteBounds="6.765, 16.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7cb3d00-0999-48b3-b56c-68a6a3c110ff" absoluteBounds="3.75, 11.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_ValueType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="786fe9de-c7db-47a7-847a-db575d5ef1fe" absoluteBounds="3.765, 12.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8577d97-ed65-4440-9629-8caf987cf33e" absoluteBounds="15.25, 18.75, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e37a096e-b2b6-4d52-877c-6f430070119d" absoluteBounds="15.265, 19.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48f74c9d-1446-4688-8baa-bd1da722015d" absoluteBounds="9.5, 13.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_Path" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23ede1a8-1043-4e32-94d7-ca6b63e6f10a" absoluteBounds="9.515, 13.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7dc296d8-0f85-4046-8d93-1dec9f9441d0" absoluteBounds="12.25, 13.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_PersonalizationAllUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a137370-76d8-44e8-a9ad-bc6c6af038cf" absoluteBounds="12.265, 13.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b50c71a-7013-47a6-b051-3f5e3fb824d6" absoluteBounds="15.25, 15.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_PersonalizationPerUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="289f3e74-1cef-4dbe-9a7d-5a1d6c61d419" absoluteBounds="15.265, 16.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a9820e3-65fb-4f7b-a55a-b1c0d9c3b860" absoluteBounds="12.25, 18.375, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a52d65c-0b89-4d41-986c-0d2328c023b7" absoluteBounds="12.265, 18.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="645a8fb0-221a-4468-976e-7b652cfebe6f" absoluteBounds="9.5, 15.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea505306-efac-4266-a3a9-3a2019910147" absoluteBounds="9.515, 16.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffe97368-8b71-49c8-baf7-abccf7ecabf6" absoluteBounds="6.75, 8.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_SchemaVersion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8893914-ae2f-45fb-8bed-e7316df45441" absoluteBounds="6.765, 8.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" absoluteBounds="9.5, 18.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="27cda458-3b18-4128-87af-c4b6eb516bf5" absoluteBounds="9.515, 18.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96594215-dfbb-457d-bd07-04040fcd46f8" absoluteBounds="12.25, 16.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5c1c8387-0327-455e-855a-6ab86903ab09" absoluteBounds="12.265, 16.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a56d071-b43b-44c3-94cb-a1963295925d" absoluteBounds="9.75, 8.5, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/akilliEvDataContext/aspnet_WebEvent_Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ed558b9-9a2a-4d11-bfb6-221a92838e90" absoluteBounds="9.765, 8.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3bad31a-98a0-4aba-929a-7acb6793e504" absoluteBounds="9.25, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_ActiveSensorParameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f59eb07-e716-44d7-871d-d811bdccda10" absoluteBounds="9.265, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e7e038f-a70d-4d61-8738-a262f25db735" absoluteBounds="6.25, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_Device" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41766da3-a978-4545-9cf8-9a4f79b00fa5" absoluteBounds="6.265, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="27f77c0a-8c0b-4ab9-b82f-6da52b2399b9" absoluteBounds="3.5, 2.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_DeviceGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41b06621-9613-4144-ab2b-35dd6d2ab683" absoluteBounds="3.515, 3.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d98dab8b-8d2d-43b5-b6a0-7ef012d226c6" absoluteBounds="3.5, 9, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_DeviceType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de4e82c8-6f71-4ee9-b925-e53a3bdfe332" absoluteBounds="3.515, 9.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ddbd0eb-931f-42c8-a788-fa87f306e574" absoluteBounds="0.75, 2.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_Gateway" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec720146-88b6-4294-ad67-ae022144bec0" absoluteBounds="0.765, 2.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1eaee2a4-a958-4130-913e-4a0980e37456" absoluteBounds="3.5, 5.25, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_Sensor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c655e5ae-6ceb-4386-b8f4-8d8cc49846ee" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8daa36b5-016e-469d-b8e3-d19cd504b127" absoluteBounds="9.25, 2.25, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_SensorData" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acd87c95-8d19-483d-8c91-1516a60e0743" absoluteBounds="9.265, 2.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f39d713b-6c08-491d-b1e2-25ccc3aac66f" absoluteBounds="0.75, 5.25, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_SensorType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d2975fb-c66d-43cf-8d36-835985397d70" absoluteBounds="0.765, 5.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" absoluteBounds="6.5, 5.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_SensorTypeParameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17a5a0be-a12c-4f8f-8d19-9e71571bca8f" absoluteBounds="6.515, 5.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ae84339-412c-4313-93ab-01c04baa882a" absoluteBounds="3.75, 13.625, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_SensorTypeParameterName" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3682028f-62e4-46fd-a731-437176870e31" absoluteBounds="3.765, 14.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d7ceee9-a420-4d1a-bdb0-e7786d0bdd9e" absoluteBounds="3.75, 16.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/akilliEvDataContext/tbl_Unit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2bab500d-89d2-4e58-974f-c95c6bba497f" absoluteBounds="3.765, 17.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.75 : 17.5785953776042); (7.75 : 21.9703597005208); (15.25 : 21.9703597005208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="0161acaf-dbff-497c-aac3-5427ee361b2e" />
+        <classShapeMoniker Id="f8577d97-ed65-4440-9629-8caf987cf33e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 16); (7.75 : 14.0392976888021); (9.5 : 14.0392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Application/aspnet_Application_aspnet_Path" />
+      <nodes>
+        <classShapeMoniker Id="0161acaf-dbff-497c-aac3-5427ee361b2e" />
+        <classShapeMoniker Id="48f74c9d-1446-4688-8baa-bd1da722015d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 14.0681469726562); (12.25 : 14.0681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationAllUser" />
+      <nodes>
+        <classShapeMoniker Id="48f74c9d-1446-4688-8baa-bd1da722015d" />
+        <classShapeMoniker Id="7dc296d8-0f85-4046-8d93-1dec9f9441d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 13.28125); (16.25 : 13.28125); (16.25 : 15.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Path/aspnet_Path_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="48f74c9d-1446-4688-8baa-bd1da722015d" />
+        <classShapeMoniker Id="8b50c71a-7013-47a6-b051-3f5e3fb824d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 16.6979484049479); (9.5 : 16.6979484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Application/aspnet_Application_aspnet_Role" />
+      <nodes>
+        <classShapeMoniker Id="0161acaf-dbff-497c-aac3-5427ee361b2e" />
+        <classShapeMoniker Id="645a8fb0-221a-4468-976e-7b652cfebe6f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 20.2444482421875); (15.25 : 20.2444482421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" />
+        <classShapeMoniker Id="f8577d97-ed65-4440-9629-8caf987cf33e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 18.2203836153846); (12.0625 : 17.6578836153846); (12.0625 : 18.0208968098958); (14.875 : 18.0208968098958); (15.25 : 17.6458968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_User/aspnet_User_aspnet_PersonalizationPerUser" />
+      <nodes>
+        <classShapeMoniker Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" />
+        <classShapeMoniker Id="8b50c71a-7013-47a6-b051-3f5e3fb824d6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 19.2604484049479); (12.25 : 19.2604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_User/aspnet_User_aspnet_Profile" />
+      <nodes>
+        <classShapeMoniker Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" />
+        <classShapeMoniker Id="1a9820e3-65fb-4f7b-a55a-b1c0d9c3b860" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.2812525 : 17.5785953776042); (8.2812525 : 19.2027498372396); (9.5 : 19.2027498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="0161acaf-dbff-497c-aac3-5427ee361b2e" />
+        <classShapeMoniker Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 16.8854484049479); (12.25 : 16.8854484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_Role/aspnet_Role_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="645a8fb0-221a-4468-976e-7b652cfebe6f" />
+        <classShapeMoniker Id="96594215-dfbb-457d-bd07-04040fcd46f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.4676923076923 : 18.125); (11.875 : 17.7176923076923); (11.875 : 17.9439925130208); (12.0035744349011 : 17.8154180781197 : JumpStart); (12.1214255650989 : 17.697566947922 : JumpEnd); (12.25 : 17.5689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/akilliEvDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="9593b1b5-d2d0-411f-9f47-8b4f4af21422" />
+        <classShapeMoniker Id="96594215-dfbb-457d-bd07-04040fcd46f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.40465413411458); (5.85416666666667 : 3.40465413411458 : JumpStart); (6.02083333333333 : 3.40465413411458 : JumpEnd); (6.25 : 3.40465413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_DeviceGroup/tbl_DeviceGroup_tbl_Device" />
+      <nodes>
+        <classShapeMoniker Id="27f77c0a-8c0b-4ab9-b82f-6da52b2399b9" />
+        <classShapeMoniker Id="4e7e038f-a70d-4d61-8738-a262f25db735" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.2636946614583); (5.57291666666667 : 10.2636946614583 : JumpStart); (5.73958333333333 : 10.2636946614583 : JumpEnd); (6.34375 : 10.2636946614583); (6.34375 : 4.05930826822917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_DeviceType/tbl_DeviceType_tbl_Device" />
+      <nodes>
+        <classShapeMoniker Id="d98dab8b-8d2d-43b5-b6a0-7ef012d226c6" />
+        <classShapeMoniker Id="4e7e038f-a70d-4d61-8738-a262f25db735" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.59780110677083); (4.5 : 7.9151025390625); (5.57291666666667 : 7.9151025390625 : JumpStart); (5.73958333333333 : 7.9151025390625 : JumpEnd); (6.16666666666667 : 7.9151025390625 : JumpStart); (6.42708333333333 : 7.9151025390625 : JumpEnd); (6.44791541666667 : 7.9151025390625 : JumpStart); (6.70833583333333 : 7.9151025390625 : JumpEnd); (8.875 : 7.9151025390625); (8.875 : 6.44314697265625); (9.25 : 6.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Sensor/tbl_Sensor_tbl_ActiveSensorParameter" />
+      <nodes>
+        <classShapeMoniker Id="1eaee2a4-a958-4130-913e-4a0980e37456" />
+        <classShapeMoniker Id="d3bad31a-98a0-4aba-929a-7acb6793e504" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.27922976923077); (5.9375 : 4.84172976923077); (5.9375 : 2.04607506705729); (6.25 : 2.04607506705729)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Sensor/tbl_Sensor_tbl_Device" />
+      <nodes>
+        <classShapeMoniker Id="1eaee2a4-a958-4130-913e-4a0980e37456" />
+        <classShapeMoniker Id="4e7e038f-a70d-4d61-8738-a262f25db735" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.33668708969351); (3.125 : 4.71168708969351); (3.125 : 6.42390055338542); (3.5 : 6.42390055338542)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Gateway/tbl_Gateway_tbl_Sensor" />
+      <nodes>
+        <classShapeMoniker Id="8ddbd0eb-931f-42c8-a788-fa87f306e574" />
+        <classShapeMoniker Id="1eaee2a4-a958-4130-913e-4a0980e37456" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.15465413411458); (9.25 : 3.15465413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Device/tbl_Device_tbl_SensorData" />
+      <nodes>
+        <classShapeMoniker Id="4e7e038f-a70d-4d61-8738-a262f25db735" />
+        <classShapeMoniker Id="8daa36b5-016e-469d-b8e3-d19cd504b127" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.28384515384615); (6.125 : 4.65884515384615); (6.125 : 4.5881982421875); (6.26041666666667 : 4.5881982421875 : JumpStart); (6.42708333333333 : 4.5881982421875 : JumpEnd); (8.32291666666667 : 4.5881982421875 : JumpStart); (8.48958333333333 : 4.5881982421875 : JumpEnd); (8.87650915249399 : 4.5881982421875); (9.25150915249399 : 4.2131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Sensor/tbl_Sensor_tbl_SensorData" />
+      <nodes>
+        <classShapeMoniker Id="1eaee2a4-a958-4130-913e-4a0980e37456" />
+        <classShapeMoniker Id="8daa36b5-016e-469d-b8e3-d19cd504b127" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.77445027669271); (3.04166666666667 : 5.77445027669271 : JumpStart); (3.20833333333333 : 5.77445027669271 : JumpEnd); (3.5 : 5.77445027669271)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_SensorType/tbl_SensorType_tbl_Sensor" />
+      <nodes>
+        <classShapeMoniker Id="f39d713b-6c08-491d-b1e2-25ccc3aac66f" />
+        <classShapeMoniker Id="1eaee2a4-a958-4130-913e-4a0980e37456" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 6.03407348632813); (9.25 : 6.03407348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_SensorTypeParameter/tbl_SensorTypeParameter_tbl_ActiveSensorParameter" />
+      <nodes>
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+        <classShapeMoniker Id="d3bad31a-98a0-4aba-929a-7acb6793e504" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 5.125); (8.40625 : 4.16750325520833); (9.25 : 4.16750325520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_SensorTypeParameter/tbl_SensorTypeParameter_tbl_SensorData" />
+      <nodes>
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+        <classShapeMoniker Id="8daa36b5-016e-469d-b8e3-d19cd504b127" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 11.625); (5.65625 : 5.15625); (6.26041666666667 : 5.15625 : JumpStart); (6.42708333333333 : 5.15625 : JumpEnd); (6.5 : 5.15625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_ValueType/tbl_ValueType_tbl_SensorTypeParameter" />
+      <nodes>
+        <classShapeMoniker Id="e7cb3d00-0999-48b3-b56c-68a6a3c110ff" />
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.59780110677083); (3.125 : 7.97280110677083); (3.125 : 8.0401025390625); (5.57291666666667 : 8.0401025390625 : JumpStart); (5.73958333333333 : 8.0401025390625 : JumpEnd); (6.125 : 8.0401025390625); (6.28482443490112 : 7.88027810416138 : JumpStart); (6.40267556509888 : 7.76242697396362 : JumpEnd); (6.5 : 7.6651025390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_SensorType/tbl_SensorType_tbl_SensorTypeParameter" />
+      <nodes>
+        <classShapeMoniker Id="f39d713b-6c08-491d-b1e2-25ccc3aac66f" />
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 14.5252958170573); (6.44791541666667 : 14.5252958170573 : JumpStart); (6.61458208333333 : 14.5252958170573 : JumpEnd); (6.6250025 : 14.5252958170573); (6.6250025 : 7.6651025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_SensorTypeParameterName/tbl_SensorTypeParameterName_tbl_SensorTypeParameter" />
+      <nodes>
+        <classShapeMoniker Id="6ae84339-412c-4313-93ab-01c04baa882a" />
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 17.8886946614583); (6.53124875 : 17.8886946614583); (6.53124875 : 7.6651025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/akilliEvDataContext/tbl_Unit/tbl_Unit_tbl_SensorTypeParameter" />
+      <nodes>
+        <classShapeMoniker Id="4d7ceee9-a420-4d1a-bdb0-e7786d0bdd9e" />
+        <classShapeMoniker Id="b802b279-4bbf-4fe1-bcea-a4f4e2f19461" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

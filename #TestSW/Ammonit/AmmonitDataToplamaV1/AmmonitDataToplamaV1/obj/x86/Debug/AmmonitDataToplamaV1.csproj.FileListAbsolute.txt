@@ -1,0 +1,8 @@
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.Form1.resources
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.Properties.Resources.resources
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.csproj.GenerateResource.Cache
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\bin\Debug\AmmonitDataToplamaV1.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\bin\Debug\AmmonitDataToplamaV1.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\Ammonit\AmmonitDataToplamaV1\AmmonitDataToplamaV1\obj\x86\Debug\AmmonitDataToplamaV1.csprojResolveAssemblyReference.cache

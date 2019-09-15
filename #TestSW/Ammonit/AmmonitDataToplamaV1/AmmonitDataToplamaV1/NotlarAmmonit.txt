@@ -1,0 +1,5 @@
+﻿# Sirasi ile tum klaslari burada duzenleyerek form ile test edelim ve kullanima hazir olup olmadiklarini anlayacagiz.
+* Ammonit icini form kullanarak duzenledim. Burada ister direk gelen uzun string ifadesi ister teker teker parametrelerin cekilmesi yada istenirse gelenlerin tamaminin DataBese'e yazdirilmasi ... bunlarin tamami icin fonksiyonlar hazirlandi ve bunlar dokumante edildi. (Boylece Ammonit.cs tamamlanmis oldu, artik dll haline getirilebilir.)
+
+* 
+

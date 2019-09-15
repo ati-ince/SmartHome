@@ -1,0 +1,2 @@
+Basic Excel Kullanimi Halledildi, Xtender icin Islevseldir.
+Excel bulma, acma , kullanma , veri cekme, ve Questioning-Arama islevlerini yerine getirebilmekte. Yeter simdilik Xtende3r icin ozellike.

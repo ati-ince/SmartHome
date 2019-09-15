@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dbAkilliEv" Class="akilliEvDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=dbAkilliEv;Integrated Security=True" SettingsObjectName="SensorDataTest.Properties.Settings" SettingsPropertyName="dbAkilliEvConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.aspnet_Applications" Member="aspnet_Applications">
+    <Type Name="aspnet_Application">
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Memberships" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Membership" />
+      <Association Name="aspnet_Application_aspnet_Path" Member="aspnet_Paths" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Path" />
+      <Association Name="aspnet_Application_aspnet_Role" Member="aspnet_Roles" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Role" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Users" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ValueType" Member="tbl_ValueTypes">
+    <Type Name="tbl_ValueType">
+      <Column Name="ValueType_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParameterValueType_Name" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_ValueType_tbl_SensorTypeParameter" Member="tbl_SensorTypeParameters" ThisKey="ValueType_Id" OtherKey="ValueType_Id" Type="tbl_SensorTypeParameter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Membership" Member="aspnet_Memberships">
+    <Type Name="aspnet_Membership">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordFormat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePIN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LoweredEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Paths" Member="aspnet_Paths">
+    <Type Name="aspnet_Path">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredPath" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationAllUser" Member="aspnet_PersonalizationAllUser" ThisKey="PathId" OtherKey="PathId" Type="aspnet_PersonalizationAllUser" Cardinality="One" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers" ThisKey="PathId" OtherKey="PathId" Type="aspnet_PersonalizationPerUser" />
+      <Association Name="aspnet_Application_aspnet_Path" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_PersonalizationAllUsers" Member="aspnet_PersonalizationAllUsers">
+    <Type Name="aspnet_PersonalizationAllUser">
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PageSettings" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationAllUser" Member="aspnet_Path" ThisKey="PathId" OtherKey="PathId" Type="aspnet_Path" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers">
+    <Type Name="aspnet_PersonalizationPerUser">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PathId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="PageSettings" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_Path_aspnet_PersonalizationPerUser" Member="aspnet_Path" ThisKey="PathId" OtherKey="PathId" Type="aspnet_Path" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_PersonalizationPerUser" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Profile" Member="aspnet_Profiles">
+    <Type Name="aspnet_Profile">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PropertyNames" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesString" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesBinary" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Roles" Member="aspnet_Roles">
+    <Type Name="aspnet_Role">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_UsersInRoles" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_UsersInRole" />
+      <Association Name="aspnet_Application_aspnet_Role" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_SchemaVersions" Member="aspnet_SchemaVersions">
+    <Type Name="aspnet_SchemaVersion">
+      <Column Name="Feature" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompatibleSchemaVersion" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IsCurrentVersion" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="aspnet_Users">
+    <Type Name="aspnet_User">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_Membership" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Membership" Cardinality="One" />
+      <Association Name="aspnet_User_aspnet_PersonalizationPerUser" Member="aspnet_PersonalizationPerUsers" ThisKey="UserId" OtherKey="UserId" Type="aspnet_PersonalizationPerUser" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_Profile" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Profile" Cardinality="One" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_UsersInRoles" ThisKey="UserId" OtherKey="UserId" Type="aspnet_UsersInRole" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_UsersInRoles" Member="aspnet_UsersInRoles">
+    <Type Name="aspnet_UsersInRole">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_Role" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_Role" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_WebEvent_Events" Member="aspnet_WebEvent_Events">
+    <Type Name="aspnet_WebEvent_Event">
+      <Column Name="EventId" Type="System.String" DbType="Char(32) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EventTimeUtc" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventType" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="EventSequence" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EventOccurrence" Type="System.Decimal" DbType="Decimal(19,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EventCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventDetailCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ApplicationPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ApplicationVirtualPath" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MachineName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestUrl" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="ExceptionType" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_ActiveSensorParameter" Member="tbl_ActiveSensorParameters">
+    <Type Name="tbl_ActiveSensorParameter">
+      <Column Name="ActiveSensorParameter_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sensor_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SensorTypeParameter_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Sensor_tbl_ActiveSensorParameter" Member="tbl_Sensor" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_Sensor" IsForeignKey="true" />
+      <Association Name="tbl_SensorTypeParameter_tbl_ActiveSensorParameter" Member="tbl_SensorTypeParameter" ThisKey="SensorTypeParameter_Id" OtherKey="SensorTypeParameter_Id" Type="tbl_SensorTypeParameter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Device" Member="tbl_Devices">
+    <Type Name="tbl_Device">
+      <Column Name="Device_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeviceGroup_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Device_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Device_Priority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sensor_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Maximum_Power" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Optimum_Consumption" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Close_Property" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Delay_Property" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Delay_Time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Delay_Repeat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Record_Frequency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Device_tbl_SensorData" Member="tbl_SensorDatas" ThisKey="Device_Id" OtherKey="Device_Id" Type="tbl_SensorData" />
+      <Association Name="tbl_DeviceGroup_tbl_Device" Member="tbl_DeviceGroup" ThisKey="DeviceGroup_Id" OtherKey="DeviceGroup_Id" Type="tbl_DeviceGroup" IsForeignKey="true" />
+      <Association Name="tbl_DeviceType_tbl_Device" Member="tbl_DeviceType" ThisKey="DeviceType_Id" OtherKey="DeviceType_Id" Type="tbl_DeviceType" IsForeignKey="true" />
+      <Association Name="tbl_Sensor_tbl_Device" Member="tbl_Sensor" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_Sensor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DeviceGroup" Member="tbl_DeviceGroups">
+    <Type Name="tbl_DeviceGroup">
+      <Column Name="DeviceGroup_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceGroup_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Icon_Opened" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Icon_Closed" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_DeviceGroup_tbl_Device" Member="tbl_Devices" ThisKey="DeviceGroup_Id" OtherKey="DeviceGroup_Id" Type="tbl_Device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_DeviceType" Member="tbl_DeviceTypes">
+    <Type Name="tbl_DeviceType">
+      <Column Name="DeviceType_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeviceType_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Icon_Opened" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Icon_Closed" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_DeviceType_tbl_Device" Member="tbl_Devices" ThisKey="DeviceType_Id" OtherKey="DeviceType_Id" Type="tbl_Device" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Gateway" Member="tbl_Gateways">
+    <Type Name="tbl_Gateway">
+      <Column Name="Gateway_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Gateway_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gateway_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gateway_Port" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gateway_BaudRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Gateway_tbl_Sensor" Member="tbl_Sensors" ThisKey="Gateway_Id" OtherKey="Gateway_Id" Type="tbl_Sensor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Sensor" Member="tbl_Sensors">
+    <Type Name="tbl_Sensor">
+      <Column Name="Sensor_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sensor_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SensorType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Port" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BaudRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Gateway_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Sensor_tbl_ActiveSensorParameter" Member="tbl_ActiveSensorParameters" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_ActiveSensorParameter" />
+      <Association Name="tbl_Sensor_tbl_Device" Member="tbl_Devices" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_Device" />
+      <Association Name="tbl_Sensor_tbl_SensorData" Member="tbl_SensorDatas" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_SensorData" />
+      <Association Name="tbl_Gateway_tbl_Sensor" Member="tbl_Gateway" ThisKey="Gateway_Id" OtherKey="Gateway_Id" Type="tbl_Gateway" IsForeignKey="true" />
+      <Association Name="tbl_SensorType_tbl_Sensor" Member="tbl_SensorType" ThisKey="SensorType_Id" OtherKey="SensorType_Id" Type="tbl_SensorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SensorData" Member="tbl_SensorDatas">
+    <Type Name="tbl_SensorData">
+      <Column Name="Data_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Sensor_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SensorTypeParameter_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="RecordTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Device_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tbl_Device_tbl_SensorData" Member="tbl_Device" ThisKey="Device_Id" OtherKey="Device_Id" Type="tbl_Device" IsForeignKey="true" />
+      <Association Name="tbl_Sensor_tbl_SensorData" Member="tbl_Sensor" ThisKey="Sensor_Id" OtherKey="Sensor_Id" Type="tbl_Sensor" IsForeignKey="true" />
+      <Association Name="tbl_SensorTypeParameter_tbl_SensorData" Member="tbl_SensorTypeParameter" ThisKey="SensorTypeParameter_Id" OtherKey="SensorTypeParameter_Id" Type="tbl_SensorTypeParameter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SensorType" Member="tbl_SensorTypes">
+    <Type Name="tbl_SensorType">
+      <Column Name="SensorType_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SensorType_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SensorType_Model" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Min_Interval" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Param1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Param2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Param3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_SensorType_tbl_Sensor" Member="tbl_Sensors" ThisKey="SensorType_Id" OtherKey="SensorType_Id" Type="tbl_Sensor" />
+      <Association Name="tbl_SensorType_tbl_SensorTypeParameter" Member="tbl_SensorTypeParameters" ThisKey="SensorType_Id" OtherKey="SensorType_Id" Type="tbl_SensorTypeParameter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SensorTypeParameter" Member="tbl_SensorTypeParameters">
+    <Type Name="tbl_SensorTypeParameter">
+      <Column Name="SensorTypeParameter_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SensorType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterName_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterRegister_Address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Parameter_ByteLength" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ValueType_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Unit_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Parameter_RW" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_SensorTypeParameter_tbl_ActiveSensorParameter" Member="tbl_ActiveSensorParameters" ThisKey="SensorTypeParameter_Id" OtherKey="SensorTypeParameter_Id" Type="tbl_ActiveSensorParameter" />
+      <Association Name="tbl_SensorTypeParameter_tbl_SensorData" Member="tbl_SensorDatas" ThisKey="SensorTypeParameter_Id" OtherKey="SensorTypeParameter_Id" Type="tbl_SensorData" />
+      <Association Name="tbl_ValueType_tbl_SensorTypeParameter" Member="tbl_ValueType" ThisKey="ValueType_Id" OtherKey="ValueType_Id" Type="tbl_ValueType" IsForeignKey="true" />
+      <Association Name="tbl_SensorType_tbl_SensorTypeParameter" Member="tbl_SensorType" ThisKey="SensorType_Id" OtherKey="SensorType_Id" Type="tbl_SensorType" IsForeignKey="true" />
+      <Association Name="tbl_SensorTypeParameterName_tbl_SensorTypeParameter" Member="tbl_SensorTypeParameterName" ThisKey="ParameterName_Id" OtherKey="ParameterName_Id" Type="tbl_SensorTypeParameterName" IsForeignKey="true" />
+      <Association Name="tbl_Unit_tbl_SensorTypeParameter" Member="tbl_Unit" ThisKey="Unit_Id" OtherKey="Unit_Id" Type="tbl_Unit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SensorTypeParameterName" Member="tbl_SensorTypeParameterNames">
+    <Type Name="tbl_SensorTypeParameterName">
+      <Column Name="ParameterName_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParameterName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="tbl_SensorTypeParameterName_tbl_SensorTypeParameter" Member="tbl_SensorTypeParameters" ThisKey="ParameterName_Id" OtherKey="ParameterName_Id" Type="tbl_SensorTypeParameter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Unit" Member="tbl_Units">
+    <Type Name="tbl_Unit">
+      <Column Name="Unit_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Unit_Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Unit_Char" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_Unit_tbl_SensorTypeParameter" Member="tbl_SensorTypeParameters" ThisKey="Unit_Id" OtherKey="Unit_Id" Type="tbl_SensorTypeParameter" />
+    </Type>
+  </Table>
+</Database>

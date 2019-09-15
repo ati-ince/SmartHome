@@ -1,0 +1,10 @@
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Debug\SensorDataTest.exe.config
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Debug\SensorDataTest.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\bin\Debug\SensorDataTest.pdb
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\SensorDataTest.Form1.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\SensorDataTest.Properties.Resources.resources
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\SensorDataTest.exe
+c:\users\zebra-ms-1\documents\visual studio 2010\Projects\SensorDataTest\SensorDataTest\obj\x86\Debug\SensorDataTest.pdb

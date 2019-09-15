@@ -1,0 +1,23 @@
+﻿Excel kullanilarak yapilacak isler:
+
+- Yazilimin calistigi klasorun uzantisi alinarak Excel dosyasinin adresini otomatik ckilmesi 
+
+- Onceden olusturulan excel dosyasina datalarin yazilmasi.
+
+- Herhangi bir zamanda excel dosyasi create ederek data yazilmasi.
+
+- Excel den data cekilmesi ve herhangi bir amac ile istenilen noktaya cekilmesi.
+
+- Excel den data cekildikten sonrasinda herhangi bir data iceriisnde  aranmasi vb gibi durumlarda kullanilmak uzere
+
+gerekli alt fonksyonlari barindirmasi lazimdir.
+................................................................................................
+
+NOTE1: Excel okuma ve excel dosyalarının herhangı bırn algoritmada CLASS yapisinda kullamnilmasi amaci ile bu CLASS halini: ExcelUsage.cs dosyasini hazirlamaktayim
+Bunu oncelikli olarakm Xtender icin kullanarak algoritmalarin otomatik calismasini sag;ayacagim.
+
+Bu ilk class yapisi Extender icin ozellesse de kullanilabilir bir cok ozellik barindirmaktadir
+Ornegin READ ve WRITE icin ayri methodlar bulunmaktadir ve bu methodlar cikti olarak bize kullanabilecegimiz READ ve WRITE listesi sunmakltadir
+
+Ayrica buna ek olarak bu liste ciktilarini sorgulamak icin bir foksiyon yazalim ve bu method geri donusu de Coordinat,TRUE/FALSE olsun (eger icerikte yok ise Coor=-1 olacaktir)
+

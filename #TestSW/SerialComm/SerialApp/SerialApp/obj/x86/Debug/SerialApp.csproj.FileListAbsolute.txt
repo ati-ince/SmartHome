@@ -1,0 +1,18 @@
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\bin\Debug\SerialApp.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\bin\Debug\SerialApp.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.Form1.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.exe
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.pdb
+D:\THR_ONEMLI_PRJ\SH-Aug20\Ongoing_Aug20_lab\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.csprojResolveAssemblyReference.cache
+D:\AkilliEv Klasoru (!)\SH_Soft_Versiyonlari (!!!)\SH-111016-AllFıles\Ongoing_Nov02\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.exe
+D:\AkilliEv Klasoru (!)\SH_Soft_Versiyonlari (!!!)\SH-111016-AllFıles\Ongoing_Nov02\OnGoing\#SerialCom-Work\SerialApp\SerialApp\obj\x86\Debug\SerialApp.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\bin\Debug\SerialApp.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\bin\Debug\SerialApp.pdb
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.csprojResolveAssemblyReference.cache
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.Form1.resources
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.Properties.Resources.resources
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\SerialComm\SerialApp\SerialApp\obj\x86\Debug\SerialApp.csproj.GenerateResource.Cache

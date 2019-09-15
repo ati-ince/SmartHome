@@ -1,0 +1,66 @@
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Nov02\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Ongoing_Aprıl15_2017\OnGoing\4Noks_Test_V1\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR\SH\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.2\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR\SH\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.3\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\THR_ONEMLI_PRJ\Ap2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\THR_ONEMLI_PRJ\July2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\THR_ONEMLI_PRJ\July2017\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.exe
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\bin\Debug\4Noks_Test_V1.pdb
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csprojResolveAssemblyReference.cache
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Form1.resources
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\_4Noks_Test_V1.Properties.Resources.resources
+D:\AkilliEv Klasoru (!)\Tests-20170729T210106Z-001\Tests\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.csproj.GenerateResource.Cache
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\4Noks\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.exe
+D:\AkilliEv Klasoru (!)\#Test_KaynakKodları\4Noks\4Noks_Test_V1.4\4Noks_Test_V1\obj\x86\Debug\4Noks_Test_V1.pdb

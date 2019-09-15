@@ -1,0 +1,76 @@
+
+2/10/2016 8:19:25 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/10/2016 8:38:38 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/10/2016 8:38:46 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 8:16:30 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 8:16:44 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 8:19:11 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 8:19:19 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:42:39 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:42:40 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:43:14 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:43:15 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:52:03 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:52:07 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:52:16 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:52:31 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:53:34 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 9:53:40 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
+
+2/11/2016 10:03:30 PM
+  :Couldn't open Xtender serial port, will try again
+-----------------------
+
+2/11/2016 10:03:33 PM
+  :Couldn't close Xtender serial port, will try again
+-----------------------
