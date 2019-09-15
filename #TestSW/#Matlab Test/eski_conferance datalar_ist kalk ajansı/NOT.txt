@@ -1,0 +1,1 @@
+Burada karşılaştırma yaparak her bir saniyede ve o zaman diliminde ne kadar data gelmiş tek-tek bunları goruntuleyecepğiz.
